@@ -1,0 +1,46 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="wrapper-outer"><div id="wrapper"><div id="wrapper_inner">
+        <h1>Contact Us</h1>
+        <div class="row-fluid">
+            <div class="span8">
+                <form method="post" id="contact" name="contact" action="#">
+
+                    <label for="name">Your Name:</label> <input type="text" id="name" name="name" class="required input_field" />
+                    <div class="cleaner_h10"></div>
+
+                    <label for="subject">Subject:</label> <input type="text" id="subject" name="subject" class="required input_field" />
+                    <div class="cleaner_h10"></div>
+
+                    <label for="email">Email Address:</label> <input type="text" id="email" name="email" class="validate-email required input_field" />
+                    <div class="cleaner_h10"></div>
+
+                    <label for="message">Message:</label> <textarea id="message" name="message" class="required"></textarea>
+                    <div class="cleaner_h10"></div>
+
+                    <div id="buttons">
+                        <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Send" style="margin-right: 100px;"/>
+                        <input type="reset" class="btn" name="reset" id="reset" value="Reset"/>
+                    </div>
+
+                </form>
+            </div>
+            <div class="span4">
+                <br/><br/>
+                <address>
+                    <strong>Email us</strong> at <a href="mailto:harvardchina.org">contact@harvardchina.org</a>.<br/><br/>
+                    <strong>Reach us by post:</strong> <br/>
+                    230 Harvard Yard Mail Box <br/>
+                    24 Cambridge Road <br/>
+                    Cambridge, MA 02138 <br/>
+                    USA <br/>
+                </address>
+                <br/><br/>
+                <p>We receive a large number of messages! Please allow up to one week for a response. We appreciate your patience.</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
