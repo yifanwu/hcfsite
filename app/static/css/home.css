@@ -1,0 +1,59 @@
+/* Home Styles */
+
+#site_slider_wrapper {
+    width: 960px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+#blurb {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #666;
+    text-align: justify;
+}
+
+#blurb_text {
+    padding-right: 30px;
+}
+
+#content h2 {
+    font-size: 24px;
+}
+
+#content .nav {
+    margin-bottom: 0;
+}
+
+#content .nav-tabs > .active > a, .nav-tabs > .active > a:hover {
+    background-color: #f8f8f8;
+}
+
+#testimonials {
+    width: 90%;
+    float: right;
+}
+
+#panel_descrip {
+    background: #f8f8f8;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    -moz-border-radius: 0px 0px 7px 7px;
+    -webkit-border-radius: 0px 0px 7px 7px;
+    border-radius: 0px 0px 7px 7px;
+    padding: 10px;
+    font-size: 12px;
+}
+
+#panel_descrip ul {
+    list-style-type: square;
+}
+
+span.title {
+    font-size: 18px;
+}
+
+.nav-tabs > li > a:hover { background-color: #e7e5e5; }

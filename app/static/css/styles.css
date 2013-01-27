@@ -1,0 +1,70 @@
+.cleaner_h10 { clear:both; height: 10px; }
+.cleaner_h30 { clear: both; height: 30px; }
+.cleaner { clear: both; height: 0px; }
+
+h1,h2 {
+    color: #aa171b;
+}
+
+.hidden { display: none; }
+
+.float_left {
+    float: left;
+    margin-right: 10px;
+}
+
+.float_right {
+    float: right;
+    margin-left: 10px;
+}
+
+.centered {
+    display:block;
+    margin: 0 auto;
+}
+
+.detail_box {
+    margin-top: 30px;
+    position: relative;
+}
+
+.detail_box:hover {
+    cursor: pointer;
+    background-color: #e2e2e2;
+}
+
+.detail_box .name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.detail_box img {
+    float: left;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.detail_box p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    left: 160px;
+    bottom: 0;
+    position: absolute;
+}
+
+/* Override Bootstrap */
+.nav-pills { font-size: 15px; }
+
+.nav-pills > .active > a, .nav-pills > .active > a:hover {
+    color: white;
+    background-color: #af171b;
+}
+.nav-pills > li > a:hover { background-color:#ddd; }
+
+.nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > li.dropdown.open.active > a:hover {
+    color: white;
+    background-color: #9c171b;
+    border-color: #999;
+}

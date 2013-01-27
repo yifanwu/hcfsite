@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+app.db
+search.db
+flask/
+tmp/associations/
+.idea/
+.DS_Store
+
