@@ -1,6 +1,7 @@
-from flask.ext.wtf import Form, TextField, BooleanField, TextAreaField
+from flask.ext.wtf import Form, TextField, BooleanField, TextAreaField, FileField, file_allowed, file_required
 from flask.ext.wtf import Required, Length
-from app.models import User
+from flask.ext.uploads import UploadSet, IMAGES
+from app.models import User, People, Panel
 
 class LoginForm(Form):
     openid = TextField('openid', validators = [Required()])
@@ -25,9 +26,27 @@ class EditForm(Form):
             return False
         return True
         
-class BlogForm(Form):
+class PostForm(Form):
     post = TextField('post', validators = [Required()])
+    panel = TextField('panel', validators = [Required()])
 
+    def validate(self):
+        if not Form.validate(self):
+            return False
+        panel_id = Panel.query.filter_by(name = self.panel.data)
+        if panel_id == None:
+            self.panel.errors.append('This panel does not yet exist in the database, please check for typo or add panel')
+            return False
+        return True
+
+
+#this is the upload extention's upload at work
+photos = UploadSet('photos', IMAGES)
+
+class UploadForm(Form):
+    upload = FileField("Upload your image",
+        validators=[file_required(),
+                    file_allowed(photos, "Images only!")])
 
 class PostPeopleForm(Form):
     name = TextAreaField('name', validators=[Required()])

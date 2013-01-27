@@ -1,12 +1,10 @@
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, oid
-from forms import LoginForm, EditForm, BlogForm, SearchForm
-from models import User, ROLE_USER, ROLE_ADMIN, Post
+from forms import LoginForm, EditForm, PostForm, SearchForm
+from models import User, ROLE_USER, ROLE_ADMIN, Post, Panel
 from datetime import datetime
-from emails import follower_notification
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
-from flask.ext.uploads import delete, init, save, Upload, IMAGES
 
 @lm.user_loader
 def load_user(id):
@@ -34,29 +32,21 @@ def internal_error(error):
 def home():
     return render_template('home.html')
 
-photos = Upload('photos', IMAGES)
-
-@app.route('/index', methods = ['GET', 'POST'])
-@app.route('/index/<String:type>', methods = ['GET', 'POST'])
+@app.route('/post_blog', methods = ['GET', 'POST'])
 @login_required
-def index(type = "people"):
-    form = BlogForm()
+def post_blog():
+    form = PostForm()
     if form.validate_on_submit():
-        post = Post(body = form.blog.data, timestamp = datetime.utcnow(), author = g.user)
+        #TODO: add a dropdown menu instead of having the user type stuff in
+        post = Post(body = form.post.data, timestamp = datetime.utcnow(), author = g.user, panel = form.panel.data)
         db.session.add(post)
         db.session.commit()
         flash('Your post is now live!')
-        return redirect(url_for('index'))
-    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)
+        return redirect(url_for('post_blog'))
 
-    """Upload a new file."""
-    if request.method == 'POST':
-        save(request.files['upload'])
-
-    return render_template('index.html',
-        title = 'Home',
-        form = form,
-        posts = posts)
+    return render_template('new_post.html',
+        title = 'New Post',
+        form = form)
 
 @app.route('/login', methods = ['GET', 'POST'])
 @oid.loginhandler
