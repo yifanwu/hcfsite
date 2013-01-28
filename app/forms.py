@@ -5,7 +5,15 @@ from app.models import User, People, Panel
 
 class LoginForm(Form):
     openid = TextField('openid', validators = [Required()])
+    passphrase = TextField('passphrase', validators = [Required()])
     remember_me = BooleanField('remember_me', default = False)
+    def validate(self):
+        if not Form.validate(self):
+            return False
+        if self.passphrase.data  != "hc4Z0IE":
+            self.passphrase.errors.append('Invalid pass phrase, only HCF board members have access.')
+            return False
+        return True
     
 class EditForm(Form):
     nickname = TextField('nickname', validators = [Required()])

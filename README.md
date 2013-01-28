@@ -27,6 +27,8 @@ Security
 
 Currently, the pass phrase is hc4Z0IE (will look into more secure methods going into the future).
 
+The passphrase is set via forms.py in the function LoginForm
+
 Notes
 -------
 
