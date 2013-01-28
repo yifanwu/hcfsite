@@ -5,7 +5,6 @@ from forms import LoginForm, EditForm, PostForm, SearchForm
 from models import User, ROLE_USER, Post, Panel, Organization, People
 from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
-from flask.ext.testing import TestCase
 
 @lm.user_loader
 def load_user(id):
@@ -13,12 +12,12 @@ def load_user(id):
 
 @app.before_request
 def before_request():
+    g.search_form = SearchForm()
     g.user = current_user
     if g.user.is_authenticated():
         g.user.last_seen = datetime.utcnow()
         db.session.add(g.user)
         db.session.commit()
-        g.search_form = SearchForm()
 
 @app.errorhandler(404)
 def internal_error(error):
@@ -31,23 +30,7 @@ def internal_error(error):
 
 @app.route('/', methods = ['GET', 'POST'])
 def home():
-    return render_template('home.html')
-
-@app.route('/post_blog', methods = ['GET', 'POST'])
-@login_required
-def post_blog():
-    form = PostForm()
-    if form.validate_on_submit():
-        #TODO: add a dropdown menu instead of having the user type stuff in
-        post = Post(body = form.post.data, timestamp = datetime.utcnow(), author = g.user, panel = form.panel.data)
-        db.session.add(post)
-        db.session.commit()
-        flash('Your post is now live!')
-        return redirect(url_for('post_blog'))
-
-    return render_template('new_post.html',
-        title = 'New Post',
-        form = form)
+    return render_template('index.html')
 
 @app.route('/partners')
 def view_partners():
@@ -65,10 +48,21 @@ def view_advisors():
         partners = table_advisors
     )
 
-class MyViewTestCase(TestCase):
-    def test_get_success(self):
-        response = self.client.get('/partners')
-        self.assertEqual(self.get_context_variable('var1'), 'value 1')
+@app.route('/search', methods = ['POST'])
+def search():
+
+    if not g.search_form.validate_on_submit():
+        return redirect(url_for('index'))
+    return redirect(url_for('search_results', query = g.search_form.search.data))
+
+@app.route('/search_results/<query>')
+def search_results(query):
+    results = Post.query.whoosh_search(query, MAX_SEARCH_RESULTS).all()
+    return render_template('search_results.html',
+        query = query,
+        results = results)
+
+#below are admin previllages
 
 @app.route('/login', methods = ['GET', 'POST'])
 @oid.loginhandler
@@ -76,6 +70,7 @@ def login():
     if g.user is not None and g.user.is_authenticated():
         return redirect(url_for('index'))
     form = LoginForm()
+
     if form.validate_on_submit():
         session['remember_me'] = form.remember_me.data
         return oid.try_login(form.openid.data, ask_for = ['nickname', 'email'])
@@ -107,6 +102,25 @@ def after_login(resp):
         session.pop('remember_me', None)
     login_user(user, remember = remember_me)
     return redirect(request.args.get('next') or url_for('index'))
+
+
+@app.route('/post_blog', methods = ['GET', 'POST'])
+@login_required
+def post_blog():
+    form = PostForm()
+    if form.validate_on_submit():
+        #TODO: add a dropdown menu instead of having the user type stuff in
+        post = Post(body = form.post.data, timestamp = datetime.utcnow(), author = g.user, panel = form.panel.data)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post is now live!')
+        return redirect(url_for('post_blog'))
+
+    return render_template('new_post.html',
+        title = 'New Post',
+        form = form)
+
+
 
 @app.route('/logout')
 def logout():
@@ -142,19 +156,4 @@ def edit():
         form.about_me.data = g.user.about_me
     return render_template('edit.html',
         form = form)
-
-@app.route('/search', methods = ['POST'])
-@login_required
-def search():
-    if not g.search_form.validate_on_submit():
-        return redirect(url_for('index'))
-    return redirect(url_for('search_results', query = g.search_form.search.data))
-
-@app.route('/search_results/<query>')
-@login_required
-def search_results(query):
-    results = Post.query.whoosh_search(query, MAX_SEARCH_RESULTS).all()
-    return render_template('search_results.html',
-        query = query,
-        results = results)
 

@@ -26,12 +26,12 @@
     <div id="header_wrapper"><div id="header">
         <a href="#"><img alt="HCF Logo" src="/static/img/logo.jpg" id="site_logo" /></a>
         <span id="lang_option"><a href="#">简体中文</a> | <a href="#">繁體中文</a> | <a href="#">English</a></span>
-        <form id="site_search" class="form-search">
-            <input type="text" class="input-medium search-query"/>
-            <input type="submit" class="btn" value="Search"/>
+        <form class="navbar-search pull-right" action="{{url_for('search')}}" method="post" name="search">
+            {{g.search_form.hidden_tag()}}{{g.search_form.search(size=20,placeholder="Search",class="search-query")}}
         </form>
+
     <span id="social_media_icons">
-      <a href="#"><img src="/static/img/icons/facebook_icon.png"/><a/>
+          <a href="#"><img src="/static/img/icons/facebook_icon.png"/></a>
           <a href="#"><img src="/static/img/icons/twitter_icon.png"/></a>
           <a href="#"><img src="/static/img/icons/weibo_icon.png"/></a>
           <a href="#"><img src="/static/img/icons/mail_icon.png"/></a>
