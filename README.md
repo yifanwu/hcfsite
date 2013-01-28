@@ -26,3 +26,8 @@ Security
 -------
 
 Currently, the pass phrase is hc4Z0IE (will look into more secure methods going into the future).
+
+Notes
+-------
+
+The html files will *not* render properly if not deployed
