@@ -3,25 +3,25 @@
 
 {% block content %}
 
-    <div id="wrapper-outer"><div id="wrapper"><div id="wrapper_inner">
-        <h1>HCF Strategic Partners</h1>
-        
-        <div id="partners_list">
-            <img src="img/partners/vanke.jpg" alt="Vanke"/>
-            <h3>Vanke (万科集团)</h3>
-            <p>Vanke is lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
-            <img src="img/partners/taikang.jpg" alt="Taikang"/>
-            <h3>Taikang Life Insurance (泰康人寿保险)</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
-            <img src="img/partners/iicg.jpg" alt="iicg"/>
-            <h3>Intercom International Communication Group (???)</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
-            <img src="img/partners/china-us.jpg" alt="china-us"/>
-            <h3>China-US Business Leaders Roundtable<br/>(中美商业领袖圆桌会议)</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
-            <img src="img/partners/cef.jpg" alt="CEF"/>
-            <h3>China Entrepreneurs Forum<br/>(中国企业家论坛)</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
+    <div id="wrapper-outer">
+        <div id="wrapper">
+            <div id="wrapper_inner">
+                <h1>HCF Strategic Partners</h1>
+
+                {% for partner in partners %}
+                    <table class="table table-hover">
+                        <tr>
+                            <td>
+                                <h3><strong>{{partner.name}}</strong></h3>
+                                <p><strong>{{partner.description}}</strong></p>
+                                {% if partner.panel != null %}
+                                    <h2><strong>{{partner.panel}}</strong></h2>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                {% endfor %}
+            </div>
         </div>
     </div>
-    </div>
-    </div>
-
 {% endblock %}

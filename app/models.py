@@ -50,14 +50,16 @@ class User(db.Model):
 class People(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(64), unique = True)
-    time_added = db.Column(db.DateTime)
-    panel_id = db.Column(db.Integer, db.ForeignKey('panel.id'))
+    panel = db.Column(db.String(140))
+    #panel_id = db.Column(db.Integer, db.ForeignKey('panel.id'))
+    description = db.Column(db.String)
 
 #partners --> description + logo + name
 class Organization(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(64), unique = True)
     logo = db.Column(db.String(128), unique = True) #path to photo
+    description = db.Column(db.String)
     #TODO: add connection to people
 
 #panels --> category + name + description + questions

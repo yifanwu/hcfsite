@@ -2,9 +2,10 @@ from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, oid
 from forms import LoginForm, EditForm, PostForm, SearchForm
-from models import User, ROLE_USER, ROLE_ADMIN, Post, Panel
+from models import User, ROLE_USER, Post, Panel, Organization, People
 from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
+from flask.ext.testing import TestCase
 
 @lm.user_loader
 def load_user(id):
@@ -48,6 +49,27 @@ def post_blog():
         title = 'New Post',
         form = form)
 
+@app.route('/partners')
+def view_partners():
+    table_partners = Organization.query.all()
+    return render_template('partners.html',
+        title = 'HCF Partners',
+        partners = table_partners
+    )
+
+@app.route('/advisors')
+def view_advisors():
+    table_advisors = People.query.all()
+    return render_template('partners.html',
+        title = 'HCF Advisors',
+        partners = table_advisors
+    )
+
+class MyViewTestCase(TestCase):
+    def test_get_success(self):
+        response = self.client.get('/partners')
+        self.assertEqual(self.get_context_variable('var1'), 'value 1')
+
 @app.route('/login', methods = ['GET', 'POST'])
 @oid.loginhandler
 def login():
@@ -57,7 +79,7 @@ def login():
     if form.validate_on_submit():
         session['remember_me'] = form.remember_me.data
         return oid.try_login(form.openid.data, ask_for = ['nickname', 'email'])
-    return render_template('login.html', 
+    return render_template('login.html',
         title = 'Sign In',
         form = form,
         providers = app.config['OPENID_PROVIDERS'])
@@ -90,7 +112,7 @@ def after_login(resp):
 def logout():
     logout_user()
     return redirect(url_for('index'))
-    
+
 @app.route('/user/<nickname>')
 @app.route('/user/<nickname>/<int:page>')
 @login_required
@@ -120,45 +142,6 @@ def edit():
         form.about_me.data = g.user.about_me
     return render_template('edit.html',
         form = form)
-
-@app.route('/follow/<nickname>')
-@login_required
-def follow(nickname):
-    user = User.query.filter_by(nickname = nickname).first()
-    if user == None:
-        flash('User ' + nickname + ' not found.')
-        return redirect(url_for('index'))
-    if user == g.user:
-        flash('You can\'t follow yourself!')
-        return redirect(url_for('user', nickname = nickname))
-    u = g.user.follow(user)
-    if u is None:
-        flash('Cannot follow ' + nickname + '.')
-        return redirect(url_for('user', nickname = nickname))
-    db.session.add(u)
-    db.session.commit()
-    flash('You are now following ' + nickname + '!')
-    follower_notification(user, g.user)
-    return redirect(url_for('user', nickname = nickname))
-
-@app.route('/unfollow/<nickname>')
-@login_required
-def unfollow(nickname):
-    user = User.query.filter_by(nickname = nickname).first()
-    if user == None:
-        flash('User ' + nickname + ' not found.')
-        return redirect(url_for('index'))
-    if user == g.user:
-        flash('You can\'t unfollow yourself!')
-        return redirect(url_for('user', nickname = nickname))
-    u = g.user.unfollow(user)
-    if u is None:
-        flash('Cannot unfollow ' + nickname + '.')
-        return redirect(url_for('user', nickname = nickname))
-    db.session.add(u)
-    db.session.commit()
-    flash('You have stopped following ' + nickname + '.')
-    return redirect(url_for('user', nickname = nickname))
 
 @app.route('/search', methods = ['POST'])
 @login_required

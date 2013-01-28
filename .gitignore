@@ -4,8 +4,8 @@ app.db
 search.db
 flask/
 tmp/associations/
-temp/nonces/
-temp/temp/
+tmp/nonces/
+tmp/temp/
 .idea/
 .DS_Store
 
