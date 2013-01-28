@@ -1,7 +1,6 @@
 from flask.ext.wtf import Form, TextField, BooleanField, TextAreaField, FileField, file_allowed, file_required
 from flask.ext.wtf import Required, Length
-from flask.ext.uploads import UploadSet, IMAGES
-from app.models import User, People, Panel
+from app.models import User, Entity, Panel
 
 class LoginForm(Form):
     openid = TextField('openid', validators = [Required()])
@@ -47,24 +46,15 @@ class PostForm(Form):
             return False
         return True
 
-
-#this is the upload extention's upload at work
-photos = UploadSet('photos', IMAGES)
-
-class UploadForm(Form):
-    upload = FileField("Upload your image",
-        validators=[file_required(),
-                    file_allowed(photos, "Images only!")])
-
 class PostPeopleForm(Form):
     name = TextAreaField('name', validators=[Required()])
-    bio = TextAreaField('bio', validators=[Required()])
-    panels = TextAreaField('panels', validators=[Required()])
+    description = TextAreaField('description', validators=[Required()])
+    panel = TextAreaField('panel', validators=[Required()])
 
     def validate(self):
         if not Form.validate(self):
             return False
-        person = People.query.filter_by(name = self.name.data).first()
+        person = Entity.query.filter_by(name = self.name.data).first()
         if person != None:
             self.name.errors.append('This person is already added, please modify the old one instead')
             #TODO: redirect to modifying the old one

@@ -46,29 +46,27 @@ class User(db.Model):
     def __repr__(self):
         return '<User %r>' % (self.nickname)
 
-#people table --> advisors + speakers + panel
-class People(db.Model):
+class Entity(db.Model):
+    __searchable__ = ['description']
+
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(64), unique = True)
+    description = db.Column(db.String)
+
+class Advisor(Entity):
+    title = db.Column(db.String(140))
+    organization = db.Column(db.String(140))
+
+class Speaker(Advisor):
     panel = db.Column(db.String(140))
-    #panel_id = db.Column(db.Integer, db.ForeignKey('panel.id'))
-    description = db.Column(db.String)
+    featured = db.Column(db.Boolean)
 
-#partners --> description + logo + name
-class Organization(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
-    name = db.Column(db.String(64), unique = True)
-    logo = db.Column(db.String(128), unique = True) #path to photo
-    description = db.Column(db.String)
-    #TODO: add connection to people
+class Organization(Entity):
+    org_logo = db.Column(db.String(128)) #path to photo
 
-#panels --> category + name + description + questions
-class Panel(db.Model):
-    id = db.Column(db.Integer, primary_key= True)
-    name = db.Column(db.String(64), unique = True)
+class Panel(Entity):
     category = db.Column(db.String(64), unique=True)
     #TODO: make sure that no cap works for the string
-    description = db.Column(db.String)
     logo = db.Column(db.String(128), unique=True) #path to photo
 
 class Post(db.Model):

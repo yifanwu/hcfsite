@@ -1,10 +1,13 @@
+import os
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, oid
-from forms import LoginForm, EditForm, PostForm, SearchForm
-from models import User, ROLE_USER, Post, Panel, Organization, People
+from forms import LoginForm, EditForm, PostForm, SearchForm, PostPeopleForm
+from models import User, ROLE_USER, Post, Panel, Organization, Advisor, Speaker
 from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
+from werkzeug.utils import secure_filename
+#from flask.ext.uploads import UploadSet, IMAGES
 
 @lm.user_loader
 def load_user(id):
@@ -29,8 +32,13 @@ def internal_error(error):
     return render_template('500.html'), 500
 
 @app.route('/', methods = ['GET', 'POST'])
-def home():
-    return render_template('index.html')
+def index():
+    #hack: some hard coding in pagination
+    featured_speakers = Speaker.query.filter_by(featured = True).paginate(1, POSTS_PER_PAGE, False)
+    return render_template('index.html',
+        title = 'Home',
+        featured_speakers = featured_speakers
+    )
 
 @app.route('/partners')
 def view_partners():
@@ -39,10 +47,17 @@ def view_partners():
         title = 'HCF Partners',
         partners = table_partners
     )
+@app.route('/speakers')
+def view_speakers():
+    table_speakers = Speaker.query.all()
+    return render_template('partners.html',
+        title = 'HCF Speakers',
+        partners = table_speakers
+    )
 
 @app.route('/advisors')
 def view_advisors():
-    table_advisors = People.query.all()
+    table_advisors = Advisor.query.all()
     return render_template('partners.html',
         title = 'HCF Advisors',
         partners = table_advisors
@@ -50,7 +65,6 @@ def view_advisors():
 
 @app.route('/search', methods = ['POST'])
 def search():
-
     if not g.search_form.validate_on_submit():
         return redirect(url_for('index'))
     return redirect(url_for('search_results', query = g.search_form.search.data))
@@ -62,7 +76,7 @@ def search_results(query):
         query = query,
         results = results)
 
-#below are admin previllages
+#below are admin privileges
 
 @app.route('/login', methods = ['GET', 'POST'])
 @oid.loginhandler
@@ -119,6 +133,29 @@ def post_blog():
     return render_template('new_post.html',
         title = 'New Post',
         form = form)
+
+#this is the upload extention's upload at work
+#photos = UploadSet('photos', IMAGES)
+ALLOWED_EXTENSIONS = set(['png','jpg'])
+def allowed_file(filename):
+    return '.' in filename and\
+           filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+
+@app.route('/new_speaker', methods=['GET', 'POST'])
+def new_speaker():
+
+    form = PostPeopleForm()
+    if request.method == 'POST':
+        file = request.files['file']
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            return redirect(url_for('uploaded_file',
+                filename=filename))
+    return render_template('new_speaker.html',
+        title = 'New Speaker',
+        form = form
+        )
 
 
 

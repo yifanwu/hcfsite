@@ -33,3 +33,6 @@ Notes
 -------
 
 The html files will *not* render properly if not deployed
+
+TODO:
+-- fix the image uploading and dynamic rendering

@@ -1,26 +1,28 @@
 <!-- extend base layout -->
 {% extends "base.html" %}
-{% block content %}
+
+{% block head %}
     <link rel="stylesheet" type="text/css" href="/static/css/home.css"/>
+    <script type="text/javascript" src="/static/js/home.js"></script>
+{% endblock %}
 
-    <p>to be rendered later</p>
-
+{% block content %}
     <div id="wrapper-outer"><div id="wrapper"><div id="wrapper_inner">
         <div class="cleaner_h10">&nbsp;</div>
         <div id="site_slider_wrapper">
             <div id="site_slider" class="carousel slide">
                 <!-- Carousel items -->
                 <div class="carousel-inner">
-                    <div class="active item"><img src="img/slider/slider1.jpg" alt="First Slider"/>
+                    <div class="active item"><img src="/static/img/slider/slider1.jpg" alt="First Slider"/>
                         <div class="carousel-caption"><h4>An Annual, Not-To-Be Missed Conference</h4><p>Harvard China Forum  meets each year at Harvard University. This year it will be held April 12 - 14, 2013. </p></div>
                     </div>
-                    <div class="item"><img src="img/slider/slider2.jpg" alt="Second Slider"/>
+                    <div class="item"><img src="/static/img/slider/slider2.jpg" alt="Second Slider"/>
                         <div class="carousel-caption"><h4>Discuss</h4><p>The Forum discusses important issues concerning Business and Innovation, Economics and Finance, and Culture and Society.</p></div>
                     </div>
-                    <div class="item"><img src="img/slider/slider3.jpg" alt="Third Slider"/>
+                    <div class="item"><img src="/static/img/slider/slider3.jpg" alt="Third Slider"/>
                         <div class="carousel-caption"><h4>Learn</h4><p>Learn about current events both in China and around the world from people who are leading the innovation.</p></div>
                     </div>
-                    <div class="item"><img src="img/slider/slider4.jpg" alt="Fourth Slider"/>
+                    <div class="item"><img src="/static/img/slider/slider4.jpg" alt="Fourth Slider"/>
                         <div class="carousel-caption"><h4>Inspire</h4><p>Each year, more than 1,000 students and conference attendees meet to inspire each other to change the world.</p></div>
                     </div>
                 </div>
@@ -35,115 +37,60 @@
                 <div id="blurb">
                     <h2>HCF 2013: Discuss, Learn, and be Inspired</h2>
                     <div class="cleaner_h10">&nbsp;</div>
-                    <p id="blurb_text">Harvard China Forum (HCF) was founded at Harvard University in 1998 and is North America's leading student forum regarding Chinese issues. Each year, HCF facilitates simulating discussions for academics, business leaders, government officials, and other leaders who are concerned about issues and opportunities in China. <a href="#">Learn more</a>.</p>
+                    <p id="blurb_text">Harvard China Forum (HCF) was founded at Harvard University in 1998 and is North America's leading student forum regarding Chinese issues. Each year, HCF facilitates simulating discussions for academics, business leaders, government officials, and other leaders who are concerned about issues and opportunities in China. <a href="about.php">Learn more</a>.</p>
                     <div class="cleaner_h10">&nbsp;</div>
                     <div id="testimonials">
                         <blockquote class="pull-right">
-                            <p><span style="color:#86171b; font-weight:bold;">Harvard China Forum</span> allowed me to view not only Chinese issues in a new light, but also gave me more perspective on issues that are affecting all corners of the <span style="color:#86171b; font-weight:bold;">world</span>. It was an enlightening experience.</p>
+                            <p><span style="color:#9f171b; font-weight:bold;">Harvard China Forum</span> allowed me to view not only Chinese issues in a new light, but also gave me more perspective on issues that are affecting all corners of the <span style="color:#9f171b; font-weight:bold;">world</span>. It was an enlightening experience.</p>
                             <small>Bob Joe, Harvard '12</small>
                         </blockquote>
                         <blockquote class="pull-right">
-                            <p>This was a rare chance for me to reflect on momentous changes that are happening everyday. It is <span style="color:#86171b; font-weight:bold;">amazing</span> how far we've come, and now, more than ever, we need to understand where we are <span style="color:#86171b; font-weight:bold;">going</span>.</p>
+                            <p>This was a rare chance for me to reflect on momentous changes that are happening everyday. It is <span style="color:#9f171b; font-weight:bold;">amazing</span> how far we've come, and now, more than ever, we need to understand where we are <span style="color:#9f171b; font-weight:bold;">going</span>.</p>
                             <small>Shi Wang, Chairman, Vanke</small>
                         </blockquote>
                     </div>
                 </div>
 
-                <div id="panels2">
-                    <a name="panels"></a>
+                <div id="panels">
                     <h2>Panels: The Heart and Soul of Discussion</h2>
                     <ul class="nav nav-tabs" id="panels_nav">
-                        <li class="active" id="busi_inno"><a href="#panels">Business/Innovation</a></li>
-                        <li id="cult_soci"><a href="#panels">Culture/Society</a></li>
-                        <li id="econ_fina"><a href="#panels">Economics/Finance</a></li>
+                        <li class="active" id="busi_inno"><a href="#panel">Business/Innovation</a></li>
+                        <li id="cult_soci"><a href="#panel">Culture/Society</a></li>
+                        <li id="econ_fina"><a href="#panel">Economics/Finance</a></li>
                     </ul>
                     <div id="panel_descrip">
                         <h4>Purpose</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna libero, consequat sit amet vulputate in, sagittis quis sapien. Sed tempor odio eu tortor vulputate placerat.</p>
                         <h4>2013 Topics</h4>
                         <ul>
-                            <li>Topic 1</li>
-                            <li>Topic 2</li>
-                            <li>Topic 3</li>
-                            <li>Topic 4</li>
+                            <li><a href="panels.php#busi_inno_1">Panel I: Lorem Ipsum Dolor sit Amet Consectetur</a></li>
+                            <li><a href="panels.php#busi_inno_2">Panel II: Adipiscing Elit nunc Nec Magna sed Augue</a></li>
+                            <li><a href="panels.php#busi_inno_3">Panel III: Viverra Lacinia eu Sed em Class Aptent</a></li>
+                            <li><a href="panels.php#busi_inno_4">Panel IV: Aciti Sociosqu ad Litora</a></li>
                         </ul>
                     </div>
                     <div class="cleaner_h10">&nbsp;</div>
-                    <a href="#" class="pull-right" style="font-size:14px;">More Panel Details<i class="icon-arrow-right" style="margin-left:3px;"></i></a>
+                    <a href="panels.php" class="pull-right" style="font-size:14px;">More Panel Details<i class="icon-arrow-right" style="margin-left:3px;"></i></a>
                 </div>
             </div>
             <div class="span5">
                 <h2>Featured Speakers</h2>
-                <div class="detail_box">
-                    <img src="img/people/icons/shi_wang.jpg" alt="Person 1"/>
-                    <p><span class="name">Shi Wang</span><br/><br/><b>Chairman, Vanke</b><br/>The largest residential<br/> real estate developer in China</p>
-                    <div class="cleaner"></div>
-                </div>
-                <div class="detail_box">
-                    <img src="img/people/icons/yuan_tian.jpg" alt="Person 2"/>
-                    <p><span class="name">Yuan Tian</span><br/><br/><b>Chairman,<br/> China Entrepreneurs Forum</b><br/>The most prestious Chinese entrepreneurship conference</p>
-                    <div class="cleaner"></div>
-                </div>
-                <div class="detail_box">
-                    <img src="img/people/icons/minhong_yu.jpg" alt="Person 3"/>
-                    <p><span class="name">Minghong Yu</span><br/><br/><b>Founder and CEO, New Oriental</b><br/>The largest comprehensive<br/>educational company in China</p>
-                    <div class="cleaner"></div>
-                </div>
-                <div class="detail_box">
-                    <img src="img/people/icons/dongsheng_chen.jpg" alt="Person 4"/>
-                    <p><span class="name">Dongsheng Chen</span><br/><br/><b>Chairman & CEO, Taikang Life</b><br/>One of the largest life<br/>insurance companies in China</p>
-                    <div class="cleaner"></div>
-                </div>
-                <div class="cleaner_h10">&nbsp;</div>
-                <a href="#" class="pull-right">More Speakers<i class="icon-arrow-right" style="margin-left:3px;"></i></a>
+                {% for speaker in featured_speakers.object_list %}
+                    <div class="detail_box">
+                        <img src="/static/img/people/icons/shi_wang.jpg" alt="Person 1"/>
+                        <p><span class="name">{{speaker.name}}</span><br/><br/>
+                            {{speaker.description}}</p>
+                        <div class="cleaner"></div>
+                    </div>
+                {% endfor %}
+                <a href="speakers" class="pull-right">More Speakers<i class="icon-arrow-right" style="margin-left:3px;"></i></a>
             </div>
         </div>
     </div>
         <div class="cleaner" style="height: 40px;">&nbsp;</div>
         <div class="ribbon_wrapper">
-            <div class="ribbon"><div class="ribbon-stitches-top"></div><strong class="ribbon-content"><h1>Join the Discussion. Register for HCF 2013.</h1></strong><div class="ribbon-stitches-bottom"></div></div>
+            <div class="ribbon"><div class="ribbon-stitches-top"></div><div class="ribbon-content"><h1>Join the Discussion. Register for HCF 2013.</h1></div><div class="ribbon-stitches-bottom"></div></div>
         </div>
         <div class="cleaner" style="height: 100px;">&nbsp;</div>
     </div></div>
-
-    <div id="footer_wrapper"><div id="footer">
-        <div class="row-fluid">
-            <div class="span4">
-                <h4>About Us</h4>
-                <p>
-                    Harvard China Forum (HCF) was founded by a group of China-focused Harvard students in 1998. In the beginning, the forum was the annual meeting for the renowned journal publication, <i>Harvard China Review</i>, and in 2010 it became an independent entity under the name Harvard College China Forum. Now, as North America's leading student forum regarding China, Harvard China Forum holds a conference each spring at Harvard University, focusing on opportunities and challenges that China faces.
-                </p>
-            </div>
-            <div class="span4">
-                <h4>HCF on the Web</h4>
-                <div class="cleaner_h10">&nbsp;</div>
-                <ul class="nav nav-tabs nav-stacked" id="on_the_web">
-                    <li><a href="#">Email</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Weibo</a></li>
-                </ul>
-            </div>
-            <div class="span4">
-                <h4>HCF Updates</h4>
-                Weibo feed here?
-            </div>
-        </div>
-        <p id="copyright">&copy; Copyright 2013 Harvard China Forum.</br>
-            Harvard name and/or VERITAS shield are trademarks of the President
-            and<br/> Fellows of Harvard College and are used by permission of Harvard University.</p>
-    </div></div>
-
-    <div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="modalLabel">
-                Shi Wang<br/>
-                <span class="title">Chairman, Vanke</span>
-            </h3>
-        </div>
-        <div class="modal-body">
-            <p><img src="img/people/icons/shi_wang.jpg" alt="Wang Shi" class="float_left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non sapien urna. Phasellus varius augue ac augue scelerisque convallis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam fringilla ipsum eget dui lacinia et hendrerit magna auctor. Vestibulum tincidunt lectus vel nisi fringilla sit amet suscipit diam sollicitudin. Quisque posuere viverra turpis, et tempus augue congue vel. Donec sodales leo vel neque facilisis nec venenatis leo dictum.</p>
-        </div>
-    </div>
 {% endblock %}

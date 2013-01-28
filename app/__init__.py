@@ -16,6 +16,9 @@ lm.login_view = 'login'
 oid = OpenID(app, os.path.join(basedir, 'tmp'))
 mail = Mail(app)
 
+#this is for people to upload the img
+UPLOAD_FOLDER = '/static/img/'
+
 if not app.debug:
     import logging
     from logging.handlers import SMTPHandler
@@ -35,6 +38,10 @@ if not app.debug:
     app.logger.addHandler(file_handler)
     app.logger.setLevel(logging.INFO)
     app.logger.info('hcfsite startup')
+
+#this sets the configuration for the application
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 app.jinja_env.globals['momentjs'] = momentjs
 
