@@ -1,0 +1,41 @@
+h3 {
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+    padding-bottom: 10px;
+    color: #90171b;
+}
+
+h4 {
+    margin-top: 30px;
+    color: #0173ac;
+}
+
+h5 {
+    margin-top: 20px;
+}
+
+#panels_nav_wrapper { position: relative; top: -10px;}
+
+#panels_nav {
+    position: absolute;
+    top: 10px;
+}
+
+#panels_nav .nav {
+    margin-bottom: 0;
+}
+
+#panels_nav .nav-pills {
+    font-size: 13px;
+}
+
+#panels_nav h5 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#back_to_top {
+    display: block;
+    margin-top: 20px;
+}

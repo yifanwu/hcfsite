@@ -1,0 +1,3 @@
+.ribbon:before, .ribbon:after {
+    display: none!important;
+}

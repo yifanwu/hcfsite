@@ -1,0 +1,22 @@
+#logistics_nav_wrapper { position: relative; top: -10px;}
+
+#logistics_nav {
+    position: absolute;
+    top: 10px;
+}
+
+#logistics_nav .nav {
+    margin-bottom: 0;
+    width: 200px;
+}
+
+#logistics_nav .nav-pills {
+    font-size: 13px;
+}
+
+#back_to_top {
+    display: block;
+    margin-top: 20px;
+}
+
+h3 { margin-top: 30px; color: #006192;}

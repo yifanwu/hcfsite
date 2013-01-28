@@ -1,0 +1,11 @@
+label { float: left; display: inline-block; width: 125px;}
+
+label.error { color: #F00; font-weight: bold; float: right; width: 220px;}
+
+#contact { margin-top: 20px; }
+
+#message { width: 250px; height: 150px; }
+
+input { width: 250px; }
+
+#buttons { width: 350px; margin: 0 auto; }

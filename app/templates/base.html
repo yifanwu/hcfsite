@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if title %}
         <title>{{title}} - HCF</title>
     {% else %}
         <title>HCF</title>
     {% endif %}
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="/static/css/ie8.css" />
+    <![endif]-->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/css/frame.css"/>
@@ -18,88 +23,93 @@
     <script type="text/javascript" src="/static/js/scripts.js"></script>
     <script type="text/javascript" src="/static/js/stickyfloat.jquery.js"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    {% endblock %}
 </head>
 <body>
-<div class="container">
-
-    <div id="header_wrapper"><div id="header">
-        <a href="#"><img alt="HCF Logo" src="/static/img/logo.jpg" id="site_logo" /></a>
-        <span id="lang_option"><a href="#">简体中文</a> | <a href="#">繁體中文</a> | <a href="#">English</a></span>
-        <form id="site_search" class="form-search">
-            <input type="text" class="input-medium search-query"/>
-            <input type="submit" class="btn" value="Search"/>
-        </form>
-    <span id="social_media_icons">
-      <a href="#"><img src="/static/img/icons/facebook_icon.png"/><a/>
-          <a href="#"><img src="/static/img/icons/twitter_icon.png"/></a>
-          <a href="#"><img src="/static/img/icons/weibo_icon.png"/></a>
-          <a href="#"><img src="/static/img/icons/mail_icon.png"/></a>
-    </span>
-        <div id="site_register">
-            <div id="site_register_top">&nbsp;</div>
-            <div id="site_register_bottom">
-                <i class="icon-check icon-white" style="vertical-align: middle; position: relative; top: -2px;"></i> Register
-            </div>
-        </div>
+	<div id="header_wrapper"><div id="header">
+		<a href="/" id="site_logo_link">
+			  <img alt="HCF Logo" src="/static/img/logo.png" id="site_logo" /><br/>
+			  <span>April 12 - 14, 2013&nbsp;</span>
+			</a>
+		<span id="lang_option"><a href="#">简体中文</a> | <a href="#">English</a></span>
+		<form id="site_search" class="form-search">
+		  <input type="text" class="input-medium search-query"/>
+		  <input type="submit" class="btn" value="Search"/>
+		</form>
+		<span id="social_media_icons">
+			<a href="#"><img src="/static/img/icons/facebook_icon.png" alt="facebook"/></a>
+			<a href="#"><img src="/static/img/icons/weibo_icon.png" alt="weibo"/></a>
+			<a href="#"><img src="/static/img/icons/mail_icon.png" alt="email"/></a>
+		</span>
+		<div id="site_register">
+		  <div id="site_register_top">&nbsp;</div>
+		  <div id="site_register_bottom">
+			<i class="icon-check icon-white" style="vertical-align: middle; position: relative; top: -2px;"></i> Register
+		  </div>
+		</div>
     </div></div>
 
-
-    <div class="navbar">
-        <div class="navbar-inner">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <ul class="nav">
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="#">Agenda</a></li>
-                <li><a href="#">Panels</a></li>
-                <li class="dropdown open">
-                    <a class="dropdown-toggle" id="drop_about" role="button" data-toggle="dropdown" href="#">People<b class="caret"></b></a>
-                    <ul id="menu_partners" class="dropdown-menu" role="menu" aria-labelledby="drop_about">
-                        <li><a href="#">Speakers</a></li>
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">Advisors</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Logistics</a></li>
-                <li class="dropdown open">
-                    <a class="dropdown-toggle" id="drop_about" role="button" data-toggle="dropdown" href="#">About Us<b class="caret"></b></a>
-                    <ul id="menu_about" class="dropdown-menu" role="menu" aria-labelledby="drop_about">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Past Conferences</a></li>
-                    </ul>
-                </li>
-
-                {% if g.user.is_authenticated() %}
-                    <li class="dropdown open">
-                        <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Modify<b class="caret"></b></a>
-                        <ul id="menu_change" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-                            <li><a tabindex="-1" href="#">speaker</a></li>
-                            <li><a tabindex="-1" href="#">organization</a></li>
-                            <li><a tabindex="-1" href="#">panels</a></li>
-                            <li class="divider"></li>
-                            <li><a tabindex="-1" href="#">blog</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
-                {% endif %}
-            </ul>
-            <div class="nav-collapse collapse">
-                {% if g.user.is_authenticated() %}
-                    <form class="navbar-search pull-right" action="{{url_for('search')}}" method="post" name="search">{{g.search_form.hidden_tag()}}{{g.search_form.search(size=20,placeholder="Search",class="search-query")}}</form>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="span12">
-            {% block content %}
-            {% endblock %}
-        </div>
-    </div>
-</div>
+	<div class="navbar"><div class="navbar-inner">
+      <ul class="nav">
+        <li id="home_site_nav" class="active"><a href="/">Home</a></li>
+        <li id="agenda_site_nav"><a href="agenda.php">Agenda</a></li>
+        <li id="speakers_site_nav"><a href="speakers.php">Speakers</a></li>
+	    <li id="panels_site_nav"><a href="panels.php">Panels</a></li>
+	    <li id="logistics_site_nav"><a href="logistics.php">Logistics</a></li>
+        <li id="partners_site_nav"><a href="partners.php">Partners</a></li>
+	    <li id="about_site_nav"><a href="about.php">About HCF</a></li>
+        <li id="team_site_nav"><a href="team.php">HCF Team</a></li>
+	    {% if g.user.is_authenticated() %}
+			<li class="dropdown">
+				<a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Modify<b class="caret"></b></a>
+				<ul id="menu_change" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+					<li><a tabindex="-1" href="#">speaker</a></li>
+					<li><a tabindex="-1" href="#">organization</a></li>
+					<li><a tabindex="-1" href="#">panels</a></li>
+					<li class="divider"></li>
+					<li><a tabindex="-1" href="#">blog</a></li>
+				</ul>
+			</li>
+			<li><a href="{{ url_for('logout') }}">Logout</a></li>
+		{% endif %}
+		<div class="nav-collapse collapse">
+			{% if g.user.is_authenticated() %}
+				<form class="navbar-search pull-right" action="{{url_for('search')}}" method="post" name="search">{{g.search_form.hidden_tag()}}{{g.search_form.search(size=20,placeholder="Search",class="search-query")}}</form>
+			{% endif %}
+		</div>
+	    <li id="contact_site_nav"><a href="contact.php">Contact Us</a></li>
+      </ul>
+    </div></div>
+	
+    {% block content %}
+    {% endblock %}
+    
+    <div id="footer_wrapper"><div id="footer">
+		<div class="row-fluid">
+		  <div class="span4">
+		<h4>About Us</h4>
+		<p id="footer_about">
+		 Harvard China Forum (HCF) was founded by a group of China-focused Harvard students in 1998. It is North America\'s leading student forum regarding China. Harvard China Forum holds a conference each spring at Harvard University, focusing on opportunities and challenges that China faces. <a href="about.php">Learn more about us.</a>
+		</p>
+		  </div>
+		  <div class="span4">
+			<h4>HCF on the Web</h4>
+			<div class="cleaner_h10">&nbsp;</div>
+			<ul class="nav nav-tabs nav-stacked" id="on_the_web">
+			  <li><a href="#">Email</a></li>
+			  <li><a href="#">Facebook</a></li>
+			  <li><a href="#">Weibo</a></li>
+			</ul>
+		  </div>
+		  <div class="span4">
+		<img src="/static/img/logo_colored.png" alt="logo" style="margin-top: 50px;"/>
+		  </div>
+		</div>
+		<div class="cleaner_h30">&nbsp;</div>
+		<p id="copyright">&copy; Copyright 2013 Harvard China Forum.<br/>Harvard China Forum is an official student organization at Harvard University.</p>
+		<p id="harvard_notice">Harvard name and/or VERITAS shield are trademarks of the President 
+	and<br/> Fellows of Harvard College and are used by permission of Harvard University.</p>
+    </div></div>
 </body>
 </html>

@@ -1,0 +1,10 @@
+#person_bio { margin-top: 10px; }
+
+#wrapper h4 { margin-bottom: 0px; padding-bottom: 0px; }
+
+.detail_box { margin-top: 20px; }
+
+.heading:hover { cursor: pointer; }
+.descrip { display: none; padding-top: 10px; color: #999; }
+
+.heading i { position: relative; top: 3px; float: right;}

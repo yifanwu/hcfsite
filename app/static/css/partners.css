@@ -1,0 +1,21 @@
+h3 { color: #006192;}
+
+#partners_list {
+    margin-top: 40px;
+}
+
+#partners_list img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#partners_list p {
+    margin-bottom: 60px;
+}
+
+.partner_logo {
+    height: 200px;
+    float: left;
+}
