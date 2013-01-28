@@ -22,5 +22,7 @@ Users are able to login via authorized Google Accounts
 
 There is a pass phrase required to publish; this pass phrase is hard coded inside the python code.
 
-currently, the pass phrase is hc4Z0IE (will look into more secure methods going into the future).
-=======
+Security
+-------
+
+Currently, the pass phrase is hc4Z0IE (will look into more secure methods going into the future).
