@@ -9,7 +9,7 @@
         <form class="form-horizontal" action="" method="post" name="post">
             {{form.hidden_tag()}}
             <div class="control-group{% if form.errors.name %} error{% endif %}">
-                <label class="control-label" for="post">Your Post:</label>
+                <label class="control-label" for="post">Panel Name:</label>
                 <div class="controls">
                     {{ form.name(size = 90, maxlength = 9000) }}
                     {% for error in form.errors.name %}
