@@ -2,7 +2,7 @@ import os
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, oid
-from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm
+from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm, PostPanelForm, PostAdvisorForm
 from models import User, ROLE_USER, Post, Panel, Organization, Advisor, Speaker
 from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
@@ -33,9 +33,19 @@ def internal_error(error):
 def index():
     #hack: some hard coding in pagination
     featured_speakers = Speaker.query.filter_by(featured = True).paginate(1, POSTS_PER_PAGE, False)
+    panels = Panel.query.all()
     return render_template('index.html',
         title = 'Home',
-        featured_speakers = featured_speakers
+        featured_speakers = featured_speakers,
+        panels = panels
+    )
+
+@app.route('/agenda')
+def view_partners():
+    table_partners = Organization.query.all()
+    return render_template('agenda.html',
+        title = 'HCF Agenda',
+        partners = table_partners
     )
 
 @app.route('/partners')
@@ -45,6 +55,8 @@ def view_partners():
         title = 'HCF Partners',
         partners = table_partners
     )
+
+#note that partners.html is NOT a copy-paste error!
 @app.route('/speakers')
 def view_speakers():
     table_speakers = Speaker.query.all()
@@ -158,7 +170,7 @@ def new_speaker():
 @app.route('/new_advisor', methods=['GET', 'POST'])
 @login_required
 def new_advisor():
-    form = PostSpeakerForm()
+    form = PostAdvisorForm()
     if form.validate_on_submit():
         post = Advisor(
             name = form.name.data, description = form.description.data,
@@ -172,6 +184,42 @@ def new_advisor():
 
     return render_template('new_advisor.html',
         title = 'New Advisor',
+        form = form
+    )
+
+@app.route('/new_partner_org', methods=['GET', 'POST'])
+@login_required
+def new_panel():
+    form = PostSpeakerForm()
+    if form.validate_on_submit():
+        post = Panel(
+            name = form.name.data, description = form.description.data, category = form.category.data
+        )
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post for new panel is now live!')
+        return redirect(url_for('new_panel'))
+
+    return render_template('new_panel.html',
+        title = 'New Panel',
+        form = form
+    )
+
+@app.route('/new_panel', methods=['GET', 'POST'])
+@login_required
+def new_panel():
+    form = PostPanelForm()
+    if form.validate_on_submit():
+        post = Panel(
+            name = form.name.data, description = form.description.data, category = form.category.data
+        )
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post for new panel is now live!')
+        return redirect(url_for('new_panel'))
+
+    return render_template('new_panel.html',
+        title = 'New Panel',
         form = form
     )
 

@@ -61,7 +61,7 @@ class PostSpeakerForm(Form):
             return False
         person = Entity.query.filter_by(name = self.name.data).first()
         if person != None:
-            self.name.errors.append('This person is already added, please modify the old one instead')
+            self.name.errors.append('This speaker is already added, please modify the old one instead')
             return False
         return True
 
@@ -77,7 +77,34 @@ class PostAdvisorForm(Form):
             return False
         person = Entity.query.filter_by(name = self.name.data).first()
         if person != None:
-            self.name.errors.append('This person is already added, please modify the old one instead')
+            self.name.errors.append('This advisor is already added, please modify the old one instead')
+            return False
+        return True
+
+class PostOrganizationForm(Form):
+    name = TextAreaField('name', validators=[Required()])
+    description = TextAreaField('description', validators=[Required()])
+    img_url = TextField('img_url', validators = [Required()])
+
+    def validate(self):
+        if not Form.validate(self):
+            return False
+        found_name = Entity.query.filter_by(name = self.name.data).first()
+        if found_name != None:
+            self.name.errors.append('This panel is already added, please modify the old one instead')
+            return False
+        return True
+
+class PostPanelForm(Form):
+    name = TextAreaField('name', validators=[Required()])
+    description = TextAreaField('description', validators=[Required()])
+    category = TextAreaField('category', validators=[Required()])
+    def validate(self):
+        if not Form.validate(self):
+            return False
+        found_name = Entity.query.filter_by(name = self.name.data).first()
+        if found_name != None:
+            self.name.errors.append('This panel is already added, please modify the old one instead')
             return False
         return True
 

@@ -2,29 +2,39 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <h1>{{ title }}</h1>
+
     <div class="well">
 
         <form class="form-horizontal" action="" method="post" name="post">
             {{form.hidden_tag()}}
-            <div class="control-group{% if form.errors.post %} error{% endif %}">
+            <div class="control-group{% if form.errors.name %} error{% endif %}">
                 <label class="control-label" for="post">Your Post:</label>
                 <div class="controls">
-                    {{ form.post(size = 90, maxlength = 9000) }}
-                    {% for error in form.errors.post %}
+                    {{ form.name(size = 90, maxlength = 9000) }}
+                    {% for error in form.errors.name %}
                         <span class="help-inline">[{{error}}]</span><br>
                     {% endfor %}
                 </div>
             </div>
-            <div class="control-group{% if form.errors.post %} error{% endif %}">
-                <label class="control-label" for="post">Pannel Associated:</label>
+            <div class="control-group{% if form.errors.description %} error{% endif %}">
+                <label class="control-label" for="post">Description:</label>
                 <div class="controls">
-                    {{ form.panel(size = 30, maxlength = 140) }}
-                    {% for error in form.errors.post %}
+                    {{ form.description(size = 30, maxlength = 140) }}
+                    {% for error in form.errors.description %}
                         <span class="help-inline">[{{error}}]</span><br>
                     {% endfor %}
                 </div>
             </div>
-
+            <div class="control-group{% if form.errors.category %} error{% endif %}">
+                <label class="input-xlarge" for="post">Category</label>
+                <div class="controls">
+                    {{ form.category(size = 30, maxlength = 140) }}
+                    {% for error in form.errors.category %}
+                        <span class="help-inline">[{{error}}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
             <div class="control-group">
                 <div class="controls">
                     <input class="btn btn-primary" type="submit" value="Post!">

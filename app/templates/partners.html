@@ -10,6 +10,9 @@
 
                 {% for partner in partners %}
                     <table class="table table-hover">
+                        {% if partner.img_url != None %}
+                            <img src="{{partner.img_url}}" alt="Person"/>
+                        {% endif %}
                         <tr>
                             <td>
                                 <h3><strong>{{partner.name}}</strong></h3>

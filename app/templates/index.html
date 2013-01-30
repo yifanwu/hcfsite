@@ -54,30 +54,21 @@
                 <div id="panels">
                     <h2>Panels: The Heart and Soul of Discussion</h2>
                     <ul class="nav nav-tabs" id="panels_nav">
-                        <li class="active" id="busi_inno"><a href="#panel">Business/Innovation</a></li>
-                        <li id="cult_soci"><a href="#panel">Culture/Society</a></li>
-                        <li id="econ_fina"><a href="#panel">Economics/Finance</a></li>
+                        {% for panel in panels %}
+                            <li class="active"><a href="{{"panels"+panel.name}}">{{ panel.name }}</a></li>
+                        {% endfor %}
                     </ul>
-                    <div id="panel_descrip">
-                        <h4>Purpose</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna libero, consequat sit amet vulputate in, sagittis quis sapien. Sed tempor odio eu tortor vulputate placerat.</p>
-                        <h4>2013 Topics</h4>
-                        <ul>
-                            <li><a href="panels.php#busi_inno_1">Panel I: Lorem Ipsum Dolor sit Amet Consectetur</a></li>
-                            <li><a href="panels.php#busi_inno_2">Panel II: Adipiscing Elit nunc Nec Magna sed Augue</a></li>
-                            <li><a href="panels.php#busi_inno_3">Panel III: Viverra Lacinia eu Sed em Class Aptent</a></li>
-                            <li><a href="panels.php#busi_inno_4">Panel IV: Aciti Sociosqu ad Litora</a></li>
-                        </ul>
                     </div>
                     <div class="cleaner_h10">&nbsp;</div>
                     <a href="panels.php" class="pull-right" style="font-size:14px;">More Panel Details<i class="icon-arrow-right" style="margin-left:3px;"></i></a>
+
                 </div>
             </div>
             <div class="span5">
                 <h2>Featured Speakers</h2>
                 {% for speaker in featured_speakers.object_list %}
                     <div class="detail_box">
-                        <img src="/static/img/people/icons/shi_wang.jpg" alt="Person 1"/>
+                        <img src="{{speaker.img_url}}" alt="Person"/>
                         <p><span class="name">{{speaker.name}}</span><br/><br/>
                             {{speaker.description}}</p>
                         <div class="cleaner"></div>
