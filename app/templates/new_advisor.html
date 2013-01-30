@@ -1,0 +1,21 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    </br>
+    </br>
+    {% include 'flash.html' %}
+    </br>
+    </br>
+
+    <form class="form-horizontal" action="" method="post" name="post">
+        {% include 'new_people.html' %}
+    <div class="control-group">
+            <div class="controls">
+                <input class="btn btn-primary" type="submit" value="Add">
+            </div>
+        </div>
+
+    </form>
+
+{% endblock %}

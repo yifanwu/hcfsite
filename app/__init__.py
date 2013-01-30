@@ -17,7 +17,7 @@ oid = OpenID(app, os.path.join(basedir, 'tmp'))
 mail = Mail(app)
 
 #this is for people to upload the img
-UPLOAD_FOLDER = '/static/img/'
+UPLOAD_FOLDER = os.path.join(basedir, 'tmp')
 
 if not app.debug:
     import logging

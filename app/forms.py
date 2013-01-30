@@ -6,6 +6,7 @@ class LoginForm(Form):
     openid = TextField('openid', validators = [Required()])
     passphrase = TextField('passphrase', validators = [Required()])
     remember_me = BooleanField('remember_me', default = False)
+
     def validate(self):
         if not Form.validate(self):
             return False
@@ -32,7 +33,7 @@ class EditForm(Form):
             self.nickname.errors.append('This nickname is already in use. Please choose another one.')
             return False
         return True
-        
+
 class PostForm(Form):
     post = TextField('post', validators = [Required()])
     panel = TextField('panel', validators = [Required()])
@@ -46,10 +47,14 @@ class PostForm(Form):
             return False
         return True
 
-class PostPeopleForm(Form):
+class PostSpeakerForm(Form):
     name = TextAreaField('name', validators=[Required()])
     description = TextAreaField('description', validators=[Required()])
     panel = TextAreaField('panel', validators=[Required()])
+    featured = BooleanField('featured', default = False)
+    img_url = TextField('img_url', validators = [Required()])
+    title = TextAreaField('title', validators=[Required()])
+    organization = TextAreaField('organization', validators=[Required()])
 
     def validate(self):
         if not Form.validate(self):
@@ -57,9 +62,24 @@ class PostPeopleForm(Form):
         person = Entity.query.filter_by(name = self.name.data).first()
         if person != None:
             self.name.errors.append('This person is already added, please modify the old one instead')
-            #TODO: redirect to modifying the old one
             return False
+        return True
 
+class PostAdvisorForm(Form):
+    name = TextAreaField('name', validators=[Required()])
+    description = TextAreaField('description', validators=[Required()])
+    img_url = TextField('img_url', validators = [Required()])
+    title = TextAreaField('title', validators=[Required()])
+    organization = TextAreaField('organization', validators=[Required()])
+
+    def validate(self):
+        if not Form.validate(self):
+            return False
+        person = Entity.query.filter_by(name = self.name.data).first()
+        if person != None:
+            self.name.errors.append('This person is already added, please modify the old one instead')
+            return False
+        return True
 
 class SearchForm(Form):
     search = TextField('search', validators = [Required()])

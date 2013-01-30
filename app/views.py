@@ -2,12 +2,10 @@ import os
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, oid
-from forms import LoginForm, EditForm, PostForm, SearchForm, PostPeopleForm
+from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm
 from models import User, ROLE_USER, Post, Panel, Organization, Advisor, Speaker
 from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
-from werkzeug.utils import secure_filename
-#from flask.ext.uploads import UploadSet, IMAGES
 
 @lm.user_loader
 def load_user(id):
@@ -98,6 +96,7 @@ def after_login(resp):
     if resp.email is None or resp.email == "":
         flash('Invalid login. Please try again.')
         redirect(url_for('login'))
+
     user = User.query.filter_by(email = resp.email).first()
     if user is None:
         nickname = resp.nickname
@@ -107,14 +106,13 @@ def after_login(resp):
         user = User(nickname = nickname, email = resp.email, role = ROLE_USER)
         db.session.add(user)
         db.session.commit()
-        # make the user follow him/herself
-        db.session.add(user.follow(user))
-        db.session.commit()
+
     remember_me = False
     if 'remember_me' in session:
         remember_me = session['remember_me']
         session.pop('remember_me', None)
     login_user(user, remember = remember_me)
+
     return redirect(request.args.get('next') or url_for('index'))
 
 
@@ -124,7 +122,10 @@ def post_blog():
     form = PostForm()
     if form.validate_on_submit():
         #TODO: add a dropdown menu instead of having the user type stuff in
-        post = Post(body = form.post.data, timestamp = datetime.utcnow(), author = g.user, panel = form.panel.data)
+        post = Post(
+            body = form.post.data, timestamp = datetime.utcnow(), author = g.user,
+            panel = form.panel.data
+        )
         db.session.add(post)
         db.session.commit()
         flash('Your post is now live!')
@@ -134,30 +135,45 @@ def post_blog():
         title = 'New Post',
         form = form)
 
-#this is the upload extention's upload at work
-#photos = UploadSet('photos', IMAGES)
-ALLOWED_EXTENSIONS = set(['png','jpg'])
-def allowed_file(filename):
-    return '.' in filename and\
-           filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
-
 @app.route('/new_speaker', methods=['GET', 'POST'])
+@login_required
 def new_speaker():
+    form = PostSpeakerForm()
+    if form.validate_on_submit():
+        post = Speaker(
+            name = form.name.data, description = form.description.data,
+            img_url = form.img_url.data, title = form.title.data,
+            organization = form.organization.data, panel = form.panel.data, featured = form.featured.data,
+        )
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post for new speaker is now live!')
+        return redirect(url_for('new_speaker'))
 
-    form = PostPeopleForm()
-    if request.method == 'POST':
-        file = request.files['file']
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('uploaded_file',
-                filename=filename))
     return render_template('new_speaker.html',
         title = 'New Speaker',
         form = form
+    )
+
+@app.route('/new_advisor', methods=['GET', 'POST'])
+@login_required
+def new_advisor():
+    form = PostSpeakerForm()
+    if form.validate_on_submit():
+        post = Advisor(
+            name = form.name.data, description = form.description.data,
+            img_url = form.img_url.data, title = form.title.data,
+            organization = form.organization.data
         )
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post for new advisor is now live!')
+        return redirect(url_for('new_advisor'))
 
-
+    return render_template('new_advisor.html',
+        title = 'New Advisor',
+        form = form
+    )
 
 @app.route('/logout')
 def logout():

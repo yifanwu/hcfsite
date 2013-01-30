@@ -34,5 +34,7 @@ Notes
 
 The html files will *not* render properly if not deployed
 
+Currently, an advisor cannot be a speaker
+
 TODO:
 -- fix the image uploading and dynamic rendering

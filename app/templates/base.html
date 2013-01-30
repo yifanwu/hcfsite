@@ -33,10 +33,13 @@
 			  <span>April 12 - 14, 2013&nbsp;</span>
 			</a>
 		<span id="lang_option"><a href="#">简体中文</a> | <a href="#">English</a></span>
-		<form id="site_search" class="form-search">
-		  <input type="text" class="input-medium search-query"/>
-		  <input type="submit" class="btn" value="Search"/>
-		</form>
+        <div id="site_search" class="form-search">
+            <form class="navbar-search pull-right" action="{{url_for('search')}}"
+                  method="post" name="search">{{g.search_form.hidden_tag()}}
+                {{g.search_form.search(size=20,placeholder="Search",class="search-query")}}
+            </form>
+        </div>
+
 		<span id="social_media_icons">
 			<a href="#"><img src="/static/img/icons/facebook_icon.png" alt="facebook"/></a>
 			<a href="#"><img src="/static/img/icons/weibo_icon.png" alt="weibo"/></a>
@@ -53,18 +56,18 @@
 	<div class="navbar"><div class="navbar-inner">
       <ul class="nav">
         <li id="home_site_nav" class="active"><a href="/">Home</a></li>
-        <li id="agenda_site_nav"><a href="agenda.php">Agenda</a></li>
-        <li id="speakers_site_nav"><a href="speakers.php">Speakers</a></li>
-	    <li id="panels_site_nav"><a href="panels.php">Panels</a></li>
-	    <li id="logistics_site_nav"><a href="logistics.php">Logistics</a></li>
-        <li id="partners_site_nav"><a href="partners.php">Partners</a></li>
-	    <li id="about_site_nav"><a href="about.php">About HCF</a></li>
-        <li id="team_site_nav"><a href="team.php">HCF Team</a></li>
+        <li id="agenda_site_nav"><a href="agenda">Agenda</a></li>
+        <li id="speakers_site_nav"><a href="speakers">Speakers</a></li>
+	    <li id="panels_site_nav"><a href="panels">Panels</a></li>
+	    <li id="logistics_site_nav"><a href="logistics">Logistics</a></li>
+        <li id="partners_site_nav"><a href="partners">Partners</a></li>
+	    <li id="about_site_nav"><a href="about">About HCF</a></li>
+        <li id="team_site_nav"><a href="team">Team</a></li>
 	    {% if g.user.is_authenticated() %}
 			<li class="dropdown">
 				<a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Modify<b class="caret"></b></a>
 				<ul id="menu_change" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-					<li><a tabindex="-1" href="#">speaker</a></li>
+					<li><a tabindex="-1" href="new_speaker">speaker</a></li>
 					<li><a tabindex="-1" href="#">organization</a></li>
 					<li><a tabindex="-1" href="#">panels</a></li>
 					<li class="divider"></li>
@@ -73,12 +76,7 @@
 			</li>
 			<li><a href="{{ url_for('logout') }}">Logout</a></li>
 		{% endif %}
-		<div class="nav-collapse collapse">
-			{% if g.user.is_authenticated() %}
-				<form class="navbar-search pull-right" action="{{url_for('search')}}" method="post" name="search">{{g.search_form.hidden_tag()}}{{g.search_form.search(size=20,placeholder="Search",class="search-query")}}</form>
-			{% endif %}
-		</div>
-	    <li id="contact_site_nav"><a href="contact.php">Contact Us</a></li>
+
       </ul>
     </div></div>
 	
