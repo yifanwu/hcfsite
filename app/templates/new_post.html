@@ -16,14 +16,10 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="control-group{% if form.errors.post %} error{% endif %}">
-                <label class="control-label" for="post">Pannel Associated:</label>
-                <div class="controls">
-                    {{ form.panel(size = 30, maxlength = 140) }}
-                    {% for error in form.errors.post %}
-                        <span class="help-inline">[{{error}}]</span><br>
-                    {% endfor %}
-                </div>
+
+            <label class="control-label" for="post">Pannel Associated:</label>
+            <div class="controls">
+                {{ form.panel(size = 30, maxlength = 140) }}
             </div>
 
             <div class="control-group">

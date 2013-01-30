@@ -1,6 +1,7 @@
-from flask.ext.wtf import Form, TextField, BooleanField, TextAreaField, FileField, file_allowed, file_required
-from flask.ext.wtf import Required, Length
-from app.models import User, Entity, Panel
+from flask.ext.wtf import Form, TextField, BooleanField, TextAreaField
+from flask.ext.wtf import Required, Length, URL
+from flask.ext.wtf.html5 import URLField
+from app.models import User, Panel, Advisor, Speaker, Organization
 
 class LoginForm(Form):
     openid = TextField('openid', validators = [Required()])
@@ -58,24 +59,26 @@ class PostSpeakerForm(Form):
 
     def validate(self):
         if not Form.validate(self):
+            self.name.errors.append('Something went wrong!')
             return False
-        person = Entity.query.filter_by(name = self.name.data).first()
+        person = Speaker.query.filter_by(name = self.name.data).first()
         if person != None:
             self.name.errors.append('This speaker is already added, please modify the old one instead')
             return False
         return True
 
 class PostAdvisorForm(Form):
-    name = TextAreaField('name', validators=[Required()])
+    name = TextField('name', validators=[Required()])
     description = TextAreaField('description', validators=[Required()])
     img_url = TextField('img_url', validators = [Required()])
-    title = TextAreaField('title', validators=[Required()])
-    organization = TextAreaField('organization', validators=[Required()])
+    title = TextField('title', validators=[Required()])
+    organization = TextField('organization', validators=[Required()])
 
     def validate(self):
-        if not Form.validate(self):
-            return False
-        person = Entity.query.filter_by(name = self.name.data).first()
+        #if not Form.validate(self):
+            #self.name.errors.append('Something went wrong!')
+            #return False
+        person = Advisor.query.filter_by(name = self.name.data).first()
         if person != None:
             self.name.errors.append('This advisor is already added, please modify the old one instead')
             return False
@@ -84,12 +87,12 @@ class PostAdvisorForm(Form):
 class PostOrganizationForm(Form):
     name = TextAreaField('name', validators=[Required()])
     description = TextAreaField('description', validators=[Required()])
-    img_url = TextField('img_url', validators = [Required()])
+    img_url = URLField(validators=[URL()])
 
     def validate(self):
         if not Form.validate(self):
             return False
-        found_name = Entity.query.filter_by(name = self.name.data).first()
+        found_name = Organization.query.filter_by(name = self.name.data).first()
         if found_name != None:
             self.name.errors.append('This panel is already added, please modify the old one instead')
             return False
@@ -97,12 +100,12 @@ class PostOrganizationForm(Form):
 
 class PostPanelForm(Form):
     name = TextAreaField('name', validators=[Required()])
-    description = TextAreaField('description', validators=[Required()])
+    info = TextAreaField('description', validators=[Required()])
     category = TextAreaField('category', validators=[Required()])
     def validate(self):
         if not Form.validate(self):
             return False
-        found_name = Entity.query.filter_by(name = self.name.data).first()
+        found_name = Panel.query.filter_by(name = self.name.data).first()
         if found_name != None:
             self.name.errors.append('This panel is already added, please modify the old one instead')
             return False

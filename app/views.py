@@ -2,7 +2,7 @@ import os
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, oid
-from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm, PostPanelForm, PostAdvisorForm
+from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm, PostPanelForm, PostAdvisorForm, PostOrganizationForm
 from models import User, ROLE_USER, Post, Panel, Organization, Advisor, Speaker
 from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
@@ -187,13 +187,15 @@ def new_advisor():
         form = form
     )
 
-@app.route('/new_partner_org', methods=['GET', 'POST'])
+
+
+@app.route('/new_panel', methods=['GET', 'POST'])
 @login_required
 def new_panel():
-    form = PostSpeakerForm()
+    form = PostPanelForm()
     if form.validate_on_submit():
         post = Panel(
-            name = form.name.data, description = form.description.data, category = form.category.data
+            name = form.name.data, info = form.info.data, category = form.category.data
         )
         db.session.add(post)
         db.session.commit()
@@ -204,21 +206,20 @@ def new_panel():
         title = 'New Panel',
         form = form
     )
-
-@app.route('/new_panel', methods=['GET', 'POST'])
+@app.route('/new_partner_org', methods=['GET', 'POST'])
 @login_required
-def new_panel():
-    form = PostPanelForm()
+def new_partner_org():
+    form = PostOrganizationForm()
     if form.validate_on_submit():
-        post = Panel(
-            name = form.name.data, description = form.description.data, category = form.category.data
+        post = Organization(
+            name = form.name.data, description = form.description.data, img_url = form.img_url.data,
         )
         db.session.add(post)
         db.session.commit()
-        flash('Your post for new panel is now live!')
-        return redirect(url_for('new_panel'))
+        flash('Your post for new partner is now live!')
+        return redirect(url_for('new_partner_org'))
 
-    return render_template('new_panel.html',
+    return render_template('new_partner.html',
         title = 'New Panel',
         form = form
     )

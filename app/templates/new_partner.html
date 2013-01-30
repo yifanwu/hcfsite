@@ -9,6 +9,8 @@
     </br>
 
     <form class="form-horizontal" action="" method="post" name="post">
+        {{form.hidden_tag()}}
+
         {% include 'new_people.html' %}
 
         <div class="control-group">
@@ -18,5 +20,4 @@
         </div>
 
     </form>
-
 {% endblock %}

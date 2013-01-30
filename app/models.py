@@ -47,42 +47,43 @@ class User(db.Model):
         return '<User %r>' % (self.nickname)
 
 
-class Entity(db.Model):
-    __searchable__ = ['description']
+
+class Advisor(db.Model):
+    __tablename__ = 'advisor'
 
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(64), unique = True)
     description = db.Column(db.String, nullable=False)
     img_url = db.Column(db.String(140), nullable=True)
-    entity_type = db.Column(db.String(32), nullable=False)
-    __mapper_args__ = {'polymorphic_on': entity_type}
-
-class Advisor(Entity):
-    __tablename__ = 'advisor'
-
-    __mapper_args__ = {'polymorphic_identity': 'advisor'}
-    id = db.Column(db.Integer, db.ForeignKey('entity.id'), primary_key=True)
     title = db.Column(db.String(140))
     organization = db.Column(db.String(140))
 
-class Speaker(Entity):
+class Speaker(db.Model):
     __tablename__ = 'speaker'
-    __mapper_args__ = {'polymorphic_identity': 'speaker'}
-    id = db.Column(db.Integer, db.ForeignKey('entity.id'), primary_key=True)
+
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String(64), unique = True)
+    description = db.Column(db.String, nullable=False)
+    img_url = db.Column(db.String(140), nullable=True)
     title = db.Column(db.String(140))
     organization = db.Column(db.String(140))
     panel = db.Column(db.String(140))
     featured = db.Column(db.Boolean)
 
-class Organization(Entity):
+class Organization(db.Model):
     __tablename__ = 'organization'
-    __mapper_args__ = {'polymorphic_identity': 'organization'}
-    id = db.Column(db.Integer, db.ForeignKey('entity.id'), primary_key=True)
 
-class Panel(Entity):
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String(64), unique = True)
+    description = db.Column(db.String, nullable=False)
+    img_url = db.Column(db.String(140), nullable=True)
+
+class Panel(db.Model):
     __tablename__ = 'panel'
-    __mapper_args__ = {'polymorphic_identity': 'panel'}
-    id = db.Column(db.Integer, db.ForeignKey('entity.id'), primary_key=True)
+
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String(64), unique = True)
+    info = db.Column(db.String(5000))
     category = db.Column(db.String(64), unique=True)
 
 class Post(db.Model):
