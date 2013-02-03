@@ -56,6 +56,12 @@ def view_partners():
         partners = table_partners
     )
 
+@app.route('/logistics')
+def view_logistics():
+    return render_template('logistics.html',
+        title = 'Logistics',
+    )
+
 #note that partners.html is NOT a copy-paste error!
 @app.route('/speakers')
 def view_speakers():
@@ -242,20 +248,44 @@ def user(nickname, page = 1):
         user = user,
         posts = posts)
 
-@app.route('/edit', methods = ['GET', 'POST'])
+map_tab = {'speaker':Speaker, 'panel':Panel, 'advisor':Advisor, 'organization': Organization}
+
+#the variables are string by default
+@app.route('/edit/<table>/<name>', methods = ['GET', 'POST'])
 @login_required
-def edit():
-    form = EditForm(g.user.nickname)
+def edit_entity(table, name):
+    form = EditForm()
+    entity_content = map_tab[table].query.filter_by(name = name).first()
+
+    if entity_content == None:
+        flash("This entity doesn\'t exit!")
+
     if form.validate_on_submit():
-        g.user.nickname = form.nickname.data
-        g.user.about_me = form.about_me.data
-        db.session.add(g.user)
+        entity_content.name = form.name.data
+        entity_content.description = form.description.data
+        entity_content.img_url = form.img_url.data
+        if table == 'advisor' or table == 'speaker':
+            entity_content.title = form.title.data
+            entity_content.organization = form.organization.data
+            if table == 'speaker':
+                entity_content.panel = form.panel.data
+                entity_content.featured = form.featured.data
         db.session.commit()
-        flash('Your changes have been saved.')
-        return redirect(url_for('edit'))
+
     elif request.method != "POST":
-        form.nickname.data = g.user.nickname
-        form.about_me.data = g.user.about_me
-    return render_template('edit.html',
-        form = form)
+        form.name.data = entity_content.name
+        form.description.data = entity_content.description
+        form.img_url.data = entity_content.img_url
+        if table == 'advisor' or table == 'speaker':
+            form.title.data = entity_content.title
+            form.organization.data = entity_content.organization
+            if table == 'speaker':
+                form.panel.data = entity_content.panel
+                form.featured.data = entity_content.featured# I CANNOT DO .ITEM HERE BECAUSE IT'S A STRING
+
+    return render_template('edit_entity.html',
+        form = form,
+        table = table,
+        name = name,
+    )
 

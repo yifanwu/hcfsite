@@ -11,29 +11,28 @@ class LoginForm(Form):
     def validate(self):
         if not Form.validate(self):
             return False
-        if self.passphrase.data  != "hc4Z0IE":
+        if self.passphrase.data  != "hcf2013admin":
             self.passphrase.errors.append('Invalid pass phrase, only HCF board members have access.')
             return False
         return True
     
 class EditForm(Form):
-    nickname = TextField('nickname', validators = [Required()])
-    about_me = TextAreaField('about_me', validators = [Length(min = 0, max = 140)])
-    
-    def __init__(self, original_nickname, *args, **kwargs):
-        Form.__init__(self, *args, **kwargs)
-        self.original_nickname = original_nickname
-        
+    name = TextAreaField('name', validators=[Required()])
+    description = TextAreaField('description', validators=[Required()])
+    panel = TextAreaField('panel', validators=[Required()])
+    featured = BooleanField('featured', default = False)
+    img_url = TextField('img_url', validators = [Required()])
+    title = TextAreaField('title', validators=[Required()])
+    organization = TextAreaField('organization', validators=[Required()])
+
     def validate(self):
         if not Form.validate(self):
             return False
-        if self.nickname.data == self.original_nickname:
-            return True
-        user = User.query.filter_by(nickname = self.nickname.data).first()
-        if user != None:
-            self.nickname.errors.append('This nickname is already in use. Please choose another one.')
+        if self.name == None:
+            self.name.errors.append('This is an invalid entry!')
             return False
         return True
+
 
 class PostForm(Form):
     post = TextField('post', validators = [Required()])
