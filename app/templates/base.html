@@ -56,21 +56,21 @@
 	<div class="navbar"><div class="navbar-inner">
       <ul class="nav">
         <li id="home_site_nav" class="active"><a href="/">Home</a></li>
-        <li id="agenda_site_nav"><a href="agenda">Agenda</a></li>
-        <li id="speakers_site_nav"><a href="speakers">Speakers</a></li>
-	    <li id="panels_site_nav"><a href="panels">Panels</a></li>
-	    <li id="logistics_site_nav"><a href="logistics">Logistics</a></li>
-        <li id="partners_site_nav"><a href="partners">Partners</a></li>
-	    <li id="about_site_nav"><a href="about">About HCF</a></li>
-        <li id="team_site_nav"><a href="team">Team</a></li>
+        <li id="agenda_site_nav"><a href="/agenda">Agenda</a></li>
+        <li id="speakers_site_nav"><a href="/speakers">Speakers</a></li>
+	    <li id="panels_site_nav"><a href="/panels">Panels</a></li>
+	    <li id="logistics_site_nav"><a href="/logistics">Logistics</a></li>
+        <li id="partners_site_nav"><a href="/partners">Partners</a></li>
+	    <li id="about_site_nav"><a href="/about">About HCF</a></li>
+        <li id="team_site_nav"><a href="/team">Team</a></li>
 	    {% if g.user.is_authenticated() %}
 			<li class="dropdown">
 				<a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Add<b class="caret"></b></a>
 				<ul id="menu_change" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-					<li><a tabindex="-1" href="new_speaker">speaker</a></li>
-                    <li><a tabindex="-1" href="new_advisor">advisor</a></li>
-                    <li><a tabindex="-1" href="new_partner_org">partner</a></li>
-					<li><a tabindex="-1" href="new_panel">panels</a></li>
+					<li><a tabindex="-1" href="/new_speaker">speaker</a></li>
+                    <li><a tabindex="-1" href="/new_advisor">advisor</a></li>
+                    <li><a tabindex="-1" href="/new_partner_org">partner</a></li>
+					<li><a tabindex="-1" href="/new_panel">panels</a></li>
 				</ul>
 			</li>
 			<li><a href="{{ url_for('logout') }}">Logout</a></li>
