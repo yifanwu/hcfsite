@@ -53,7 +53,8 @@ def view_partners():
     table_partners = Organization.query.all()
     return render_template('partners.html',
         title = 'HCF Partners',
-        partners = table_partners
+        partners = table_partners,
+        type = 'partner'
     )
 
 @app.route('/logistics')
@@ -68,7 +69,8 @@ def view_speakers():
     table_speakers = Speaker.query.all()
     return render_template('partners.html',
         title = 'HCF Speakers',
-        partners = table_speakers
+        partners = table_speakers,
+        type = 'speaker'
     )
 
 @app.route('/advisors')
@@ -76,7 +78,8 @@ def view_advisors():
     table_advisors = Advisor.query.all()
     return render_template('partners.html',
         title = 'HCF Advisors',
-        partners = table_advisors
+        partners = table_advisors,
+        type = 'advisor'
     )
 
 @app.route('/search', methods = ['POST'])
@@ -249,6 +252,17 @@ def user(nickname, page = 1):
         posts = posts)
 
 map_tab = {'speaker':Speaker, 'panel':Panel, 'advisor':Advisor, 'organization': Organization}
+
+'''
+@app.route('/make_edit/<table>', methods = ['GET', 'POST'])
+@login_required
+def make_edit(table):
+    all_content = map_tab[table].query.all()
+'''
+
+@app.route('/how_to', methods = ['GET'])
+def how_to():
+    return render_template('how_to.html')
 
 #the variables are string by default
 @app.route('/edit/<table>/<name>', methods = ['GET', 'POST'])
