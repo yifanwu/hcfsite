@@ -1,2 +1,8 @@
 flask
 *.pyc
+
+tmp/nonces
+tmp/associations/
+tmp/nonces/
+tmp/temp/
+tmp/hcfsite.log
