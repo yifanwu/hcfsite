@@ -1,4 +1,4 @@
-from flask.ext.wtf import Form, TextField, BooleanField, TextAreaField
+from flask.ext.wtf import Form, TextField, BooleanField, TextAreaField, SelectField
 from flask.ext.wtf import Required, Length, URL
 from flask.ext.wtf.html5 import URLField
 from app.models import User, Panel, Advisor, Speaker, Organization
@@ -19,7 +19,8 @@ class LoginForm(Form):
 class EditForm(Form):
     name = TextAreaField('name', validators=[Required()])
     description = TextAreaField('description', validators=[Required()])
-    panel = TextAreaField('panel', validators=[Required()])
+    panel = SelectField(u'panel', choices=[('text', 'Plain Text')])
+    #TextAreaField('panel', validators=[Required()])
     featured = BooleanField('featured', default = False)
     img_url = TextField('img_url', validators = [Required()])
     title = TextAreaField('title', validators=[Required()])
@@ -47,10 +48,18 @@ class PostForm(Form):
             return False
         return True
 
+class PostCategoryForm(Form):
+    name = TextAreaField('name', validators=[Required()])
+
+class PostTeamForm(Form):
+    name = TextAreaField('name', validators=[Required()])
+    bio = TextAreaField('bio', validators=[Required()])
+
 class PostSpeakerForm(Form):
     name = TextAreaField('name', validators=[Required()])
     description = TextAreaField('description', validators=[Required()])
-    panel = TextAreaField('panel', validators=[Required()])
+    panel = SelectField(u'panel', choices=[(1, 'Plain Text')])
+    #panel = TextAreaField('panel', validators=[Required()])
     featured = BooleanField('featured', default = False)
     img_url = TextField('img_url', validators = [Required()])
     title = TextAreaField('title', validators=[Required()])
@@ -100,7 +109,8 @@ class PostOrganizationForm(Form):
 class PostPanelForm(Form):
     name = TextAreaField('name', validators=[Required()])
     info = TextAreaField('description', validators=[Required()])
-    category = TextAreaField('category', validators=[Required()])
+    category_id = SelectField(u'category_id', choices=[(1, 'Plain Text')])
+    #TextAreaField('category', validators=[Required()])
     def validate(self):
         if not Form.validate(self):
             return False

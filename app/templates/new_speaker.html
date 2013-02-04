@@ -12,15 +12,15 @@
         {{form.hidden_tag()}}
         {% include 'new_people.html' %}
 
-        <div class="control-group{% if form.errors.panel %} error{% endif %}">
-            <label class="control-label" for="post">Pannel Associated:</label>
-            <div class="controls">
-                {{ form.panel(size = 30, maxlength = 140) }}
-                {% for error in form.errors.panel %}
-                    <span class="help-inline">[{{error}}]</span><br>
-                {% endfor %}
+        <fieldset>
+            <div class="control-group{% if form.errors.panel %} error{% endif %}">
+                <label class="control-label">Select Panel:</label>
+
+                <div class="controls">
+                    {{ form.panel }}
+                </div>
             </div>
-        </div>
+        </fieldset>
 
         <div class="control-group">
             <div class="controls">

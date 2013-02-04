@@ -1,0 +1,50 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+
+    </br>
+    {% include 'flash.html' %}
+    </br>
+
+    <div class="well">
+
+        <form class="form-horizontal" action="" method="post" name="post">
+            {{form.hidden_tag()}}
+
+            <div class="control-group{% if form.errors.name %} error{% endif %}">
+                <label class="control-label" for="post">Name:</label>
+                <div class="controls">
+                    {{ form.name(size = 90, maxlength = 900) }}
+                    {% for error in form.errors.name %}
+                        <span class="help-inline">[{{error}}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="control-group{% if form.errors.description %} error{% endif %}">
+                <label class="control-label" for="post">Bio:</label>
+                <div class="controls">
+                    {{ form.description(size = 100, maxlength = 140) }}
+                    {% for error in form.errors.description %}
+                        <span class="help-inline">[{{error}}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <p>If you have the url to the photo, please paste it dirctly, otherwise, upload picture of the speaker
+                <a href="http://www.freeimagehosting.net/">here</a> and paste the link as prompted</p>
+            <div class="control-group{% if form.errors.img_url %} error{% endif %}">
+                <label class="control-label" for="post">Image URL</label>
+                <div class="controls">
+                    {{ form.img_url(size = 100, maxlength = 500) }}
+                    {% for error in form.errors.img_url %}
+                        <span class="help-inline">[{{error}}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </form>
+    </div>
+{% endblock %}

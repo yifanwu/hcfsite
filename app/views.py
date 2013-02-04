@@ -2,8 +2,9 @@ import os
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, oid
-from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm, PostPanelForm, PostAdvisorForm, PostOrganizationForm
-from models import User, ROLE_USER, Post, Panel, Organization, Advisor, Speaker
+from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm, PostPanelForm, \
+    PostAdvisorForm, PostOrganizationForm, PostCategoryForm, PostTeamForm
+from models import User, ROLE_USER, Post, Panel, Organization, Advisor, Speaker, Category, Team
 from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
 
@@ -48,6 +49,16 @@ def view_partners():
         partners = table_partners
     )
 
+@app.route('/team')
+def view_partners():
+    table_team = Team.query.all()
+
+    return render_template('team.html',
+        title = 'HCF Team',
+        partners = table_team,
+        type = 'team'
+    )
+
 @app.route('/partners')
 def view_partners():
     table_partners = Organization.query.all()
@@ -67,10 +78,15 @@ def view_logistics():
 @app.route('/speakers')
 def view_speakers():
     table_speakers = Speaker.query.all()
-    return render_template('partners.html',
+    cat_list = Category.query.all()
+    panel_list = Panel.query.all()
+
+    return render_template('speakers.html',
         title = 'HCF Speakers',
-        partners = table_speakers,
-        type = 'speaker'
+        speakers = table_speakers,
+        type = 'speaker',
+        panels = panel_list,
+        categories = cat_list
     )
 
 @app.route('/advisors')
@@ -93,7 +109,8 @@ def search_results(query):
     results = Post.query.whoosh_search(query, MAX_SEARCH_RESULTS).all()
     return render_template('search_results.html',
         query = query,
-        results = results)
+        results = results
+    )
 
 #below are admin privileges
 
@@ -156,10 +173,45 @@ def post_blog():
         title = 'New Post',
         form = form)
 
+@app.route('/new_category', methods=['GET', 'POST'])
+@login_required
+def new_category():
+    form = PostCategoryForm()
+
+    if form.validate_on_submit():
+        post = Category(name = form.name.data)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post for new CATEGORY is now lIVE!')
+        return redirect(url_for('new_category'))
+    return render_template('new_category.html',
+        title = 'New Category',
+        form = form,
+    )
+
+@app.route('/new_team', methods=['GET', 'POST'])
+@login_required
+def new_team():
+    form = PostTeamForm()
+
+    if form.validate_on_submit():
+        post = Team(name = form.name.data, bio = form.bio.data)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post for new CATEGORY is now lIVE!')
+        return redirect(url_for('new_team'))
+    return render_template('new_team.html',
+        title = 'New Team',
+        form = form,
+    )
+
 @app.route('/new_speaker', methods=['GET', 'POST'])
 @login_required
 def new_speaker():
     form = PostSpeakerForm()
+    panel_list = Panel.query.all()
+    form.panel.choices = [(g.id, g.name) for g in panel_list]
+
     if form.validate_on_submit():
         post = Speaker(
             name = form.name.data, description = form.description.data,
@@ -173,7 +225,9 @@ def new_speaker():
 
     return render_template('new_speaker.html',
         title = 'New Speaker',
-        form = form
+        form = form,
+        panels = panel_list,
+
     )
 
 @app.route('/new_advisor', methods=['GET', 'POST'])
@@ -202,9 +256,12 @@ def new_advisor():
 @login_required
 def new_panel():
     form = PostPanelForm()
+    categories = Category.query.all()
+    form.category_id.choices = [(g.id, g.name) for g in categories]
+
     if form.validate_on_submit():
         post = Panel(
-            name = form.name.data, info = form.info.data, category = form.category.data
+            name = form.name.data, info = form.info.data, category_id = form.category_id.data
         )
         db.session.add(post)
         db.session.commit()
@@ -213,8 +270,10 @@ def new_panel():
 
     return render_template('new_panel.html',
         title = 'New Panel',
-        form = form
+        form = form,
+        categories = categories
     )
+
 @app.route('/new_partner_org', methods=['GET', 'POST'])
 @login_required
 def new_partner_org():

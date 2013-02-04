@@ -1,0 +1,13 @@
+<li class="dropdown active">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="cult_soci">{{ category }}<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+        {% for panel in panels %}
+            {% if panel.category == category %}
+                <li><a href="#speakers" id="cult_soci_1" class="panel_select">{{ panel.name }}</a></li>
+                {% if g.user.is_authenticated() %}
+                    <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
+                {% endif %}
+            {% endif %}
+        {% endfor  %}
+    </ul>
+</li>

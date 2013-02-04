@@ -1,0 +1,59 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div id="wrapper-outer">
+        <div id="wrapper">
+            <div id="wrapper_inner">
+                <h1>{{ title }}</h1>
+
+                <!--people-->
+                <div class="span7" id="people">
+                    <ul class="nav nav-pills">
+                        {% for category in categories %}
+                            {% include 'cat_panel.html' %}
+                        {% endfor %}
+
+                        <!--panel detail-->
+                        {% for panel in panels %}
+                            <div class="row-fluid" id="panel_detail">
+                                <div class="span12" id="panel_heading">
+                                    <h4>Culture and Society Panel I:<br/> Sustainable Urban Development in China</h4>
+                                </div>
+
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        {% for speaker in speakers %}
+                                            {% if speaker.panel_id == panel.id %}
+                                                <div class="detail_box" id="{{ speaker.name }}">
+                                                    <img src="{{ speaker.img_url }}" alt="{{ speaker.name }}"/>
+                                                    <p>
+                                                        <span class="name">{{ spearker.name }}</span>
+                                                        <br/>{{ speaker.title }}
+                                                        <br/>{{ speaker.organization }}
+                                                    </p>
+                                                    <div class="cleaner"></div>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <!--end panel detail-->
+
+                        <a href="#speakers" class="pull-right" id="view_all">View All</a>
+                        <a href="#speakers" class="pull-right" style="display:none;" id="collapse">Collapse</a>
+
+                        <div id="people_more">
+
+                        </div>
+                    </ul>
+                </div>
+
+            </div>
+            <!--end people-->
+        </div>
+    </div>
+{% endblock %}
