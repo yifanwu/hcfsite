@@ -65,7 +65,6 @@ class Advisor(db.Model):
 
 class Speaker(db.Model):
     __tablename__ = 'speaker'
-    __searchable__ = ['description']
 
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(64), unique = True)
@@ -94,7 +93,6 @@ class Category(db.Model):
 
 class Panel(db.Model):
     __tablename__ = 'panel'
-    __searchable__ = ['info']
 
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(64), unique = True)

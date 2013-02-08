@@ -42,11 +42,9 @@ def index():
     )
 
 @app.route('/agenda')
-def view_partners():
-    table_partners = Organization.query.all()
+def view_agenda():
     return render_template('agenda.html',
-        title = 'HCF Agenda',
-        partners = table_partners
+        title = 'HCF Agenda'
     )
 
 @app.route('/team')
@@ -87,6 +85,17 @@ def view_speakers():
         type = 'speaker',
         panels = panel_list,
         categories = cat_list
+    )
+
+@app.route('/panels')
+def view_panels():
+    cat_list = Category.query.all()
+    panel_list = Panel.query.all()
+    return render_template('panels.html',
+                       title = 'HCF Panels',
+                       type = 'panel',
+                       panels = panel_list,
+                       categories = cat_list
     )
 
 @app.route('/advisors')
@@ -195,10 +204,10 @@ def new_team():
     form = PostTeamForm()
 
     if form.validate_on_submit():
-        post = Team(name = form.name.data, bio = form.bio.data)
+        post = Team(name = form.name.data, bio = form.bio.data, img_url = form.img_url.data)
         db.session.add(post)
         db.session.commit()
-        flash('Your post for new CATEGORY is now lIVE!')
+        flash('Your post for new TEAM is now lIVE!')
         return redirect(url_for('new_team'))
     return render_template('new_team.html',
         title = 'New Team',
@@ -210,13 +219,13 @@ def new_team():
 def new_speaker():
     form = PostSpeakerForm()
     panel_list = Panel.query.all()
-    form.panel.choices = [(g.id, g.name) for g in panel_list]
+    form.panel_id.choices = [(g.id, g.name) for g in panel_list]
 
     if form.validate_on_submit():
         post = Speaker(
             name = form.name.data, description = form.description.data,
             img_url = form.img_url.data, title = form.title.data,
-            organization = form.organization.data, panel = form.panel.data, featured = form.featured.data,
+            organization = form.organization.data, panel_id = form.panel_id.data, featured = form.featured.data,
         )
         db.session.add(post)
         db.session.commit()

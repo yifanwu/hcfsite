@@ -17,12 +17,12 @@ class LoginForm(Form):
         return True
     
 class EditForm(Form):
-    name = TextAreaField('name', validators=[Required()])
+    name = TextField('name', validators=[Required()])
     description = TextAreaField('description', validators=[Required()])
-    panel = SelectField(u'panel', choices=[('text', 'Plain Text')])
+    panel = SelectField(u'panel', coerce=int)
     #TextAreaField('panel', validators=[Required()])
     featured = BooleanField('featured', default = False)
-    img_url = TextField('img_url', validators = [Required()])
+    img_url = URLField(validators=[URL()])
     title = TextAreaField('title', validators=[Required()])
     organization = TextAreaField('organization', validators=[Required()])
 
@@ -49,19 +49,19 @@ class PostForm(Form):
         return True
 
 class PostCategoryForm(Form):
-    name = TextAreaField('name', validators=[Required()])
+    name = TextField('name', validators=[Required()])
 
 class PostTeamForm(Form):
-    name = TextAreaField('name', validators=[Required()])
+    name = TextField('name', validators=[Required()])
     bio = TextAreaField('bio', validators=[Required()])
+    img_url = URLField(validators=[URL()])
 
 class PostSpeakerForm(Form):
-    name = TextAreaField('name', validators=[Required()])
+    name = TextField('name', validators=[Required()])
     description = TextAreaField('description', validators=[Required()])
-    panel = SelectField(u'panel', choices=[(1, 'Plain Text')])
-    #panel = TextAreaField('panel', validators=[Required()])
+    panel_id = SelectField(u'panel_id', coerce=int)
     featured = BooleanField('featured', default = False)
-    img_url = TextField('img_url', validators = [Required()])
+    img_url = URLField(validators=[URL()])
     title = TextAreaField('title', validators=[Required()])
     organization = TextAreaField('organization', validators=[Required()])
 
@@ -78,14 +78,14 @@ class PostSpeakerForm(Form):
 class PostAdvisorForm(Form):
     name = TextField('name', validators=[Required()])
     description = TextAreaField('description', validators=[Required()])
-    img_url = TextField('img_url', validators = [Required()])
+    img_url = URLField(validators=[URL()])
     title = TextField('title', validators=[Required()])
     organization = TextField('organization', validators=[Required()])
 
     def validate(self):
-        #if not Form.validate(self):
-            #self.name.errors.append('Something went wrong!')
-            #return False
+        if not Form.validate(self):
+            self.name.errors.append('Something went wrong!')
+            return False
         person = Advisor.query.filter_by(name = self.name.data).first()
         if person != None:
             self.name.errors.append('This advisor is already added, please modify the old one instead')
@@ -109,8 +109,8 @@ class PostOrganizationForm(Form):
 class PostPanelForm(Form):
     name = TextAreaField('name', validators=[Required()])
     info = TextAreaField('description', validators=[Required()])
-    category_id = SelectField(u'category_id', choices=[(1, 'Plain Text')])
-    #TextAreaField('category', validators=[Required()])
+    category_id = SelectField('category_id', coerce=int)
+
     def validate(self):
         if not Form.validate(self):
             return False

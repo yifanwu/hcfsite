@@ -3,6 +3,7 @@
 
 {% block content %}
     </br>
+    <h1>{{ title }}</h1>
     </br>
     {% include 'flash.html' %}
     </br>
@@ -13,11 +14,10 @@
         {% include 'new_people.html' %}
 
         <fieldset>
-            <div class="control-group{% if form.errors.panel %} error{% endif %}">
+            <div class="control-group{% if form.errors.panel_id %} error{% endif %}">
                 <label class="control-label">Select Panel:</label>
-
                 <div class="controls">
-                    {{ form.panel }}
+                    {{ form.panel_id }}
                 </div>
             </div>
         </fieldset>

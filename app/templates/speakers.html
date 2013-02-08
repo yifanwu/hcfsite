@@ -19,7 +19,7 @@
                         {% for panel in panels %}
                             <div class="row-fluid" id="panel_detail">
                                 <div class="span12" id="panel_heading">
-                                    <h4>Culture and Society Panel I:<br/> Sustainable Urban Development in China</h4>
+                                    <h4>{{ panel.name }}</h4>
                                 </div>
 
                                 <div class="row-fluid">
@@ -29,7 +29,7 @@
                                                 <div class="detail_box" id="{{ speaker.name }}">
                                                     <img src="{{ speaker.img_url }}" alt="{{ speaker.name }}"/>
                                                     <p>
-                                                        <span class="name">{{ spearker.name }}</span>
+                                                        <span class="name">{{ speaker.name }}</span>
                                                         <br/>{{ speaker.title }}
                                                         <br/>{{ speaker.organization }}
                                                     </p>
