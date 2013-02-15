@@ -46,7 +46,12 @@ class User(db.Model):
     def __repr__(self):
         return '<User %r>' % (self.nickname)
 
-
+class Team(db.Model):
+    __tablename__ = 'team'
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String(64), unique = True)
+    bio = db.Column(db.String, nullable=False)
+    img_url = db.Column(db.String(140), nullable=True)
 
 class Advisor(db.Model):
     __tablename__ = 'advisor'
@@ -67,8 +72,9 @@ class Speaker(db.Model):
     img_url = db.Column(db.String(140), nullable=True)
     title = db.Column(db.String(140))
     organization = db.Column(db.String(140))
-    panel = db.Column(db.String(140))
     featured = db.Column(db.Boolean)
+    panel_id = db.Column(db.Integer, db.ForeignKey('panel.id'))
+
 
 class Organization(db.Model):
     __tablename__ = 'organization'
@@ -78,13 +84,22 @@ class Organization(db.Model):
     description = db.Column(db.String, nullable=False)
     img_url = db.Column(db.String(140), nullable=True)
 
+class Category(db.Model):
+    __tablename__ = 'category'
+
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String(64), unique = True)
+    panels = db.relationship("Panel")
+
 class Panel(db.Model):
     __tablename__ = 'panel'
 
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(64), unique = True)
     info = db.Column(db.String(5000))
-    category = db.Column(db.String(64), unique=True)
+    category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
+    speakers = db.relationship("Speaker")
+    #db.Column(db.String(64), unique=True)
 
 class Post(db.Model):
     __tablename__ = 'posts'
@@ -93,8 +108,9 @@ class Post(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     body = db.Column(db.String(5000))
     timestamp = db.Column(db.DateTime)
+    # multiple foreign key allowed
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    panel = db.Column(db.String(140))
+    panel_id = db.Column(db.Integer, db.ForeignKey('panel.id'))
 
     def __repr__(self):
         return '<Post %r>' % (self.body)

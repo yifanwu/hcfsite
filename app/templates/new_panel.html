@@ -3,7 +3,9 @@
 
 {% block content %}
     <h1>{{ title }}</h1>
+    </br>
     {% include 'flash.html' %}
+    </br>
     <div class="well">
 
         <form class="form-horizontal" action="" method="post" name="post">
@@ -26,15 +28,15 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="control-group{% if form.errors.category %} error{% endif %}">
-                <label class="control-label" for="post">Category</label>
-                <div class="controls">
-                    {{ form.category(size = 30, maxlength = 140) }}
-                    {% for error in form.errors.category %}
-                        <span class="help-inline">[{{error}}]</span><br>
-                    {% endfor %}
+
+
+                <div class="control-group{% if form.errors.category_id %} error{% endif %}">
+                    <label class="control-label">Select Category:</label>
+                    <div class="controls">
+                        {{ form.category_id }}
+                    </div>
                 </div>
-            </div>
+
             <div class="control-group">
                 <div class="controls">
                     <input class="btn btn-primary" type="submit" value="Post!">
