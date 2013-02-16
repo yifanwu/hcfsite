@@ -1,16 +1,16 @@
 #logistics_nav_wrapper { position: relative; top: -10px;}
 
-#logistics_nav {
+#side_nav {
     position: absolute;
     top: 10px;
 }
 
-#logistics_nav .nav {
+#side_nav .nav {
     margin-bottom: 0;
     width: 200px;
 }
 
-#logistics_nav .nav-pills {
+#side_nav .nav-pills {
     font-size: 13px;
 }
 

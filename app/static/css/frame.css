@@ -189,6 +189,7 @@ body {
     color: #ddd;
     font-size: 12px;
 }
+#footer h4 {color: #ddd !important;}
 
 #footer a {
     color: #eee;

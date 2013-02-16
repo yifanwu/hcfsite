@@ -35,24 +35,33 @@ def index():
     #hack: some hard coding in pagination
     featured_speakers = Speaker.query.filter_by(featured = True).paginate(1, POSTS_PER_PAGE, False)
     panels = Panel.query.all()
+    cat_list = Category.query.all()
+
+    for cat in cat_list:
+        cat.html_id = "cat_" + str(cat.id)
+
     return render_template('index.html',
         title = 'Home',
+        page_id = 'home',
         featured_speakers = featured_speakers,
-        panels = panels
+        panels = panels,
+        categories = cat_list
     )
 
 @app.route('/agenda')
 def view_agenda():
     return render_template('agenda.html',
-        title = 'HCF Agenda'
+        title = 'HCF Agenda',
+        page_id = 'agenda'
     )
 
 @app.route('/team')
-def view_partners():
+def view_team():
     table_team = Team.query.all()
 
     return render_template('team.html',
         title = 'HCF Team',
+        page_id = 'team',
         partners = table_team,
         type = 'team'
     )
@@ -62,6 +71,7 @@ def view_partners():
     table_partners = Organization.query.all()
     return render_template('partners.html',
         title = 'HCF Partners',
+        page_id = 'partners',
         partners = table_partners,
         type = 'partner'
     )
@@ -70,6 +80,14 @@ def view_partners():
 def view_logistics():
     return render_template('logistics.html',
         title = 'Logistics',
+        page_id = 'logistics'
+    )
+
+@app.route('/about')
+def view_about():
+    return render_template('about.html',
+        title = 'About HCF',
+        page_id = 'about'
     )
 
 #note that partners.html is NOT a copy-paste error!
@@ -78,9 +96,12 @@ def view_speakers():
     table_speakers = Speaker.query.all()
     cat_list = Category.query.all()
     panel_list = Panel.query.all()
+    for panel in panel_list:
+        panel.html_id = "panel_" + str(panel.id)
 
     return render_template('speakers.html',
         title = 'HCF Speakers',
+        page_id = 'speakers',
         speakers = table_speakers,
         type = 'speaker',
         panels = panel_list,
@@ -91,11 +112,19 @@ def view_speakers():
 def view_panels():
     cat_list = Category.query.all()
     panel_list = Panel.query.all()
+
+    for cat in cat_list:
+        cat.html_id = "cat_" + str(cat.id)
+
+    for panel in panel_list:
+        panel.html_id = "panel_" + str(panel.id)
+
     return render_template('panels.html',
-                       title = 'HCF Panels',
-                       type = 'panel',
-                       panels = panel_list,
-                       categories = cat_list
+       title = 'HCF Panels',
+       page_id = 'panels',
+       type = 'panel',
+       panels = panel_list,
+       categories = cat_list
     )
 
 @app.route('/advisors')
@@ -103,6 +132,7 @@ def view_advisors():
     table_advisors = Advisor.query.all()
     return render_template('partners.html',
         title = 'HCF Advisors',
+        page_id = 'advisors',
         partners = table_advisors,
         type = 'advisor'
     )

@@ -17,20 +17,20 @@ h5 {
 
 #panels_nav_wrapper { position: relative; top: -10px;}
 
-#panels_nav {
+#side_nav {
     position: absolute;
     top: 10px;
 }
 
-#panels_nav .nav {
+#side_nav .nav {
     margin-bottom: 0;
 }
 
-#panels_nav .nav-pills {
+#side_nav .nav-pills {
     font-size: 13px;
 }
 
-#panels_nav h5 {
+#side_nav h5 {
     margin-top: 10px;
     margin-bottom: 0px;
 }

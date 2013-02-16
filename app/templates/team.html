@@ -1,9 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block content %}
+<h1>{{ title }}</h1>
+{% for partner in partners %}
+    <table class="table table-hover">
+        {% if partner.img_url != None %}
+            <img src="{{partner.img_url}}" alt="Person"/>
+        {% endif %}
+        <tr>
+            <td>
+                <h3><strong>{{partner.name}}</strong></h3>
+                <h2><strong>{{partner.title}}</strong></h2>
+                <h2><strong>{{partner.organization}}</strong></h2>
+                <p><strong>{{partner.description}}</strong></p>
+                {% if partner.panel != null %}
+                    <h2><strong>{{partner.panel}}</strong></h2>
+                {% endif %}
+            </td>
+        </tr>
+        {% if g.user.is_authenticated() %}
+            <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
+        {% endif %}
+
+    </table>
+{% endfor %}
+{% endblock %}

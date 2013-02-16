@@ -1,40 +1,39 @@
 <!-- extend base layout -->
 {% extends "base.html" %}
 
-{% block content %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="/static/css/agenda.css"/>
+{% endblock %}
 
-    <div id="wrapper-outer"><div id="wrapper"><div id="wrapper_inner">
-        <h1>Agenda 2013</h1>
-        <h4>Friday, April 12</h4>
-        <ul style="list-style-type: none;">
-            <li><span class="time">07:30 PM - 08:30 PM</span> <span class="item">Registration</span> <span class="location">Northwest Building</span></li>
-            <li><span class="time">08:30 PM - 09:00 PM</span> <span class="item">Welcome Address</span> <span class="location">Northwest Building</span></li>
-            <li><span class="time">09:00 PM - 09:30 PM</span> <span class="item">Keynote Address</span> <span class="location">Northwest Building</span></li>
-            <li><span class="time">09:30 PM - 11:00 PM</span> <span class="item">Networking</span> <span class="location">Northwest Building</span></li>
-        </uL>
-        <h4>Saturday, April 13</h4>
-        <ul style="list-style-type: none;">
-            <li><span class="time">09:00 AM - 09:45 AM</span> <span class="item">Registration</span> <span class="location">Memorial Church</span></li>
-            <li><span class="time">09:45 AM - 12:30 PM</span> <span class="item">Grand Opening</span> <span class="location">Memorial Church</span></li>
-            <li><span class="time">12:30 PM - 02:30 PM</span> <span class="item">Lunch</span></li>
-            <li><span class="time">02:30 PM - 04:00 PM</span> <span class="item">Sustainable Urban Development in China</span> <span class="location">Science Center B</span></li>
-            <li><span class="time">02:30 PM - 04:00 PM</span> <span class="item">Oversea Expansion & Cross-Border M&amp;A </span> <span class="location">Science Center C</span></li>
-            <li><span class="time">02:30 PM - 04:00 PM</span> <span class="item">In a World of Prolonged Depression </span> <span class="location">Science Center D</span></li>
-            <li><span class="time">04:30 PM - 06:00 PM</span> <span class="item">Winning in China's Surging Consumer Market</span> <span class="location">Science Center B</span></li>
-            <li><span class="time">04:30 PM - 06:00 PM</span> <span class="item">Economic Reform in China</span> <span class="location">Science Center C</span></li>
-            <li><span class="time">04:30 PM - 06:00 PM</span> <span class="item">Blooming Healthcare Business in China</span> <span class="location">Science Center D</span></li>
-            <li><span class="time">07:00 PM - 10:00 PM</span> <span class="item">Private Dinner (Invitation Only)</span></li>
-        </ul>
-        <h4>Sunday, April 14</h4>
-        <ul style="list-style-type: none;">
-            <li><span class="time">09:00 AM - 10:30 AM</span> <span class="item">Investments and Business Financing in China</span> <span class="location">Science Center B</span></li>
-            <li><span class="time">09:00 AM - 10:30 AM</span> <span class="item">China in Modern Media </span> <span class="location">Science Center C</span></li>
-            <li><span class="time">09:00 AM - 10:30 AM</span> <span class="item">Technology, Innovation, and Entrepreneurship</span> <span class="location">Science Center D</span></li>
-            <li><span class="time">10:45 AM - 12:45 PM</span> <span class="item">Closing Ceremony</span> <span class="location">Science Center B</span></li>
-            <li><span class="time">02:45 PM - 06:00 PM</span> <span class="item">Corporate Recruiting Sessions</span> <span class="location">Science Center A</span></li>
-        </ul>
-    </div>
-    </div>
-    </div>
+{% block content %}
+<h1>Agenda 2013</h1>
+<h4>Friday, April 12</h4>
+<ul style="list-style-type: none;">
+    <li><span class="time">07:30 PM - 08:30 PM</span> <span class="item">Registration</span> <span class="location">Northwest Building</span></li>
+    <li><span class="time">08:30 PM - 09:00 PM</span> <span class="item">Welcome Address</span> <span class="location">Northwest Building</span></li>
+    <li><span class="time">09:00 PM - 09:30 PM</span> <span class="item">Keynote Address</span> <span class="location">Northwest Building</span></li>
+    <li><span class="time">09:30 PM - 11:00 PM</span> <span class="item">Networking</span> <span class="location">Northwest Building</span></li>
+</uL>
+<h4>Saturday, April 13</h4>
+<ul style="list-style-type: none;">
+    <li><span class="time">09:00 AM - 09:45 AM</span> <span class="item">Registration</span> <span class="location">Memorial Church</span></li>
+    <li><span class="time">09:45 AM - 12:30 PM</span> <span class="item">Grand Opening</span> <span class="location">Memorial Church</span></li>
+    <li><span class="time">12:30 PM - 02:30 PM</span> <span class="item">Lunch</span></li>
+    <li><span class="time">02:30 PM - 04:00 PM</span> <span class="item">Sustainable Urban Development in China</span> <span class="location">Science Center B</span></li>
+    <li><span class="time">02:30 PM - 04:00 PM</span> <span class="item">Oversea Expansion & Cross-Border M&amp;A </span> <span class="location">Science Center C</span></li>
+    <li><span class="time">02:30 PM - 04:00 PM</span> <span class="item">In a World of Prolonged Depression </span> <span class="location">Science Center D</span></li>
+    <li><span class="time">04:30 PM - 06:00 PM</span> <span class="item">Winning in China's Surging Consumer Market</span> <span class="location">Science Center B</span></li>
+    <li><span class="time">04:30 PM - 06:00 PM</span> <span class="item">Economic Reform in China</span> <span class="location">Science Center C</span></li>
+    <li><span class="time">04:30 PM - 06:00 PM</span> <span class="item">Blooming Healthcare Business in China</span> <span class="location">Science Center D</span></li>
+    <li><span class="time">07:00 PM - 10:00 PM</span> <span class="item">Private Dinner (Invitation Only)</span></li>
+</ul>
+<h4>Sunday, April 14</h4>
+<ul style="list-style-type: none;">
+    <li><span class="time">09:00 AM - 10:30 AM</span> <span class="item">Investments and Business Financing in China</span> <span class="location">Science Center B</span></li>
+    <li><span class="time">09:00 AM - 10:30 AM</span> <span class="item">China in Modern Media </span> <span class="location">Science Center C</span></li>
+    <li><span class="time">09:00 AM - 10:30 AM</span> <span class="item">Technology, Innovation, and Entrepreneurship</span> <span class="location">Science Center D</span></li>
+    <li><span class="time">10:45 AM - 12:45 PM</span> <span class="item">Closing Ceremony</span> <span class="location">Science Center B</span></li>
+    <li><span class="time">02:45 PM - 06:00 PM</span> <span class="item">Corporate Recruiting Sessions</span> <span class="location">Science Center A</span></li>
+</ul>
 
 {% endblock %}

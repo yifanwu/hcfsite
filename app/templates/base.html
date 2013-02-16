@@ -23,10 +23,14 @@
     <script type="text/javascript" src="/static/js/scripts.js"></script>
     <script type="text/javascript" src="/static/js/stickyfloat.jquery.js"></script>
 
+    <script type="text/javascript">
+    	$(document).ready(function() {$('#{{ page_id }}_site_nav').addClass('active');});
+    </script>
+
     {% block head %}
     {% endblock %}
 </head>
-<body>
+<body data-spy="scroll" data-target="#side_nav" data-offset="10">
 	<div id="header_wrapper"><div id="header">
 		<a href="/" id="site_logo_link">
 			  <img alt="HCF Logo" src="/static/img/logo.png" id="site_logo" /><br/>
@@ -55,7 +59,7 @@
 
 	<div class="navbar"><div class="navbar-inner">
       <ul class="nav">
-        <li id="home_site_nav" class="active"><a href="/">Home</a></li>
+        <li id="home_site_nav"><a href="/">Home</a></li>
         <li id="agenda_site_nav"><a href="/agenda">Agenda</a></li>
         <li id="speakers_site_nav"><a href="/speakers">Speakers</a></li>
 	    <li id="panels_site_nav"><a href="/panels">Panels</a></li>
@@ -77,15 +81,22 @@
                 </ul>
 			</li>
 			<li><a href="{{ url_for('logout') }}">Logout</a></li>
-            <li><a href="make_edit">Modify</a></li>
 		{% endif %}
 
       </ul>
     </div></div>
 	
+    <div id="wrapper-outer"><div id="wrapper"><div id="wrapper_inner">
     {% block content %}
     {% endblock %}
-    
+    </div>
+    <div class="cleaner" style="height: 40px;">&nbsp;</div>
+    <div class="ribbon_wrapper">
+      <div class="ribbon"><div class="ribbon-stitches-top"></div><div class="ribbon-content"><h1>Join the Discussion. Register for HCF 2013.</h1></div><div class="ribbon-stitches-bottom"></div></div>
+    </div>
+    <div class="cleaner" style="height: 100px;">&nbsp;</div>
+    </div></div>
+
     <div id="footer_wrapper"><div id="footer">
 		<div class="row-fluid">
 		  <div class="span4">

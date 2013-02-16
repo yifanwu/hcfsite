@@ -1,59 +1,69 @@
-<!-- extend base layout -->
 {% extends "base.html" %}
 
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="/static/css/speakers.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/persons.css"/>
+    <script type="text/javascript" src="/static/js/speakers.js"></script>
+    <script type="text/javascript" src="/static/js/persons.js"></script>
+    <script type="text/javascript" src="/static/js/stickyfloat.jquery.js"></script>
+{% endblock %}
+
 {% block content %}
-
-    <div id="wrapper-outer">
-        <div id="wrapper">
-            <div id="wrapper_inner">
-                <h1>{{ title }}</h1>
-
-                <!--people-->
-                <div class="span7" id="people">
-                    <ul class="nav nav-pills">
-                        {% for category in categories %}
-                            {% include 'cat_panel.html' %}
-                        {% endfor %}
-
-                        <!--panel detail-->
-                        {% for panel in panels %}
-                            <div class="row-fluid" id="panel_detail">
-                                <div class="span12" id="panel_heading">
-                                    <h4>{{ panel.name }}</h4>
-                                </div>
-
-                                <div class="row-fluid">
-                                    <div class="span6">
-                                        {% for speaker in speakers %}
-                                            {% if speaker.panel_id == panel.id %}
-                                                <div class="detail_box" id="{{ speaker.name }}">
-                                                    <img src="{{ speaker.img_url }}" alt="{{ speaker.name }}"/>
-                                                    <p>
-                                                        <span class="name">{{ speaker.name }}</span>
-                                                        <br/>{{ speaker.title }}
-                                                        <br/>{{ speaker.organization }}
-                                                    </p>
-                                                    <div class="cleaner"></div>
-                                                </div>
-                                            {% endif %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                        {% endfor %}
-                        <!--end panel detail-->
-
-                        <a href="#speakers" class="pull-right" id="view_all">View All</a>
-                        <a href="#speakers" class="pull-right" style="display:none;" id="collapse">Collapse</a>
-
-                        <div id="people_more">
-
-                        </div>
-                    </ul>
+<h1>{{ title }}</h1>
+<div class="row-fluid">
+    <div class="span5" id="person_bio">
+        <p id="person_select_text">Please select a speaker<br/>from the right to view biography.</p>
+    </div>
+    <div class="span7" id="people">
+        <ul class="nav nav-pills">
+            {% for category in categories %}
+                {% include 'cat_panel.html' %}
+            {% endfor %}
+        </ul>
+        <!--panel detail-->
+        {% for panel in panels %}
+            <div class="row-fluid panel_detail {{ panel.html_id }}">
+                <div class="span12 panel_heading">
+                    <h4>{{ panel.name }}</h4>
                 </div>
 
+                <div class="row-fluid">
+                    <div class="span6">
+                        {% for speaker in speakers %}
+                            {% if speaker.panel_id == panel.id or 1 == 1 %}
+                                <div class="detail_box" id="{{ speaker.name }}">
+                                    <img src="{{ speaker.img_url }}" alt="{{ speaker.name }}"/>
+                                    <p>
+                                        <span class="name">{{ speaker.name }}</span><br/>
+                                        <span class="title">{{ speaker.title }}</span><br/>
+                                        <span class="organization">{{ speaker.organization }}</span>
+                                        <span class="bio hidden">{{ speaker.description }}</span>
+                                    </p>
+                                    <div class="cleaner"></div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="span6">
+                        {% for speaker in speakers %}
+                            {% if speaker.panel_id == panel.id or 1 == 1 %}
+                                <div class="detail_box" id="{{ speaker.name }}">
+                                    <img src="{{ speaker.img_url }}" alt="{{ speaker.name }}"/>
+                                    <p>
+                                        <span class="name">{{ speaker.name }}</span><br/>
+                                        <span class="title">{{ speaker.title }}</span><br/>
+                                        <span class="organization">{{ speaker.organization }}</span>
+                                        <span class="bio hidden">{{ speaker.description }}</span>
+                                    </p>
+                                    <div class="cleaner"></div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
-            <!--end people-->
-        </div>
+        {% endfor %}
+        <!--end panel detail-->
     </div>
+</div>
 {% endblock %}
