@@ -2,8 +2,9 @@
 .cleaner_h30 { clear: both; height: 30px; }
 .cleaner { clear: both; height: 0px; }
 
-h1,h2 {
+h1,h2,h3,h4 {
     color: #aa171b;
+    font-family: 'Bitter', serif;
 }
 
 .hidden { display: none; }
