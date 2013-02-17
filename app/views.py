@@ -7,6 +7,7 @@ from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm, Po
 from models import User, ROLE_USER, Post, Panel, Organization, Advisor, Speaker, Category, Team, Group
 from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
+from flask import request
 
 @lm.user_loader
 def load_user(id):
@@ -105,6 +106,7 @@ def view_speakers():
         for speaker in table_speakers:
             if speaker.panel_id == panel.id:
                 panel.speakers_list[i % 2].append(speaker)
+                speaker.edit_url = "edit/speaker/" + str(speaker.id)
                 i += 1
 
     return render_template('speakers.html',
@@ -380,14 +382,9 @@ def user(nickname, page = 1):
         user = user,
         posts = posts)
 
-map_tab = {'speaker':Speaker, 'panel':Panel, 'advisor':Advisor, 'organization': Organization}
-
-'''
-@app.route('/make_edit/<table>', methods = ['GET', 'POST'])
-@login_required
-def make_edit(table):
-    all_content = map_tab[table].query.all()
-'''
+map_tab = {'speaker':Speaker, 'panel':Panel, 'advisor':Advisor,
+           'organization': Organization, 'group':Group,
+           'category':Category}
 
 @app.route('/how_to', methods = ['GET'])
 def how_to():
@@ -397,13 +394,30 @@ def how_to():
 @app.route('/edit/<table>/<id>', methods = ['GET', 'POST'])
 @login_required
 def edit_entity(table, id):
+
+    to_edit = map_tab[table].query.filter_by(id = id).first()
     form = EditForm()
-    entity_content = map_tab[table].query.filter_by(id = id).first()
+
+    form.populate_obj(to_edit)
+
+    '''
+    form = EditForm("POST", obj=to_edit)
 
     if entity_content == None:
         flash("This entity doesn\'t exit!")
+    if request.POST and form.validate():
+        form.populate_obj(to_edit)
+        to_edit.save()
+        return redirect('/')
+    '''
+    #return render_to_response('edit_profile.html', form=form)
 
-    if form.validate_on_submit():
+    '''
+    im form.validate_on_submit():
+        for i, field in enumerate(form):
+            entity_content[i] = field.data
+
+
         entity_content.name = form.name.data
         entity_content.description = form.description.data
         entity_content.img_url = form.img_url.data
@@ -413,9 +427,15 @@ def edit_entity(table, id):
             if table == 'speaker':
                 entity_content.panel = form.panel.data
                 entity_content.featured = form.featured.data
+
         db.session.commit()
 
     elif request.method != "POST":
+        form = entity_content
+        #for i, field in enumerate(form):
+         #   field.data = entity_content[i]
+
+
         form.name.data = entity_content.name
         form.description.data = entity_content.description
         form.img_url.data = entity_content.img_url
@@ -425,10 +445,11 @@ def edit_entity(table, id):
             if table == 'speaker':
                 form.panel.data = entity_content.panel
                 form.featured.data = entity_content.featured# I CANNOT DO .ITEM HERE BECAUSE IT'S A STRING
-
+    '''
     return render_template('edit_entity.html',
         form = form,
         table = table,
-        name = name,
+        id = id,
     )
+
 
