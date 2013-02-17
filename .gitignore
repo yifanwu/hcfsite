@@ -1,4 +1,5 @@
 flask
+*.db
 *.pyc
 
 tmp/nonces

@@ -1,27 +1,21 @@
 {% extends "base.html" %}
 
-{% block content %}
-<h1>{{ title }}</h1>
-{% for partner in partners %}
-    <table class="table table-hover">
-        {% if partner.img_url != None %}
-            <img src="{{partner.img_url}}" alt="Person"/>
-        {% endif %}
-        <tr>
-            <td>
-                <h3><strong>{{partner.name}}</strong></h3>
-                <h2><strong>{{partner.title}}</strong></h2>
-                <h2><strong>{{partner.organization}}</strong></h2>
-                <p><strong>{{partner.description}}</strong></p>
-                {% if partner.panel != null %}
-                    <h2><strong>{{partner.panel}}</strong></h2>
-                {% endif %}
-            </td>
-        </tr>
-        {% if g.user.is_authenticated() %}
-            <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
-        {% endif %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="/static/css/partners.css"/>
+{% endblock %}
 
-    </table>
-{% endfor %}
+{% block content %}
+<h1>HCF Strategic Partners</h1>
+    <div id="partners_list">
+      <div class="partner_logo"><img src="/static/img/partners/vanke.jpg" alt="Vanke"/></div>
+      <h3>Vanke (万科集团)</h3><p>Vanke is lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
+      <div class="partner_logo"><img src="/static/img/partners/taikang.jpg" alt="Taikang"/></div>
+      <h3>Taikang Life Insurance (泰康人寿保险)</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
+      <div class="partner_logo"><img src="/static/img/partners/iicg.jpg" alt="iicg"/></div>
+      <h3>Intercom International Communication Group (???)</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
+      <div class="partner_logo"><img src="/static/img/partners/china-us.jpg" alt="china-us"/></div>
+      <h3>China-US Business Leaders Roundtable<br/>(中美商业领袖圆桌会议)</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
+      <div class="partner_logo"><img src="/static/img/partners/cef.jpg" alt="CEF"/></div>
+      <h3>China Entrepreneurs Forum<br/>(中国企业家论坛)</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
+    </div>
 {% endblock %}
