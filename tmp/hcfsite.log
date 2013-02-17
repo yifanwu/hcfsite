@@ -3801,3 +3801,6 @@ Traceback (most recent call last):
 AttributeError: 'NoneType' object has no attribute 'pop'
 2013-02-17 02:38:35,012 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
 2013-02-17 02:39:10,669 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 13:09:16,044 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 13:09:18,050 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 13:13:01,931 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]

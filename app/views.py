@@ -21,17 +21,6 @@ def before_request():
         db.session.add(g.user)
         db.session.commit()
 
-@app.url_defaults
-def add_language_code(endpoint, values):    
-    if 'lang_code' in values or not g.lang_code:
-        return
-    if app.url_map.is_endpoint_expecting(endpoint, 'lang_code'):
-        values['lang_code'] = g.lang_code
-
-@app.url_value_preprocessor
-def pull_lang_code(endpoint, values):
-    g.lang_code = values.pop('lang_code', None)
-
 @app.errorhandler(404)
 def internal_error(error):
     return render_template('404.html'), 404
@@ -41,15 +30,7 @@ def internal_error(error):
     db.session.rollback()
     return render_template('500.html'), 500
 
-@app.route('/')
-def index_english():
-    return redirect('/en/')
-
-@app.route('/<path>')
-def english_default(path):
-    return redirect('/en/' + path)
-
-@app.route('/<lang_code>/', methods = ['GET', 'POST'])
+@app.route('/', methods = ['GET', 'POST'])
 def index():
     featured_speakers = Speaker.query.filter_by(featured = True)
     panels = Panel.query.all()
@@ -66,14 +47,14 @@ def index():
         categories = cat_list
     )
 
-@app.route('/<lang_code>/agenda')
+@app.route('/agenda')
 def view_agenda():
     return render_template('agenda.html',
         title = 'HCF Agenda',
         page_id = 'agenda'
     )
 
-@app.route('/<lang_code>/team')
+@app.route('/team')
 def view_team():
     table_team  = Team.query.all()
     table_group = Group.query.all()
@@ -93,7 +74,7 @@ def view_team():
         type    = 'team'
     )
 
-@app.route('/<lang_code>/partners')
+@app.route('/partners')
 def view_partners():
     table_partners = Organization.query.all()
     return render_template('partners.html',
@@ -103,14 +84,14 @@ def view_partners():
         type = 'partner'
     )
 
-@app.route('/<lang_code>/logistics')
+@app.route('/logistics')
 def view_logistics():
     return render_template('logistics.html',
         title = 'Logistics',
         page_id = 'logistics'
     )
 
-@app.route('/<lang_code>/about')
+@app.route('/about')
 def view_about():
     return render_template('about.html',
         title = 'About HCF',
@@ -118,7 +99,7 @@ def view_about():
     )
 
 #note that partners.html is NOT a copy-paste error!
-@app.route('/<lang_code>/speakers')
+@app.route('/speakers')
 def view_speakers():
     table_speakers = Speaker.query.all()
     cat_list = Category.query.all()
@@ -141,7 +122,7 @@ def view_speakers():
         categories = cat_list
     )
 
-@app.route('/<lang_code>/panels')
+@app.route('/panels')
 def view_panels():
     cat_list    = Category.query.all()
     panel_list  = Panel.query.all()
@@ -161,7 +142,7 @@ def view_panels():
        categories = cat_list
     )
 
-@app.route('/<lang_code>/advisors')
+@app.route('/advisors')
 def view_advisors():
     table_advisors = Advisor.query.all()
     length = len(table_advisors)
