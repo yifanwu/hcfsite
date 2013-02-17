@@ -97,13 +97,19 @@ def view_speakers():
     table_speakers = Speaker.query.all()
     cat_list = Category.query.all()
     panel_list = Panel.query.all()
+
     for panel in panel_list:
         panel.html_id = "panel_" + str(panel.id)
+        panel.speakers_list = [[], []]
+        i = 0
+        for speaker in table_speakers:
+            if speaker.panel_id == panel.id:
+                panel.speakers_list[i % 2].append(speaker)
+                i += 1
 
     return render_template('speakers.html',
         title = 'HCF Speakers',
         page_id = 'speakers',
-        speakers = table_speakers,
         type = 'speaker',
         panels = panel_list,
         categories = cat_list

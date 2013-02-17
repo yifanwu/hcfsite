@@ -1,27 +1,272 @@
 {% extends "base.html" %}
 
-{% block content %}
-<h1>{{ title }}</h1>
-{% for partner in partners %}
-    <table class="table table-hover">
-        {% if partner.img_url != None %}
-            <img src="{{partner.img_url}}" alt="Person"/>
-        {% endif %}
-        <tr>
-            <td>
-                <h3><strong>{{partner.name}}</strong></h3>
-                <h2><strong>{{partner.title}}</strong></h2>
-                <h2><strong>{{partner.organization}}</strong></h2>
-                <p><strong>{{partner.description}}</strong></p>
-                {% if partner.panel != null %}
-                    <h2><strong>{{partner.panel}}</strong></h2>
-                {% endif %}
-            </td>
-        </tr>
-        {% if g.user.is_authenticated() %}
-            <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
-        {% endif %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="css/persons.css"/>
+    <link rel="stylesheet" type="text/css" href="css/team.css"/>
+    <script type="text/javascript" src="js/persons.js"></script>
+    <script type="text/javascript" src="js/team.js"></script>
+    <script type="text/javascript" src="js/stickyfloat.jquery.js"></script>
+{% endblock %}
 
-    </table>
-{% endfor %}
+{% block content %}
+<h1>The Team</h1>
+    <div class="row-fluid">
+      <div class="span5" id="person_bio">
+    <p id="person_select_text">Please select a team member<br/>from the right to view biography.</p>
+      </div>
+      <!--people-->
+      <div class="span7" id="people">
+    <div class="row-fluid">
+          <div>
+        <h4 class="heading">Executive Board <i class="icon-chevron-down"></i></h4>
+            <div class="descrip">Lorem ipsum consectetur adipiscing elit. In rutrum hendrerit augue, ut luctus risus imperdiet id. Mauris sit amet tortor eros. Aliquam at erat nec leo laoreet ullamcorper et at nisi. Aenean ipsum elit, tristique eget dignissim nec, volutpat eu neque. Praesent sit amet scelerisque erat. Nullam consequat ornare mi. Duis quis enim sed lectus auctor condimentum.</div>
+          </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <div class="detail_box" id="shi_wang">
+        <img src="img/people/icons/shi_wang.jpg" alt="Person 1"/>
+        <p><span class="name">Shi Wang</span><br/>Chairman<br/>Vanke</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="yuan_tian">
+        <img src="img/people/icons/yuan_tian.jpg" alt="Person 2"/>
+        <p><span class="name">Yuan Tian</span><br/>Chairman<br/>China Entrepreneurs Forum</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="anthony_leung">
+        <img src="img/people/icons/anthony_leung.jpg" alt="Person 3"/>
+        <p><span class="name">Anthony Leung</span><br/>Greater China Chairman<br/>Blackstone Group</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+        <div class="span6">
+          <div class="detail_box" id="dongsheng_chen">
+        <img src="img/people/icons/dongsheng_chen.jpg" alt="Person 4"/>
+        <p><span class="name">Dongsheng Chen</span><br/>Chairman & CEO<br/>Taikang Life</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="minhong_yu">
+        <img src="img/people/icons/minhong_yu.jpg" alt="Person 5"/>
+        <p><span class="name">Minghong Yu</span><br/>Founder & CEO<br/>New Oriental</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+      </div>
+      
+          <div class="cleaner_h30">&nbsp;</div>
+          <div>
+        <h4 class="heading">Information Technology <i class="icon-chevron-down"></i></h4>
+            <div class="descrip">Lorem ipsum consectetur adipiscing elit. In rutrum hendrerit augue, ut luctus risus imperdiet id. Mauris sit amet tortor eros. Aliquam at erat nec leo laoreet ullamcorper et at nisi. Aenean ipsum elit, tristique eget dignissim nec, volutpat eu neque. Praesent sit amet scelerisque erat. Nullam consequat ornare mi. Duis quis enim sed lectus auctor condimentum.</div>
+          </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <div class="detail_box" id="shi_wang">
+        <img src="img/people/icons/shi_wang.jpg" alt="Person 1"/>
+        <p><span class="name">Shi Wang</span><br/>Chairman<br/>Vanke</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="yuan_tian">
+        <img src="img/people/icons/yuan_tian.jpg" alt="Person 2"/>
+        <p><span class="name">Yuan Tian</span><br/>Chairman<br/>China Entrepreneurs Forum</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+        <div class="span6">
+          <div class="detail_box" id="dongsheng_chen">
+        <img src="img/people/icons/dongsheng_chen.jpg" alt="Person 4"/>
+        <p><span class="name">Dongsheng Chen</span><br/>Chairman & CEO<br/>Taikang Life</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+      </div>
+
+          <div class="cleaner_h30">&nbsp;</div>
+          <div>
+        <h4 class="heading">Operations <i class="icon-chevron-down"></i></h4>
+            <div class="descrip">Lorem ipsum consectetur adipiscing elit. In rutrum hendrerit augue, ut luctus risus imperdiet id. Mauris sit amet tortor eros. Aliquam at erat nec leo laoreet ullamcorper et at nisi. Aenean ipsum elit, tristique eget dignissim nec, volutpat eu neque. Praesent sit amet scelerisque erat. Nullam consequat ornare mi. Duis quis enim sed lectus auctor condimentum.</div>
+          </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <div class="detail_box" id="shi_wang">
+        <img src="img/people/icons/shi_wang.jpg" alt="Person 1"/>
+        <p><span class="name">Shi Wang</span><br/>Chairman<br/>Vanke</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="yuan_tian">
+        <img src="img/people/icons/yuan_tian.jpg" alt="Person 2"/>
+        <p><span class="name">Yuan Tian</span><br/>Chairman<br/>China Entrepreneurs Forum</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="anthony_leung">
+        <img src="img/people/icons/anthony_leung.jpg" alt="Person 3"/>
+        <p><span class="name">Anthony Leung</span><br/>Greater China Chairman<br/>Blackstone Group</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+        <div class="span6">
+          <div class="detail_box" id="dongsheng_chen">
+        <img src="img/people/icons/dongsheng_chen.jpg" alt="Person 4"/>
+        <p><span class="name">Dongsheng Chen</span><br/>Chairman & CEO<br/>Taikang Life</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="minhong_yu">
+        <img src="img/people/icons/minhong_yu.jpg" alt="Person 5"/>
+        <p><span class="name">Minghong Yu</span><br/>Founder & CEO<br/>New Oriental</p>
+        <div class="cleaner"></div>
+          </div>
+              <div class="detail_box" id="minhong_yu">
+        <img src="img/people/icons/minhong_yu.jpg" alt="Person 5"/>
+        <p><span class="name">Minghong Yu</span><br/>Founder & CEO<br/>New Oriental</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+      </div>
+      
+          <div class="cleaner_h30">&nbsp;</div>
+          <div>
+        <h4 class="heading">Marketing <i class="icon-chevron-down"></i></h4>
+            <div class="descrip">Lorem ipsum consectetur adipiscing elit. In rutrum hendrerit augue, ut luctus risus imperdiet id. Mauris sit amet tortor eros. Aliquam at erat nec leo laoreet ullamcorper et at nisi. Aenean ipsum elit, tristique eget dignissim nec, volutpat eu neque. Praesent sit amet scelerisque erat. Nullam consequat ornare mi. Duis quis enim sed lectus auctor condimentum.</div>
+          </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <div class="detail_box" id="shi_wang">
+        <img src="img/people/icons/shi_wang.jpg" alt="Person 1"/>
+        <p><span class="name">Shi Wang</span><br/>Chairman<br/>Vanke</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="yuan_tian">
+        <img src="img/people/icons/yuan_tian.jpg" alt="Person 2"/>
+        <p><span class="name">Yuan Tian</span><br/>Chairman<br/>China Entrepreneurs Forum</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+        <div class="span6">
+          <div class="detail_box" id="dongsheng_chen">
+        <img src="img/people/icons/dongsheng_chen.jpg" alt="Person 4"/>
+        <p><span class="name">Dongsheng Chen</span><br/>Chairman & CEO<br/>Taikang Life</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="minhong_yu">
+        <img src="img/people/icons/minhong_yu.jpg" alt="Person 5"/>
+        <p><span class="name">Minghong Yu</span><br/>Founder & CEO<br/>New Oriental</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+      </div>
+      
+          <div class="cleaner_h30">&nbsp;</div>
+          <div>
+        <h4 class="heading">Panel: Business and Innovation <i class="icon-chevron-down"></i></h4>
+            <div class="descrip">Lorem ipsum consectetur adipiscing elit. In rutrum hendrerit augue, ut luctus risus imperdiet id. Mauris sit amet tortor eros. Aliquam at erat nec leo laoreet ullamcorper et at nisi. Aenean ipsum elit, tristique eget dignissim nec, volutpat eu neque. Praesent sit amet scelerisque erat. Nullam consequat ornare mi. Duis quis enim sed lectus auctor condimentum.</div>
+          </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <div class="detail_box" id="shi_wang">
+        <img src="img/people/icons/shi_wang.jpg" alt="Person 1"/>
+        <p><span class="name">Shi Wang</span><br/>Chairman<br/>Vanke</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="yuan_tian">
+        <img src="img/people/icons/yuan_tian.jpg" alt="Person 2"/>
+        <p><span class="name">Yuan Tian</span><br/>Chairman<br/>China Entrepreneurs Forum</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="anthony_leung">
+        <img src="img/people/icons/anthony_leung.jpg" alt="Person 3"/>
+        <p><span class="name">Anthony Leung</span><br/>Greater China Chairman<br/>Blackstone Group</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+        <div class="span6">
+          <div class="detail_box" id="dongsheng_chen">
+        <img src="img/people/icons/dongsheng_chen.jpg" alt="Person 4"/>
+        <p><span class="name">Dongsheng Chen</span><br/>Chairman & CEO<br/>Taikang Life</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="minhong_yu">
+        <img src="img/people/icons/minhong_yu.jpg" alt="Person 5"/>
+        <p><span class="name">Minghong Yu</span><br/>Founder & CEO<br/>New Oriental</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+      </div>
+      
+          <div class="cleaner_h30">&nbsp;</div>
+          <div>
+        <h4 class="heading">Panel: Culture and Society <i class="icon-chevron-down"></i></h4>
+            <div class="descrip">Lorem ipsum consectetur adipiscing elit. In rutrum hendrerit augue, ut luctus risus imperdiet id. Mauris sit amet tortor eros. Aliquam at erat nec leo laoreet ullamcorper et at nisi. Aenean ipsum elit, tristique eget dignissim nec, volutpat eu neque. Praesent sit amet scelerisque erat. Nullam consequat ornare mi. Duis quis enim sed lectus auctor condimentum.</div>
+      </div>
+          <div class="row-fluid">
+        <div class="span6">
+          <div class="detail_box" id="shi_wang">
+        <img src="img/people/icons/shi_wang.jpg" alt="Person 1"/>
+        <p><span class="name">Shi Wang</span><br/>Chairman<br/>Vanke</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="yuan_tian">
+        <img src="img/people/icons/yuan_tian.jpg" alt="Person 2"/>
+        <p><span class="name">Yuan Tian</span><br/>Chairman<br/>China Entrepreneurs Forum</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="anthony_leung">
+        <img src="img/people/icons/anthony_leung.jpg" alt="Person 3"/>
+        <p><span class="name">Anthony Leung</span><br/>Greater China Chairman<br/>Blackstone Group</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+        <div class="span6">
+          <div class="detail_box" id="dongsheng_chen">
+        <img src="img/people/icons/dongsheng_chen.jpg" alt="Person 4"/>
+        <p><span class="name">Dongsheng Chen</span><br/>Chairman & CEO<br/>Taikang Life</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="minhong_yu">
+        <img src="img/people/icons/minhong_yu.jpg" alt="Person 5"/>
+        <p><span class="name">Minghong Yu</span><br/>Founder & CEO<br/>New Oriental</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+      </div>
+      
+          <div class="cleaner_h30">&nbsp;</div>
+          <div>
+        <h4 class="heading">Panel: Finance and Economics <i class="icon-chevron-down"></i></h4>
+            <div class="descrip">Lorem ipsum consectetur adipiscing elit. In rutrum hendrerit augue, ut luctus risus imperdiet id. Mauris sit amet tortor eros. Aliquam at erat nec leo laoreet ullamcorper et at nisi. Aenean ipsum elit, tristique eget dignissim nec, volutpat eu neque. Praesent sit amet scelerisque erat. Nullam consequat ornare mi. Duis quis enim sed lectus auctor condimentum.</div>
+          </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <div class="detail_box" id="shi_wang">
+        <img src="img/people/icons/shi_wang.jpg" alt="Person 1"/>
+        <p><span class="name">Shi Wang</span><br/>Chairman<br/>Vanke</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="yuan_tian">
+        <img src="img/people/icons/yuan_tian.jpg" alt="Person 2"/>
+        <p><span class="name">Yuan Tian</span><br/>Chairman<br/>China Entrepreneurs Forum</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="anthony_leung">
+        <img src="img/people/icons/anthony_leung.jpg" alt="Person 3"/>
+        <p><span class="name">Anthony Leung</span><br/>Greater China Chairman<br/>Blackstone Group</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+        <div class="span6">
+          <div class="detail_box" id="dongsheng_chen">
+        <img src="img/people/icons/dongsheng_chen.jpg" alt="Person 4"/>
+        <p><span class="name">Dongsheng Chen</span><br/>Chairman & CEO<br/>Taikang Life</p>
+        <div class="cleaner"></div>
+          </div>
+          <div class="detail_box" id="minhong_yu">
+        <img src="img/people/icons/minhong_yu.jpg" alt="Person 5"/>
+        <p><span class="name">Minghong Yu</span><br/>Founder & CEO<br/>New Oriental</p>
+        <div class="cleaner"></div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+      </div>
+      <!--end people-->
+    </div>
 {% endblock %}
