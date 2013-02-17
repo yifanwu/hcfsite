@@ -1987,3 +1987,1817 @@ TypeError: 'group_id' is an invalid keyword argument for Team
 2013-02-17 01:06:02,185 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
 2013-02-17 01:14:17,091 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
 2013-02-17 01:20:43,662 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 01:23:32,732 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 01:32:38,882 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 01:46:28,699 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 01:50:42,439 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 01:50:44,488 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1361, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1439, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+2013-02-17 01:50:49,874 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1361, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1439, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+2013-02-17 01:51:25,068 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 01:57:51,300 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 01:58:23,129 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 01:59:18,636 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 01:59:41,151 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:00:08,144 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:04:20,468 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:05:33,798 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:05:35,218 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:05:35,519 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:05:40,972 ERROR: Exception on /en/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:05:41,378 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:05:44,203 ERROR: Exception on /en/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:01,066 ERROR: Exception on /en/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:01,476 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:01,706 ERROR: Exception on /en/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:01,933 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:14,498 ERROR: Exception on /en/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:14,873 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:20,082 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:06:21,175 ERROR: Exception on /en/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:21,642 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:32,230 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:32,528 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:43,914 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:06:47,660 ERROR: Exception on /en/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:48,650 ERROR: Exception on /en/agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:48,841 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:49,582 ERROR: Exception on /en/agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:06:49,776 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:07:14,348 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:11:37,747 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:11:51,839 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:11:54,576 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:11:55,759 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:11:56,244 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:11:56,505 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:11:56,872 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:11:57,078 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:11:57,344 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:11:58,821 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:12:03,433 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:12:10,223 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:15:10,801 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:15:37,893 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:15:42,191 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1361, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1439, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+2013-02-17 02:15:52,423 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1361, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1439, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+2013-02-17 02:15:53,059 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1361, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1439, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+2013-02-17 02:16:31,947 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:16:33,683 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 34, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:18:56,082 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 34, in pull_lang_code
+    @app.errorhandler(404)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:18:59,025 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:19:01,671 ERROR: Exception on /en/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:19:01,928 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:19:30,539 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:19:32,016 ERROR: Exception on /en/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:19:32,300 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:19:32,721 ERROR: Exception on /en/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:19:32,984 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:19:35,423 ERROR: Exception on /en/agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:19:35,810 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:19:36,575 ERROR: Exception on /en/agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:19:36,798 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:19:38,156 ERROR: Exception on /en/agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:19:38,363 ERROR: Exception on /favicon.ico/ [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 36, in internal_error
+    return render_template('404.html'), 404
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 02:19:56,723 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:20:09,291 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:23:08,992 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:27:23,050 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:27:53,267 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:27:54,905 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 34, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:28:13,792 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 34, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:29:43,867 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 34, in pull_lang_code
+    
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:29:44,683 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 34, in pull_lang_code
+    
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:29:56,221 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 34, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:29:56,853 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 34, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:29:57,462 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 34, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:30:03,867 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 34, in pull_lang_code
+    
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:30:08,643 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 34, in pull_lang_code
+    
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:30:15,222 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:30:16,484 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 34, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:30:25,670 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:30:27,057 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:32:20,139 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:33:36,033 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:33:37,401 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:33:39,888 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:33:42,420 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:33:43,632 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:34:08,984 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:34:11,065 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:34:12,201 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:34:12,788 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:34:13,150 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:34:13,513 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:34:16,117 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:34:18,225 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:34:19,198 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:34:48,749 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:34:50,425 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:34:57,080 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:34:59,336 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:34:59,953 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:35:00,401 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:35:00,890 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:35:01,145 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:35:01,503 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:35:01,716 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:35:02,004 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:35:02,109 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:35:08,926 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:35:49,061 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:36:21,526 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:36:23,406 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:36:30,145 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:37:03,670 ERROR: Exception on /agenda [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:37:06,665 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:37:10,700 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:37:36,198 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:37:38,746 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:38:14,013 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:38:26,719 ERROR: Exception on /en/speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 33, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 02:38:35,012 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 02:39:10,669 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
