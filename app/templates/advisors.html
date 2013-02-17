@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="/static/css/persons.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/advisors.css"/>
+    <script type="text/javascript" src="/static/js/persons.js"></script>
+    <script type="text/javascript" src="/static/js/stickyfloat.jquery.js"></script>
+{% endblock %}
+
+{% block content %}
+<h1>Board of Advisors</h1>
+<div class="row-fluid">
+    <div class="span5" id="person_bio">
+        <p id="person_select_text">Please select an advisor<br/>from the right to view biography.</p>
+    </div>
+    <!--people-->
+    <div class="span7" id="people">
+        <div class="row-fluid">
+            <div class="row-fluid">
+                {% for advisor_group in advisors_list %}
+                <div class="span6">
+                    {% for advisor in advisor_group %}
+                        <div class="detail_box">
+                            <img src="{{ advisor.img_url }}" alt=""/>
+                            <p>
+                                <span class="name">{{ advisor.name }}</span><br/>
+                                <span class="title">{{ advisor.title }}</span><br/>
+                                <span class="organization">{{ advisor.organization }}<span>
+                            </p>
+                            <div class="bio">{{ advisor.description }}</div>
+                        <div class="cleaner"></div>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!--end people-->
+</div>
+{% endblock %}
