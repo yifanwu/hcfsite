@@ -15,7 +15,7 @@ class LoginForm(Form):
             self.passphrase.errors.append('Invalid pass phrase, only HCF board members have access.')
             return False
         return True
-    
+
 class EditForm(Form):
     name = TextField('name', validators=[Required()])
     description = TextAreaField('description', validators=[Required()])
@@ -48,6 +48,11 @@ class PostForm(Form):
             return False
         return True
 
+class PostGroupForm(Form):
+    name = TextField('name', validators=[Required()])
+    description = TextAreaField('description', validators=[Required()])
+
+
 class PostCategoryForm(Form):
     name = TextField('name', validators=[Required()])
 
@@ -55,6 +60,7 @@ class PostTeamForm(Form):
     name = TextField('name', validators=[Required()])
     bio = TextAreaField('bio', validators=[Required()])
     img_url = URLField(validators=[URL()])
+    group_id = SelectField(u'group_id', coerce=int)
 
 class PostSpeakerForm(Form):
     name = TextField('name', validators=[Required()])

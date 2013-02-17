@@ -1,0 +1,49 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    </br>
+    {% include 'flash.html' %}
+    </br>
+    <div class="well">
+
+        <form class="form-horizontal" action="" method="post" name="post">
+            {{form.hidden_tag()}}
+            <div class="control-group{% if form.errors.name %} error{% endif %}">
+                <label class="control-label" for="post">Category Name:</label>
+                <div class="controls">
+                    {{ form.name(size = 90, maxlength = 9000) }}
+                    {% for error in form.errors.name %}
+                        <span class="help-inline">[{{error}}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="control-group{% if form.errors.description %} error{% endif %}">
+                <label class="control-label" for="post">Group
+                    Description:</label>
+                <div class="controls">
+                    {{ form.description(size = 90, maxlength = 9000) }}
+                    {% for error in form.errors.description %}
+                        <span class="help-inline">[{{error}}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="control-group{% if form.errors.group_id %} error{% endif %}">
+                <label class="control-label">Select Group:</label>
+                <div class="controls">
+                    {{ form.group_id }}
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">
+                    <input class="btn btn-primary" type="submit" value="Post!">
+                </div>
+            </div>
+
+        </form>
+    </div>
+{% endblock %}

@@ -27,7 +27,7 @@ class User(db.Model):
                 break
             version += 1
         return new_nickname
-        
+
     def is_authenticated(self):
         return True
 
@@ -46,12 +46,20 @@ class User(db.Model):
     def __repr__(self):
         return '<User %r>' % (self.nickname)
 
+class Group(db.Model):
+    __tablename__ = 'group'
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String(64), unique = True)
+    members = db.relationship("Team")
+    description = db.Column(db.String(64), unique = True)
+
 class Team(db.Model):
     __tablename__ = 'team'
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(64), unique = True)
     bio = db.Column(db.String, nullable=False)
     img_url = db.Column(db.String(140), nullable=True)
+    group = db.Column(db.Integer, db.ForeignKey('group.id'))
 
 class Advisor(db.Model):
     __tablename__ = 'advisor'
@@ -99,12 +107,11 @@ class Panel(db.Model):
     info = db.Column(db.String(5000))
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
     speakers = db.relationship("Speaker")
-    #db.Column(db.String(64), unique=True)
 
 class Post(db.Model):
     __tablename__ = 'posts'
     __searchable__ = ['body']
-    
+
     id = db.Column(db.Integer, primary_key = True)
     body = db.Column(db.String(5000))
     timestamp = db.Column(db.DateTime)
@@ -114,5 +121,5 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post %r>' % (self.body)
-        
+
 whooshalchemy.whoosh_index(app, Post)
