@@ -23,7 +23,7 @@ def before_request():
         db.session.commit()
 
 @app.url_defaults
-def add_language_code(endpoint, values):    
+def add_language_code(endpoint, values):
     if 'lang_code' in values or not g.lang_code:
         return
     if app.url_map.is_endpoint_expecting(endpoint, 'lang_code'):
@@ -422,12 +422,31 @@ def how_to():
 @login_required
 def edit_entity(table, id):
 
-    to_edit = map_tab[table].query.filter_by(id = id).first()
-    form = EditForm()
+    #to_edit = map_tab[table].query.filter_by(id = id).first()
+    model = map_tab[table].get(id)
+    form = EditForm(request.form, model)
 
-    form.populate_obj(to_edit)
+    if form.validate_on_submit():
+        form.populate_obj(model)
+        model.put()
+        flash("Entry updated!")
+        return redirect(url_for("index"))
+    return render_template("edit_entity.html", form=form)
 
     '''
+
+@app.route("/edit<id>")
+def edit(id):
+    MyForm = model_form(MyModel, Form)
+    model = MyModel.get(id)
+    form = MyForm(request.form, model)
+
+    if form.validate_on_submit():
+        form.populate_obj(model)
+        model.put()
+        flash("MyModel updated")
+        return redirect(url_for("index"))
+    return render_template("edit.html", form=form)
     form = EditForm("POST", obj=to_edit)
 
     if entity_content == None:
@@ -472,11 +491,11 @@ def edit_entity(table, id):
             if table == 'speaker':
                 form.panel.data = entity_content.panel
                 form.featured.data = entity_content.featured# I CANNOT DO .ITEM HERE BECAUSE IT'S A STRING
-    '''
     return render_template('edit_entity.html',
         form = form,
         table = table,
         id = id,
     )
+    '''
 
 

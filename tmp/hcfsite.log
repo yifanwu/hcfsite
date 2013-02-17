@@ -3801,3 +3801,96 @@ Traceback (most recent call last):
 AttributeError: 'NoneType' object has no attribute 'pop'
 2013-02-17 02:38:35,012 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
 2013-02-17 02:39:10,669 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 13:02:47,228 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 13:02:56,576 ERROR: Exception on /static/favicon.ico [GET] [in /Library/Python/2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/views.py", line 38, in internal_error
+    return render_template('404.html'), 404
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Library/Python/2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Library/Python/2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Library/Python/2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 13:03:06,531 ERROR: Exception on /en/edit/speaker/2 [GET] [in /Library/Python/2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/views.py", line 34, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 13:03:06,551 ERROR: Exception on /static/favicon.ico [GET] [in /Library/Python/2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1253, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1213, in handle_http_exception
+    return handler(e)
+  File "/Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/views.py", line 38, in internal_error
+    return render_template('404.html'), 404
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/templates/404.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/templates/base.html", line 93, in top-level template code
+    {% block content %}
+  File "/Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/templates/404.html", line 6, in block "content"
+    <p><a href="{{url_for('index')}}">Back</a></p>
+  File "/Library/Python/2.7/site-packages/flask/helpers.py", line 361, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Library/Python/2.7/site-packages/flask/helpers.py", line 354, in url_for
+    force_external=external)
+  File "/Library/Python/2.7/site-packages/werkzeug/routing.py", line 1607, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('index', {}, None)
+2013-02-17 13:03:06,717 ERROR: Exception on /en/favicon.ico [GET] [in /Library/Python/2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1533, in preprocess_request
+    func(request.endpoint, request.view_args)
+  File "/Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/views.py", line 34, in pull_lang_code
+    g.lang_code = values.pop('lang_code', None)
+AttributeError: 'NoneType' object has no attribute 'pop'
+2013-02-17 13:04:18,966 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 13:04:20,026 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 13:21:48,507 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 13:21:50,155 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
