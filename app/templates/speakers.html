@@ -31,7 +31,7 @@
                     {% for speaker_group in panel.speakers_list %}
                         <div class="span6">
                             {% for speaker in speaker_group %}
-                                <div class="detail_box" id="{{ speaker.name }}">
+                                <div class="detail_box">
                                     <img src="{{ speaker.img_url }}" alt="{{ speaker.name }}"/>
                                     <p>
                                         <span class="name">{{ speaker.name }}</span><br/>

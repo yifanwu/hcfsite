@@ -32,8 +32,7 @@ def internal_error(error):
 
 @app.route('/', methods = ['GET', 'POST'])
 def index():
-    #hack: some hard coding in pagination
-    featured_speakers = Speaker.query.filter_by(featured = True).paginate(1, POSTS_PER_PAGE, False)
+    featured_speakers = Speaker.query.filter_by(featured = True)
     panels = Panel.query.all()
     cat_list = Category.query.all()
 
@@ -59,11 +58,19 @@ def view_agenda():
 def view_team():
     table_team  = Team.query.all()
     table_group = Group.query.all()
+
+    for group in table_group:
+        group.team_list = [[], []]
+        i = 0
+        for team_member in table_team:
+            if team_member.group_id == group.id:
+                group.team_list[i % 2].append(team_member)
+                i += 1
+
     return render_template('team.html',
         title   = 'HCF Team',
         page_id = 'team',
-        partners = table_team,
-        group   = table_group,
+        groups  = table_group,
         type    = 'team'
     )
 
@@ -125,6 +132,7 @@ def view_panels():
 
     for panel in panel_list:
         panel.html_id = "panel_" + str(panel.id)
+        panel.keyq = panel.keyq.split('\n')
 
     return render_template('panels.html',
        title = 'HCF Panels',
