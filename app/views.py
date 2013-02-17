@@ -2,9 +2,8 @@ import os
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, oid
-from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm, PostPanelForm, \
-    PostAdvisorForm, PostOrganizationForm, PostCategoryForm, PostTeamForm
-from models import User, ROLE_USER, Post, Panel, Organization, Advisor, Speaker, Category, Team
+from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm, PostPanelForm, PostGroupForm,  PostAdvisorForm, PostOrganizationForm, PostCategoryForm, PostTeamForm
+from models import User, ROLE_USER, Post, Panel, Organization, Advisor, Speaker, Category, Team, Group
 from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
 
@@ -62,7 +61,7 @@ def view_team():
     return render_template('team.html',
         title   = 'HCF Team',
         page_id = 'team',
-        partners = table_team,
+        members = table_team,
         group   = table_group,
         type    = 'team'
     )
@@ -249,10 +248,13 @@ def new_group():
 @app.route('/new_team', methods=['GET', 'POST'])
 @login_required
 def new_team():
-    form = PostTeamForm()
+    form        = PostTeamForm()
+    group_list  = Group.query.all()
+    form.group_id.choices = [(g.id, g.name) for g in group_list]
 
     if form.validate_on_submit():
-        post = Team(name = form.name.data, bio = form.bio.data, img_url = form.img_url.data)
+        post = Team(name = form.name.data, bio = form.bio.data, img_url
+                = form.img_url.data, group_id = form.group_id.data)
         db.session.add(post)
         db.session.commit()
         flash('Your post for new TEAM is now lIVE!')

@@ -33,6 +33,13 @@
                 </div>
             </div>
 
+            <div class="control-group{% if form.errors.group_id %} error{% endif %}">
+                <label class="control-label">Select Group:</label>
+                <div class="controls">
+                    {{ form.group_id }}
+                </div>
+            </div>
+
             <p>If you have the url to the photo, please paste it dirctly, otherwise, upload picture of the speaker
                 <a href="http://www.freeimagehosting.net/">here</a> and paste the link as prompted</p>
             <div class="control-group{% if form.errors.img_url %} error{% endif %}">
