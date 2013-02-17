@@ -1,4 +1,5 @@
 /temp/nouces
+.gitignore
 flask
 *.pyc
 .DS_Store
