@@ -130,10 +130,12 @@ def view_panels():
 @app.route('/advisors')
 def view_advisors():
     table_advisors = Advisor.query.all()
-    return render_template('partners.html',
+    length = len(table_advisors)
+    advisors_list = [table_advisors[:length / 2], table_advisors[(length / 2):]]
+    return render_template('advisors.html',
         title = 'HCF Advisors',
         page_id = 'advisors',
-        partners = table_advisors,
+        advisors_list = advisors_list,
         type = 'advisor'
     )
 

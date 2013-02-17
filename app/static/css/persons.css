@@ -59,6 +59,10 @@
     font-size: 16px;
 }
 
+.detail_box .bio {
+    display: none;
+}
+
 #panel_heading {
     margin-top: 5px;
 }
