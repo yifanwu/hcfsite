@@ -29,13 +29,22 @@
                 </div>
             </div>
 
-
-                <div class="control-group{% if form.errors.category_id %} error{% endif %}">
-                    <label class="control-label">Select Category:</label>
-                    <div class="controls">
-                        {{ form.category_id }}
-                    </div>
+            <div class="control-group{% if form.errors.keyq %} error{% endif %}">
+                <label class="input-xlarge" for="post">Key Questions:</label>
+                <div class="controls">
+                    {{ form.keyq (size = 30, maxlength = 140) }}
+                    {% for error in form.jeyq.info %}
+                        <span class="help-inline">[{{error}}]</span><br>
+                    {% endfor %}
                 </div>
+            </div>
+
+            <div class="control-group{% if form.errors.category_id %} error{% endif %}">
+                <label class="control-label">Select Category:</label>
+                <div class="controls">
+                    {{ form.category_id }}
+                </div>
+            </div>
 
             <div class="control-group">
                 <div class="controls">
