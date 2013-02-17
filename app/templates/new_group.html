@@ -11,7 +11,7 @@
         <form class="form-horizontal" action="" method="post" name="post">
             {{form.hidden_tag()}}
             <div class="control-group{% if form.errors.name %} error{% endif %}">
-                <label class="control-label" for="post">Panel Name:</label>
+                <label class="control-label" for="post">Category Name:</label>
                 <div class="controls">
                     {{ form.name(size = 90, maxlength = 9000) }}
                     {% for error in form.errors.name %}
@@ -19,30 +19,22 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="control-group{% if form.errors.info %} error{% endif %}">
-                <label class="input-xlarge" for="post">Description:</label>
+
+            <div class="control-group{% if form.errors.description %} error{% endif %}">
+                <label class="control-label" for="post">Group
+                    Description:</label>
                 <div class="controls">
-                    {{ form.info (size = 30, maxlength = 140) }}
-                    {% for error in form.errors.info %}
+                    {{ form.description(size = 90, maxlength = 9000) }}
+                    {% for error in form.errors.description %}
                         <span class="help-inline">[{{error}}]</span><br>
                     {% endfor %}
                 </div>
             </div>
 
-            <div class="control-group{% if form.errors.keyq %} error{% endif %}">
-                <label class="input-xlarge" for="post">Key Questions:</label>
+            <div class="control-group{% if form.errors.group_id %} error{% endif %}">
+                <label class="control-label">Select Group:</label>
                 <div class="controls">
-                    {{ form.keyq (size = 30, maxlength = 140) }}
-                    {% for error in form.jeyq.info %}
-                        <span class="help-inline">[{{error}}]</span><br>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <div class="control-group{% if form.errors.category_id %} error{% endif %}">
-                <label class="control-label">Select Category:</label>
-                <div class="controls">
-                    {{ form.category_id }}
+                    {{ form.group_id }}
                 </div>
             </div>
 

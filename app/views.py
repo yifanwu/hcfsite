@@ -57,13 +57,14 @@ def view_agenda():
 
 @app.route('/team')
 def view_team():
-    table_team = Team.query.all()
-
+    table_team  = Team.query.all()
+    table_group = Group.query.all()
     return render_template('team.html',
-        title = 'HCF Team',
+        title   = 'HCF Team',
         page_id = 'team',
         partners = table_team,
-        type = 'team'
+        group   = table_group,
+        type    = 'team'
     )
 
 @app.route('/partners')
@@ -110,8 +111,8 @@ def view_speakers():
 
 @app.route('/panels')
 def view_panels():
-    cat_list = Category.query.all()
-    panel_list = Panel.query.all()
+    cat_list    = Category.query.all()
+    panel_list  = Panel.query.all()
 
     for cat in cat_list:
         cat.html_id = "cat_" + str(cat.id)
@@ -230,6 +231,23 @@ def new_category():
         form = form,
     )
 
+
+@app.route('/new_group', methods=['GET', 'POST'])
+@login_required
+def new_group():
+    form = PostGroupForm()
+
+    if form.validate_on_submit():
+        post = Group(name = form.name.data, description =
+                form.description.data)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post for new GROUP now lIVE!')
+        return redirect(url_for('new_group'))
+    return render_template('new_group.html',
+        title = 'New Group',
+        form = form,
+    )
 @app.route('/new_team', methods=['GET', 'POST'])
 @login_required
 def new_team():
@@ -302,7 +320,8 @@ def new_panel():
 
     if form.validate_on_submit():
         post = Panel(
-            name = form.name.data, info = form.info.data, category_id = form.category_id.data
+            name = form.name.data, info = form.info.data, category_id =
+            form.category_id.data, keyq = form.keyq.data
         )
         db.session.add(post)
         db.session.commit()
