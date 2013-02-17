@@ -394,11 +394,11 @@ def how_to():
     return render_template('how_to.html')
 
 #the variables are string by default
-@app.route('/edit/<table>/<name>', methods = ['GET', 'POST'])
+@app.route('/edit/<table>/<id>', methods = ['GET', 'POST'])
 @login_required
-def edit_entity(table, name):
+def edit_entity(table, id):
     form = EditForm()
-    entity_content = map_tab[table].query.filter_by(name = name).first()
+    entity_content = map_tab[table].query.filter_by(id = id).first()
 
     if entity_content == None:
         flash("This entity doesn\'t exit!")

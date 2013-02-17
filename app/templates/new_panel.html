@@ -33,7 +33,7 @@
                 <label class="input-xlarge" for="post">Key Questions:</label>
                 <div class="controls">
                     {{ form.keyq (size = 30, maxlength = 140) }}
-                    {% for error in form.jeyq.info %}
+                    {% for error in form.keyq.info %}
                         <span class="help-inline">[{{error}}]</span><br>
                     {% endfor %}
                 </div>
