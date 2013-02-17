@@ -1,0 +1,1989 @@
+2013-02-15 11:51:01,844 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 11:51:19,352 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 11:52:45,005 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 12:02:50,558 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 12:29:48,663 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 15, in block "content"
+    {% include 'cat_panel.html' %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/cat_panel.html", line 8, in top-level template code
+    <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 372, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'partner' is undefined
+2013-02-15 12:29:53,405 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 15, in block "content"
+    {% include 'cat_panel.html' %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/cat_panel.html", line 8, in top-level template code
+    <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 372, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'partner' is undefined
+2013-02-15 12:29:54,190 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 15, in block "content"
+    {% include 'cat_panel.html' %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/cat_panel.html", line 8, in top-level template code
+    <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 372, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'partner' is undefined
+2013-02-15 12:29:54,892 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 15, in block "content"
+    {% include 'cat_panel.html' %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/cat_panel.html", line 8, in top-level template code
+    <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 372, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'partner' is undefined
+2013-02-15 12:29:55,654 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 15, in block "content"
+    {% include 'cat_panel.html' %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/cat_panel.html", line 8, in top-level template code
+    <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 372, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'partner' is undefined
+2013-02-15 12:30:01,205 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 15, in block "content"
+    {% include 'cat_panel.html' %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/cat_panel.html", line 8, in top-level template code
+    <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 372, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'partner' is undefined
+2013-02-15 12:30:03,508 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 15, in block "content"
+    {% include 'cat_panel.html' %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/cat_panel.html", line 8, in top-level template code
+    <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 372, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'partner' is undefined
+2013-02-15 12:30:51,808 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 15, in block "content"
+    {% include 'cat_panel.html' %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/cat_panel.html", line 9, in top-level template code
+    <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 372, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'partner' is undefined
+2013-02-15 12:31:43,158 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 15, in block "content"
+    {% include 'cat_panel.html' %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/cat_panel.html", line 8, in top-level template code
+    <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 372, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'partner' is undefined
+2013-02-15 12:32:07,287 ERROR: Exception on /edit/speaker/My [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask_login.py", line 496, in decorated_view
+    return fn(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 358, in edit_entity
+    form.name.data = entity_content.name
+AttributeError: 'NoneType' object has no attribute 'name'
+2013-02-15 12:36:50,418 ERROR: Exception on /edit/speaker/My [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask_login.py", line 496, in decorated_view
+    return fn(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 358, in edit_entity
+    form.name.data = entity_content.name
+AttributeError: 'NoneType' object has no attribute 'name'
+2013-02-15 12:36:55,707 ERROR: Exception on /edit/speaker/My Awesome Panel [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask_login.py", line 496, in decorated_view
+    return fn(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 358, in edit_entity
+    form.name.data = entity_content.name
+AttributeError: 'NoneType' object has no attribute 'name'
+2013-02-15 14:59:08,983 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 16:46:15,219 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 16:51:40,493 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 124, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 758, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 719, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 693, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 493, in compile
+    self.handle_exception(exc_info, source_hint=source)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 54, in template
+    {% if speaker.panel_id == panel.id || 1 = 1 %}
+TemplateSyntaxError: expected token 'name', got '|'
+2013-02-15 16:51:58,001 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 124, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 758, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 719, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 693, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 493, in compile
+    self.handle_exception(exc_info, source_hint=source)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 54, in template
+    {% if speaker.panel_id == panel.id || speaker.panel_id != panel.id %}
+TemplateSyntaxError: expected token 'name', got '|'
+2013-02-15 16:52:24,240 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 124, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 758, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 719, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 693, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 493, in compile
+    self.handle_exception(exc_info, source_hint=source)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 39, in template
+    {% if speaker.panel_id == panel.id or 1 = 1 %}
+TemplateSyntaxError: expected token 'end of statement block', got '='
+2013-02-15 16:52:25,371 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 124, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 758, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 719, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 693, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 493, in compile
+    self.handle_exception(exc_info, source_hint=source)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 39, in template
+    {% if speaker.panel_id == panel.id or 1 = 1 %}
+TemplateSyntaxError: expected token 'end of statement block', got '='
+2013-02-15 16:54:35,590 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 124, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 758, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 719, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 693, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 493, in compile
+    self.handle_exception(exc_info, source_hint=source)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 31, in template
+    <div class="row-fluid panel_detail" id="{% 'panel_' + panel.id %}">
+TemplateSyntaxError: tag name expected
+2013-02-15 16:55:11,187 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 31, in block "content"
+    <div class="row-fluid panel_detail" id="{{ 'panel_' + panel.id }}">
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 16:55:12,439 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 31, in block "content"
+    <div class="row-fluid panel_detail" id="{{ 'panel_' + panel.id }}">
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 16:55:28,021 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 31, in block "content"
+    <div class="row-fluid panel_detail" id="{{ "panel_" + panel.id }}">
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 16:55:29,197 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 31, in block "content"
+    <div class="row-fluid panel_detail" id="{{ "panel_" + panel.id }}">
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 16:55:37,263 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 31, in block "content"
+    <div class="row-fluid panel_detail" id="{{ "panel_" + 2 }}">
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 16:55:44,687 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 31, in block "content"
+    <div class="row-fluid panel_detail" id="{{ "panel_" + str(panel.id) }}">
+UndefinedError: 'str' is undefined
+2013-02-15 16:55:45,618 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 31, in block "content"
+    <div class="row-fluid panel_detail" id="{{ "panel_" + str(panel.id) }}">
+UndefinedError: 'str' is undefined
+2013-02-15 16:55:46,992 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 87, in view_speakers
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 86, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 31, in block "content"
+    <div class="row-fluid panel_detail" id="{{ "panel_" + str(panel.id) }}">
+UndefinedError: 'str' is undefined
+2013-02-15 17:36:48,858 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 17:36:50,947 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 82, in view_speakers
+    panel.html_id = "panel_" + panel.id
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 17:36:53,012 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 82, in view_speakers
+    panel.html_id = "panel_" + panel.id
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 17:36:53,586 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 82, in view_speakers
+    panel.html_id = "panel_" + panel.id
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 17:36:54,020 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 82, in view_speakers
+    panel.html_id = "panel_" + panel.id
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 17:36:54,417 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 82, in view_speakers
+    panel.html_id = "panel_" + panel.id
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 17:36:54,811 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 82, in view_speakers
+    panel.html_id = "panel_" + panel.id
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 17:36:55,218 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 82, in view_speakers
+    panel.html_id = "panel_" + panel.id
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 17:36:55,611 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 82, in view_speakers
+    panel.html_id = "panel_" + panel.id
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 17:36:56,035 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 82, in view_speakers
+    panel.html_id = "panel_" + panel.id
+TypeError: cannot concatenate 'str' and 'int' objects
+2013-02-15 17:37:17,260 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 18:12:58,154 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1539, in preprocess_request
+    rv = func()
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 22, in before_request
+    db.session.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 114, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 703, in commit
+    self.transaction.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 361, in commit
+    self._prepare_impl()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 340, in _prepare_impl
+    self.session.flush()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 59, in save_obj
+    mapper, table, update)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 485, in _emit_update_statements
+    execute(statement, params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1449, in execute
+    params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1698, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1691, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 331, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) database is locked u'UPDATE user SET last_seen=? WHERE user.id = ?' ('2013-02-15 23:12:53.109227', 1)
+2013-02-15 18:13:03,997 ERROR: Exception on /favicon.ico [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1539, in preprocess_request
+    rv = func()
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 22, in before_request
+    db.session.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 114, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 703, in commit
+    self.transaction.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 361, in commit
+    self._prepare_impl()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 340, in _prepare_impl
+    self.session.flush()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 59, in save_obj
+    mapper, table, update)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 485, in _emit_update_statements
+    execute(statement, params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1449, in execute
+    params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1698, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1691, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 331, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) database is locked u'UPDATE user SET last_seen=? WHERE user.id = ?' ('2013-02-15 23:12:58.947704', 1)
+2013-02-15 18:13:14,547 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1539, in preprocess_request
+    rv = func()
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 22, in before_request
+    db.session.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 114, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 703, in commit
+    self.transaction.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 361, in commit
+    self._prepare_impl()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 340, in _prepare_impl
+    self.session.flush()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 59, in save_obj
+    mapper, table, update)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 485, in _emit_update_statements
+    execute(statement, params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1449, in execute
+    params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1698, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1691, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 331, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) database is locked u'UPDATE user SET last_seen=? WHERE user.id = ?' ('2013-02-15 23:13:09.495953', 1)
+2013-02-15 18:13:20,042 ERROR: Exception on /favicon.ico [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1539, in preprocess_request
+    rv = func()
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 22, in before_request
+    db.session.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 114, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 703, in commit
+    self.transaction.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 361, in commit
+    self._prepare_impl()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 340, in _prepare_impl
+    self.session.flush()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 59, in save_obj
+    mapper, table, update)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 485, in _emit_update_statements
+    execute(statement, params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1449, in execute
+    params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1698, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1691, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 331, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) database is locked u'UPDATE user SET last_seen=? WHERE user.id = ?' ('2013-02-15 23:13:14.990090', 1)
+2013-02-15 18:13:25,103 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1539, in preprocess_request
+    rv = func()
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 22, in before_request
+    db.session.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 114, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 703, in commit
+    self.transaction.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 361, in commit
+    self._prepare_impl()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 340, in _prepare_impl
+    self.session.flush()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 59, in save_obj
+    mapper, table, update)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 485, in _emit_update_statements
+    execute(statement, params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1449, in execute
+    params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1698, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1691, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 331, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) database is locked u'UPDATE user SET last_seen=? WHERE user.id = ?' ('2013-02-15 23:13:20.053663', 1)
+2013-02-15 18:13:35,134 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 18:13:42,221 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1539, in preprocess_request
+    rv = func()
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 22, in before_request
+    db.session.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 114, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 703, in commit
+    self.transaction.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 361, in commit
+    self._prepare_impl()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 340, in _prepare_impl
+    self.session.flush()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 59, in save_obj
+    mapper, table, update)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 485, in _emit_update_statements
+    execute(statement, params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1449, in execute
+    params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1698, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1691, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 331, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) database is locked u'UPDATE user SET last_seen=? WHERE user.id = ?' ('2013-02-15 23:13:37.164349', 1)
+2013-02-15 18:13:47,759 ERROR: Exception on /favicon.ico [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1356, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1539, in preprocess_request
+    rv = func()
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 22, in before_request
+    db.session.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 114, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 703, in commit
+    self.transaction.commit()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 361, in commit
+    self._prepare_impl()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 340, in _prepare_impl
+    self.session.flush()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 59, in save_obj
+    mapper, table, update)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 485, in _emit_update_statements
+    execute(statement, params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1449, in execute
+    params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1698, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1691, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 331, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) database is locked u'UPDATE user SET last_seen=? WHERE user.id = ?' ('2013-02-15 23:13:42.709213', 1)
+2013-02-15 18:27:02,934 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 18:28:23,787 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 18:30:03,647 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 19:29:20,405 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 19:30:47,498 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-15 20:16:11,918 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 00:06:08,279 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 00:12:38,542 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 48, in index
+    categories = cat_list
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/index.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 90, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/index.html", line 81, in block "content"
+    {{ len(featured_speakers.object_list) }}
+UndefinedError: 'len' is undefined
+2013-02-16 00:13:08,796 ERROR: Exception on /edit/speaker/Bob [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask_login.py", line 496, in decorated_view
+    return fn(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 381, in edit_entity
+    form.panel.data = entity_content.panel
+AttributeError: 'Speaker' object has no attribute 'panel'
+2013-02-16 00:13:11,770 ERROR: Exception on /edit/speaker/1 [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask_login.py", line 496, in decorated_view
+    return fn(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 374, in edit_entity
+    form.name.data = entity_content.name
+AttributeError: 'NoneType' object has no attribute 'name'
+2013-02-16 00:13:15,396 ERROR: Exception on /edit/speaker/2 [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask_login.py", line 496, in decorated_view
+    return fn(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 374, in edit_entity
+    form.name.data = entity_content.name
+AttributeError: 'NoneType' object has no attribute 'name'
+2013-02-16 00:13:17,454 ERROR: Exception on /edit/speaker/3 [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask_login.py", line 496, in decorated_view
+    return fn(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 374, in edit_entity
+    form.name.data = entity_content.name
+AttributeError: 'NoneType' object has no attribute 'name'
+2013-02-16 00:13:19,199 ERROR: Exception on /edit/speaker/4 [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask_login.py", line 496, in decorated_view
+    return fn(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 374, in edit_entity
+    form.name.data = entity_content.name
+AttributeError: 'NoneType' object has no attribute 'name'
+2013-02-16 00:19:50,590 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 00:39:21,425 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 01:04:15,950 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 01:05:07,481 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 01:08:30,501 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 01:15:04,930 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 01:35:45,776 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 21:48:35,135 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 21:48:40,650 ERROR: Exception on /advisors [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 137, in view_advisors
+    type = 'advisor'
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 124, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 758, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 719, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 693, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 61, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: adviors.html
+2013-02-16 21:49:07,431 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 21:54:12,231 ERROR: Exception on /advisors [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 137, in view_advisors
+    type = 'advisor'
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 124, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 758, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 719, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 693, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 493, in compile
+    self.handle_exception(exc_info, source_hint=source)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/advisors.html", line 27, in template
+    {% end %}
+TemplateSyntaxError: Encountered unknown tag 'end'. Jinja was looking for the following tags: 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
+2013-02-16 21:54:19,374 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 21:54:20,300 ERROR: Exception on /advisors [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 137, in view_advisors
+    type = 'advisor'
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 124, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 758, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 719, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 693, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 493, in compile
+    self.handle_exception(exc_info, source_hint=source)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/advisors.html", line 27, in template
+    {% end %}
+TemplateSyntaxError: Encountered unknown tag 'end'. Jinja was looking for the following tags: 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
+2013-02-16 21:54:36,635 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 21:54:38,292 ERROR: Exception on /advisors [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 137, in view_advisors
+    type = 'advisor'
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 124, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 758, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 719, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 693, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 493, in compile
+    self.handle_exception(exc_info, source_hint=source)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/advisors.html", line 27, in template
+    {% end %}
+TemplateSyntaxError: Encountered unknown tag 'end'. Jinja was looking for the following tags: 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
+2013-02-16 21:55:41,989 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:11:53,679 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:11:56,991 ERROR: Exception on /advisors [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 134, in view_advisors
+    advisors.append = table_advisors[(len(table_advisors)/2) + 1:]
+NameError: global name 'advisors' is not defined
+2013-02-16 22:12:04,882 ERROR: Exception on /advisors [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 134, in view_advisors
+    advisors.append = table_advisors[(len(table_advisors)/2) + 1:]
+NameError: global name 'advisors' is not defined
+2013-02-16 22:12:05,914 ERROR: Exception on /advisors [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 134, in view_advisors
+    advisors.append = table_advisors[(len(table_advisors)/2) + 1:]
+NameError: global name 'advisors' is not defined
+2013-02-16 22:13:05,971 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:13:13,314 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:13:14,718 ERROR: Exception on /advisors [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 136, in view_advisors
+    advisors.append(table_advisors[(length / 2) + 1:])
+NameError: global name 'advisors' is not defined
+2013-02-16 22:13:15,834 ERROR: Exception on /advisors [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 136, in view_advisors
+    advisors.append(table_advisors[(length / 2) + 1:])
+NameError: global name 'advisors' is not defined
+2013-02-16 22:13:16,588 ERROR: Exception on /advisors [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 136, in view_advisors
+    advisors.append(table_advisors[(length / 2) + 1:])
+NameError: global name 'advisors' is not defined
+2013-02-16 22:13:40,321 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:13:54,137 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:14:47,520 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:18:49,193 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:18:53,006 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 99, in view_speakers
+    panel_list = Panel.query.all()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2115, in all
+    return list(self)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2227, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2242, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1449, in execute
+    params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1698, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1691, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 331, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) no such column: panel.keyq u'SELECT panel.id AS panel_id, panel.name AS panel_name, panel.info AS panel_info, panel.keyq AS panel_keyq, panel.category_id AS panel_category_id \nFROM panel' ()
+2013-02-16 22:19:03,416 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 37, in index
+    panels = Panel.query.all()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2115, in all
+    return list(self)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2227, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2242, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1449, in execute
+    params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1698, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1691, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 331, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) no such column: panel.keyq u'SELECT panel.id AS panel_id, panel.name AS panel_name, panel.info AS panel_info, panel.keyq AS panel_keyq, panel.category_id AS panel_category_id \nFROM panel' ()
+2013-02-16 22:19:04,524 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 37, in index
+    panels = Panel.query.all()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2115, in all
+    return list(self)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2227, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2242, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1449, in execute
+    params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1698, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1691, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 331, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) no such column: panel.keyq u'SELECT panel.id AS panel_id, panel.name AS panel_name, panel.info AS panel_info, panel.keyq AS panel_keyq, panel.category_id AS panel_category_id \nFROM panel' ()
+2013-02-16 22:19:06,514 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 37, in index
+    panels = Panel.query.all()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2115, in all
+    return list(self)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2227, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2242, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1449, in execute
+    params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1698, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1691, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 331, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) no such column: panel.keyq u'SELECT panel.id AS panel_id, panel.name AS panel_name, panel.info AS panel_info, panel.keyq AS panel_keyq, panel.category_id AS panel_category_id \nFROM panel' ()
+2013-02-16 22:19:09,462 ERROR: Exception on / [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 37, in index
+    panels = Panel.query.all()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2115, in all
+    return list(self)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2227, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2242, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1449, in execute
+    params)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1698, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1691, in _execute_context
+    context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 331, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) no such column: panel.keyq u'SELECT panel.id AS panel_id, panel.name AS panel_name, panel.info AS panel_info, panel.keyq AS panel_keyq, panel.category_id AS panel_category_id \nFROM panel' ()
+2013-02-16 22:19:26,204 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:19:41,640 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:20:03,755 ERROR: Exception on /team [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 61, in view_team
+    table_group = Group.query.all()
+NameError: global name 'Group' is not defined
+2013-02-16 22:22:07,275 ERROR: Exception on /team [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 61, in view_team
+    table_group = Group.query.all()
+NameError: global name 'Group' is not defined
+2013-02-16 22:23:54,141 ERROR: Exception on /team [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 61, in view_team
+    table_group = Group.query.all()
+NameError: global name 'Group' is not defined
+2013-02-16 22:24:35,067 ERROR: Exception on /team [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 61, in view_team
+    table_group = Group.query.all()
+NameError: global name 'Group' is not defined
+2013-02-16 22:24:36,198 ERROR: Exception on /team [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 61, in view_team
+    table_group = Group.query.all()
+NameError: global name 'Group' is not defined
+2013-02-16 22:25:43,628 ERROR: Exception on /team [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 61, in view_team
+    table_group = Group.query.all()
+NameError: global name 'Group' is not defined
+2013-02-16 22:25:44,768 ERROR: Exception on /team [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 61, in view_team
+    table_group = Group.query.all()
+NameError: global name 'Group' is not defined
+2013-02-16 22:25:45,730 ERROR: Exception on /team [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 61, in view_team
+    table_group = Group.query.all()
+NameError: global name 'Group' is not defined
+2013-02-16 22:32:26,260 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 109, in view_speakers
+    
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 124, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 758, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 719, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 693, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 493, in compile
+    self.handle_exception(exc_info, source_hint=source)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 31, in template
+    {% for speaker_group in panel.speakers_list}
+TemplateSyntaxError: unexpected '}'
+2013-02-16 22:32:27,426 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 109, in view_speakers
+    
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 124, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 758, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 719, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 693, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 493, in compile
+    self.handle_exception(exc_info, source_hint=source)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/speakers.html", line 31, in template
+    {% for speaker_group in panel.speakers_list}
+TemplateSyntaxError: unexpected '}'
+2013-02-16 22:32:32,140 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:32:33,512 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 104, in view_speakers
+    for speaker in table.speakers:
+NameError: global name 'table' is not defined
+2013-02-16 22:32:41,936 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:32:45,727 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 104, in view_speakers
+    for speaker in table.speakers:
+NameError: global name 'table' is not defined
+2013-02-16 22:33:03,247 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 104, in view_speakers
+    for speaker in table.speakers:
+NameError: global name 'table' is not defined
+2013-02-16 22:33:04,991 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 104, in view_speakers
+    for speaker in table.speakers:
+NameError: global name 'table' is not defined
+2013-02-16 22:33:06,730 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 104, in view_speakers
+    for speaker in table.speakers:
+NameError: global name 'table' is not defined
+2013-02-16 22:33:28,126 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:33:29,368 ERROR: Exception on /speakers [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 104, in view_speakers
+    for speaker in table.speakers:
+NameError: global name 'table' is not defined
+2013-02-16 22:34:09,888 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:35:27,205 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:38:12,877 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:46:19,303 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:46:20,091 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:55:25,484 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:55:26,054 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 22:55:52,075 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:02:13,534 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:02:15,429 ERROR: Exception on /team [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 61, in view_team
+    table_group = Group.query.all()
+NameError: global name 'Group' is not defined
+2013-02-16 23:03:26,706 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:05:07,262 ERROR: Exception on /new_team [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask_login.py", line 496, in decorated_view
+    return fn(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 270, in new_team
+    form = form,
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/new_team.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 92, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/new_team.html", line 39, in block "content"
+    {{ form.group_id }}
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/_markupsafe/_native.py", line 20, in escape
+    return s.__html__()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/fields/core.py", line 131, in __html__
+    return self()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/fields/core.py", line 140, in __call__
+    return self.widget(self, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/widgets/core.py", line 246, in __call__
+    for val, label, selected in field.iter_choices():
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/fields/core.py", line 411, in iter_choices
+    for value, label in self.choices:
+TypeError: 'NoneType' object is not iterable
+2013-02-16 23:05:16,387 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:05:17,981 ERROR: Exception on /new_team [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask_login.py", line 496, in decorated_view
+    return fn(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 270, in new_team
+    form = form,
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/new_team.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 92, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/new_team.html", line 39, in block "content"
+    {{ form.group_id }}
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/_markupsafe/_native.py", line 20, in escape
+    return s.__html__()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/fields/core.py", line 131, in __html__
+    return self()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/fields/core.py", line 140, in __call__
+    return self.widget(self, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/widgets/core.py", line 246, in __call__
+    for val, label, selected in field.iter_choices():
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/fields/core.py", line 411, in iter_choices
+    for value, label in self.choices:
+TypeError: 'NoneType' object is not iterable
+2013-02-16 23:05:48,917 ERROR: Exception on /new_team [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask_login.py", line 496, in decorated_view
+    return fn(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 270, in new_team
+    form = form,
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/new_team.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 92, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/new_team.html", line 39, in block "content"
+    {{ form.group_id }}
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/_markupsafe/_native.py", line 20, in escape
+    return s.__html__()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/fields/core.py", line 131, in __html__
+    return self()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/fields/core.py", line 140, in __call__
+    return self.widget(self, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/widgets/core.py", line 246, in __call__
+    for val, label, selected in field.iter_choices():
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/fields/core.py", line 411, in iter_choices
+    for value, label in self.choices:
+TypeError: 'NoneType' object is not iterable
+2013-02-16 23:05:53,546 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:05:55,295 ERROR: Exception on /new_team [GET] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask_login.py", line 496, in decorated_view
+    return fn(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 270, in new_team
+    form = form,
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 125, in render_template
+    context, ctx.app)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/templating.py", line 107, in _render
+    rv = template.render(context)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/yuechen/Projects/hcfsite/app/templates/new_team.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/base.html", line 92, in top-level template code
+    {% block content %}
+  File "/Users/yuechen/Projects/hcfsite/app/templates/new_team.html", line 39, in block "content"
+    {{ form.group_id }}
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/jinja2/_markupsafe/_native.py", line 20, in escape
+    return s.__html__()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/fields/core.py", line 131, in __html__
+    return self()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/fields/core.py", line 140, in __call__
+    return self.widget(self, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/widgets/core.py", line 246, in __call__
+    for val, label, selected in field.iter_choices():
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/wtforms/fields/core.py", line 411, in iter_choices
+    for value, label in self.choices:
+TypeError: 'NoneType' object is not iterable
+2013-02-16 23:08:00,360 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:08:44,378 ERROR: Exception on /new_team [POST] [in /Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py:1306]
+Traceback (most recent call last):
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1687, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1360, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1358, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask/app.py", line 1344, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/flask_login.py", line 496, in decorated_view
+    return fn(*args, **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/app/views.py", line 267, in new_team
+    = form.img_url.data, group_id = form.group_id.data)
+  File "<string>", line 4, in __init__
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/orm/state.py", line 98, in initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/yuechen/Projects/hcfsite/flask/lib/python2.7/site-packages/sqlalchemy/ext/declarative.py", line 1566, in _declarative_constructor
+    (k, cls_.__name__))
+TypeError: 'group_id' is an invalid keyword argument for Team
+2013-02-16 23:09:11,954 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:09:12,399 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:11:42,588 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:12:05,752 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:14:40,264 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:16:11,820 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:16:15,620 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:16:23,684 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:16:24,104 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:29:35,653 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:29:36,111 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:30:10,946 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:30:11,374 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:31:25,887 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:31:26,447 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:32:52,216 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:32:52,671 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:40:15,460 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:45:30,662 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:45:32,738 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-16 23:45:33,258 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 00:23:30,888 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 00:24:15,076 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 00:37:18,619 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 00:38:30,199 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 00:39:09,849 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 00:39:10,268 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 01:06:01,657 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 01:06:02,185 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 01:14:17,091 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 01:20:43,662 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]

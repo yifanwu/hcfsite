@@ -1,9 +1,3 @@
 flask
 *.pyc
 .DS_Store
-
-tmp/nonces
-tmp/associations/
-tmp/nonces/
-tmp/temp/
-tmp/hcfsite.log
