@@ -58,3 +58,6 @@ span.title {
 }
 
 .nav-tabs > li > a:hover { background-color: #e7e5e5; }
+
+.detail_box:hover { cursor: default; background: none;}
+.detail_box img { width: 150px; height: auto; }

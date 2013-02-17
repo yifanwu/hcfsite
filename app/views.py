@@ -22,6 +22,17 @@ def before_request():
         db.session.add(g.user)
         db.session.commit()
 
+@app.url_defaults
+def add_language_code(endpoint, values):    
+    if 'lang_code' in values or not g.lang_code:
+        return
+    if app.url_map.is_endpoint_expecting(endpoint, 'lang_code'):
+        values['lang_code'] = g.lang_code
+
+@app.url_value_preprocessor
+def pull_lang_code(endpoint, values):
+    g.lang_code = values.pop('lang_code', None)
+
 @app.errorhandler(404)
 def internal_error(error):
     return render_template('404.html'), 404
@@ -31,10 +42,17 @@ def internal_error(error):
     db.session.rollback()
     return render_template('500.html'), 500
 
-@app.route('/', methods = ['GET', 'POST'])
+@app.route('/')
+def index_english():
+    return redirect('/en/')
+
+@app.route('/<path>')
+def english_default(path):
+    return redirect('/en/' + path)
+
+@app.route('/<lang_code>/', methods = ['GET', 'POST'])
 def index():
-    #hack: some hard coding in pagination
-    featured_speakers = Speaker.query.filter_by(featured = True).paginate(1, POSTS_PER_PAGE, False)
+    featured_speakers = Speaker.query.filter_by(featured = True)
     panels = Panel.query.all()
     cat_list = Category.query.all()
 
@@ -49,26 +67,34 @@ def index():
         categories = cat_list
     )
 
-@app.route('/agenda')
+@app.route('/<lang_code>/agenda')
 def view_agenda():
     return render_template('agenda.html',
         title = 'HCF Agenda',
         page_id = 'agenda'
     )
 
-@app.route('/team')
+@app.route('/<lang_code>/team')
 def view_team():
     table_team  = Team.query.all()
     table_group = Group.query.all()
+
+    for group in table_group:
+        group.team_list = [[], []]
+        i = 0
+        for team_member in table_team:
+            if team_member.group_id == group.id:
+                group.team_list[i % 2].append(team_member)
+                i += 1
+
     return render_template('team.html',
         title   = 'HCF Team',
         page_id = 'team',
-        partners = table_team,
-        group   = table_group,
+        groups  = table_group,
         type    = 'team'
     )
 
-@app.route('/partners')
+@app.route('/<lang_code>/partners')
 def view_partners():
     table_partners = Organization.query.all()
     return render_template('partners.html',
@@ -78,14 +104,14 @@ def view_partners():
         type = 'partner'
     )
 
-@app.route('/logistics')
+@app.route('/<lang_code>/logistics')
 def view_logistics():
     return render_template('logistics.html',
         title = 'Logistics',
         page_id = 'logistics'
     )
 
-@app.route('/about')
+@app.route('/<lang_code>/about')
 def view_about():
     return render_template('about.html',
         title = 'About HCF',
@@ -93,7 +119,7 @@ def view_about():
     )
 
 #note that partners.html is NOT a copy-paste error!
-@app.route('/speakers')
+@app.route('/<lang_code>/speakers')
 def view_speakers():
     table_speakers = Speaker.query.all()
     cat_list = Category.query.all()
@@ -117,7 +143,7 @@ def view_speakers():
         categories = cat_list
     )
 
-@app.route('/panels')
+@app.route('/<lang_code>/panels')
 def view_panels():
     cat_list    = Category.query.all()
     panel_list  = Panel.query.all()
@@ -127,6 +153,7 @@ def view_panels():
 
     for panel in panel_list:
         panel.html_id = "panel_" + str(panel.id)
+        panel.keyq = panel.keyq.split('\n')
 
     return render_template('panels.html',
        title = 'HCF Panels',
@@ -136,7 +163,7 @@ def view_panels():
        categories = cat_list
     )
 
-@app.route('/advisors')
+@app.route('/<lang_code>/advisors')
 def view_advisors():
     table_advisors = Advisor.query.all()
     length = len(table_advisors)

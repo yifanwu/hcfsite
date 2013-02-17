@@ -31,12 +31,12 @@
 				{% if panel.category_id == category.id %}
 					<h4 id="{{ panel.html_id }}">{{ panel.name }}</h4>
 					<h5>Panel Description</h5>
-					<p>Nullam iaculis, enim et faucibus dapibus, ligula ante scelerisque nibh, id tempor sapien risus sed nibh. Nunc at tellus mauris. Nullam et cursus risus. Phasellus ac tempus velit. Nunc lacinia augue ut sem imperdiet ornare. Pellentesque lacinia leo eu diam vulputate sit amet accumsan enim rhoncus. In hac habitasse platea dictumst. Ut scelerisque tellus ac eros facilisis sed hendrerit felis ultrices. Vivamus nibh mi, vehicula quis sollicitudin pellentesque, varius id quam. Morbi facilisis, felis sit amet viverra semper, tellus erat fringilla nisl, ut elementum leo quam id quam. Maecenas bibendum ligula at metus scelerisque porta. Donec in lobortis nisi. Integer sed nulla purus. Phasellus hendrerit ornare sem ac ultrices.</p>
+					<p>{{ panel.info }}</p>
 					<h5>Key Questions</h5>
 					<ol>
-					  <li>Duis dapibus, ligula id tempus sodales, ligula neque eleifend lacus, eu volutpat ipsum libero in diam?</li>
-					  <li>Cras ullamcorper massa nec nisi venenatis ut convallis arcu hendrerit?</li>
-					  <li>Nam sed mi nibh, ut ullamcorper nibh. Curabitur consectetur augue quis nisi bibendum ac ornare ante condimentum?</li>
+					  	{% for question in panel.keyq %}
+					  		<li>{{ question }}</li>
+					  	{% endfor %}
 					</ol>
 				{% endif %}
 			{% endfor %}
