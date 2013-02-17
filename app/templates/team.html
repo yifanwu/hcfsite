@@ -9,25 +9,6 @@
 {% endblock %}
 
 {% block content %}
-<h1>{{ title }}</h1>
-{% for member in members %}
-    <table class="table table-hover">
-        {% if member.img_url != None %}
-            <img src="{{member.img_url}}" alt="Person"/>
-        {% endif %}
-        <tr>
-            <td>
-                <h3><strong>{{member.name}}</strong></h3>
-                <p><strong>{{member.bio}}</strong></p>
-            </td>
-        </tr>
-        {% if g.user.is_authenticated() %}
-            <a href={{ "edit/"+type+"/"+ member.name }}>edit</a>
-        {% endif %}
-
-    </table>
-{% endfor %}
-{% endblock %}
 <h1>The Team</h1>
     <div class="row-fluid">
       <div class="span5" id="person_bio">
@@ -71,7 +52,7 @@
           </div>
         </div>
       </div>
-
+      
           <div class="cleaner_h30">&nbsp;</div>
           <div>
         <h4 class="heading">Information Technology <i class="icon-chevron-down"></i></h4>
@@ -140,7 +121,7 @@
           </div>
         </div>
       </div>
-
+      
           <div class="cleaner_h30">&nbsp;</div>
           <div>
         <h4 class="heading">Marketing <i class="icon-chevron-down"></i></h4>
@@ -172,7 +153,7 @@
           </div>
         </div>
       </div>
-
+      
           <div class="cleaner_h30">&nbsp;</div>
           <div>
         <h4 class="heading">Panel: Business and Innovation <i class="icon-chevron-down"></i></h4>
@@ -209,7 +190,7 @@
           </div>
         </div>
       </div>
-
+      
           <div class="cleaner_h30">&nbsp;</div>
           <div>
         <h4 class="heading">Panel: Culture and Society <i class="icon-chevron-down"></i></h4>
@@ -246,7 +227,7 @@
           </div>
         </div>
       </div>
-
+      
           <div class="cleaner_h30">&nbsp;</div>
           <div>
         <h4 class="heading">Panel: Finance and Economics <i class="icon-chevron-down"></i></h4>
@@ -283,10 +264,9 @@
           </div>
         </div>
       </div>
-
+      
     </div>
       </div>
       <!--end people-->
     </div>
 {% endblock %}
->>>>>>> 0c7bf9c80aa6901d3bffdcbb26f3c5f13a7051c0

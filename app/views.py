@@ -2,7 +2,8 @@ import os
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, oid
-from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm, PostPanelForm, PostGroupForm,  PostAdvisorForm, PostOrganizationForm, PostCategoryForm, PostTeamForm
+from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm, PostPanelForm, \
+    PostAdvisorForm, PostOrganizationForm, PostCategoryForm, PostTeamForm, PostGroupForm
 from models import User, ROLE_USER, Post, Panel, Organization, Advisor, Speaker, Category, Team, Group
 from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
@@ -61,7 +62,7 @@ def view_team():
     return render_template('team.html',
         title   = 'HCF Team',
         page_id = 'team',
-        members = table_team,
+        partners = table_team,
         group   = table_group,
         type    = 'team'
     )
@@ -253,6 +254,7 @@ def new_group():
         title = 'New Group',
         form = form,
     )
+
 @app.route('/new_team', methods=['GET', 'POST'])
 @login_required
 def new_team():

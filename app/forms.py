@@ -1,7 +1,7 @@
 from flask.ext.wtf import Form, TextField, BooleanField, TextAreaField, SelectField
 from flask.ext.wtf import Required, Length, URL
 from flask.ext.wtf.html5 import URLField
-from app.models import User, Panel, Advisor, Speaker, Organization
+from app.models import User, Panel, Advisor, Speaker, Organization, Group
 
 class LoginForm(Form):
     openid = TextField('openid', validators = [Required()])
@@ -51,7 +51,8 @@ class PostForm(Form):
 class PostGroupForm(Form):
     name = TextField('name', validators=[Required()])
     description = TextAreaField('description', validators=[Required()])
-
+    def validate(self):
+        return True
 
 class PostCategoryForm(Form):
     name = TextField('name', validators=[Required()])

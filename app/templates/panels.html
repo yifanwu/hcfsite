@@ -39,9 +39,6 @@
 					  <li>Nam sed mi nibh, ut ullamcorper nibh. Curabitur consectetur augue quis nisi bibendum ac ornare ante condimentum?</li>
 					</ol>
 				{% endif %}
-                {% if g.user.is_authenticated() %}
-                    <a href={{ "edit/"+type+"/"+ partner.name }}>edit</a>
-                {% endif %}
 			{% endfor %}
 			<div class="cleaner_h30">&nbsp;</div>
 		{% endfor %}

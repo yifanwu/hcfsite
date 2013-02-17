@@ -59,7 +59,7 @@ class Team(db.Model):
     name = db.Column(db.String(64), unique = True)
     bio = db.Column(db.String, nullable=False)
     img_url = db.Column(db.String(140), nullable=True)
-    group = db.Column(db.Integer, db.ForeignKey('group.id'))
+    group_id = db.Column(db.Integer, db.ForeignKey('group.id'))
 
 class Advisor(db.Model):
     __tablename__ = 'advisor'

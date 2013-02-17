@@ -1,6 +1,7 @@
 flask
 *.db
 *.pyc
+.DS_Store
 
 tmp/nonces
 tmp/associations/
