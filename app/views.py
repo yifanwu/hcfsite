@@ -82,7 +82,7 @@ def view_team():
 def view_partners():
     table_partners = Organization.query.all()
     for p in table_partners:
-        p.edit_url = "edit/partners/" + str(p.id)
+        p.edit_url = "edit/organization/" + str(p.id)
     return render_template('partners.html',
         title = 'HCF Partners',
         page_id = 'partners',
@@ -228,10 +228,12 @@ def contact():
     form = ContactForm()
     if form.validate_on_submit():
         contact_notification(form.name.data, form.subject.data, form.email_add.data, form.msg.data)
-        flash('Your post is now live!')
+        flash('Thank you for contacting us!')
         return redirect(url_for('contact'))
 
     return render_template('contact.html',
+        title = 'Contact Us',
+        page_id = 'contact',
         form = form)
 
 
@@ -432,6 +434,8 @@ def return_url(table):
         return "/panels"
     elif (table == "group" or table == "team"):
         return "/team"
+    elif (table == "organization"):
+        return "/partners"
     else:
         return url_for("view_"+table+"s")
 

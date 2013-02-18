@@ -67,24 +67,25 @@
         <li id="speakers_site_nav"><a href="/speakers">Speakers</a></li>
 	    <li id="panels_site_nav"><a href="/panels">Panels</a></li>
 	    <li id="logistics_site_nav"><a href="/logistics">Logistics</a></li>
-        <li id="advisors_site_nav"><a href="/advisors">Advisors</a></li>
         <li id="partners_site_nav"><a href="/partners">Partners</a></li>
+        <li id="advisors_site_nav"><a href="/advisors">Advisors</a></li>
 	    <li id="about_site_nav"><a href="/about">About HCF</a></li>
         <li id="team_site_nav"><a href="/team">Team</a></li>
+        <li id="contact_site_nav"><a href="/contact">Contact Us</a></li>
 	    {% if g.user.is_authenticated() %}
 			<li class="dropdown">
-				<a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Add<b class="caret"></b></a>
+				<a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Admin<b class="caret"></b></a>
 				<ul id="menu_change" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-                    <li><a tabindex="-1" href="/new_category">Panel Category</a></li>
-                    <li><a tabindex="-1" href="/new_panel">Panel</a></li>
-                    <li><a tabindex="-1" href="/new_speaker">Panel Speaker</a></li>
-                    <li><a tabindex="-1" href="/new_advisor">HCF Advisor</a></li>
-                    <li><a tabindex="-1" href="/new_partner_org">HCF Partner</a></li>
-                    <li><a tabindex="-1" href="/new_group">Team Group</a></li>
-					<li><a tabindex="-1" href="/new_team">Team Member</a></li>
+                    <li><a tabindex="-1" href="/new_category">Add Panel Category</a></li>
+                    <li><a tabindex="-1" href="/new_panel">Add Panel</a></li>
+                    <li><a tabindex="-1" href="/new_speaker">Add Panel Speaker</a></li>
+                    <li><a tabindex="-1" href="/new_advisor">Add HCF Advisor</a></li>
+                    <li><a tabindex="-1" href="/new_partner_org">Add HCF Partner</a></li>
+                    <li><a tabindex="-1" href="/new_group">Add Team Group</a></li>
+					<li><a tabindex="-1" href="/new_team">Add Team Member</a></li>
+                    <li><a tabindex="-1" href="{{ url_for('logout') }}">Logout</a></li>
                 </ul>
 			</li>
-			<li><a href="{{ url_for('logout') }}">Logout</a></li>
 		{% endif %}
 
       </ul>
@@ -123,7 +124,7 @@
 		  </div>
 		</div>
 		<div class="cleaner_h30">&nbsp;</div>
-		<p id="copyright">&copy; Copyright 2013 Harvard China Forum.<br/>Harvard China Forum is an official student organization at Harvard University.</p>
+		<p id="copyright">&copy; Copyright 2013 Harvard China Forum.<br/>Designed and created by <a href="http://yifanwu.net/">Yifan Wu</a> and <a href="http://www.yuechenzhao.com/">Yuechen Zhao</a>.</p>
 		<p id="harvard_notice">Harvard name and/or VERITAS shield are trademarks of the President 
 	and<br/> Fellows of Harvard College and are used by permission of Harvard University.</p>
     </div></div>

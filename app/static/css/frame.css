@@ -228,6 +228,7 @@ body {
 #footer p#footer_about a { text-decoration: underline; }
 #footer #copyright { margin: 0; padding-bottom: 10px; float: left; color: #666; 
     font-family: 'Helvetica Neue', 'Helvetica', sans-serif;}
+#footer #copyright a { color: #aaa; }
 #footer #harvard_notice { margin: 0; padding-bottom: 10px; text-align: right; color: #666; 
     font-family: 'Helvetica Neue', 'Helvetica', sans-serif;}
 

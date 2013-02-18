@@ -1,78 +1,79 @@
-<!-- extend base layout -->
 {% extends "base.html" %}
 
-{% block content %}
-    <div id="wrapper-outer"><div id="wrapper"><div id="wrapper_inner">
+{% block head %}
+<link rel="stylesheet" type="text/css" href="/static/css/contact.css"/>
+{% endblock %}
 
-    <h1>Contact Us</h1>
+{% block content %}
+    <h1>{{ title }}</h1>
         
     </br>
     {% include 'flash.html' %}
     </br>
-    <div class="well">
 
+    <div class="row-fluid">
+        <div class="span8">
+            <form class="form-horizontal" action="" method="post" name="post" id="contact">
+                {{form.hidden_tag()}}
+                <div class="control-group{% if form.errors.name %} error{% endif %}">
+                    <label class="control-label" for="post">Your Name:</label>
+                    <div class="controls">
+                        {{ form.name(size = 90, maxlength = 9000) }}
+                        {% for error in form.errors.name %}
+                            <span class="help-inline">[{{error}}]</span><br>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="control-group{% if form.errors.subject %} error{% endif %}">
+                    <label class="control-label" for="post">Subject:</label>
+                    <div class="controls">
+                        {{ form.subject (size = 90, maxlength = 140) }}
+                        {% for error in form.errors.subject %}
+                            <span class="help-inline">[{{error}}]</span><br>
+                        {% endfor %}
+                    </div>
+                </div>
 
-        <form class="form-horizontal" action="" method="post" name="post">
-            {{form.hidden_tag()}}
-            <div class="control-group{% if form.errors.name %} error{% endif %}">
-                <label class="control-label" for="post">Your Name:</label>
-                <div class="controls">
-                    {{ form.name(size = 90, maxlength = 9000) }}
-                    {% for error in form.errors.name %}
-                        <span class="help-inline">[{{error}}]</span><br>
-                    {% endfor %}
+                <div class="control-group{% if form.errors.email_add %} error{% endif %}">
+                    <label class="control-label" for="post">Email Address:</label>
+                    <div class="controls">
+                        {{ form.email_add (size = 90, maxlength = 140) }}
+                        {% for error in form.errors.email_add %}
+                            <span class="help-inline">[{{error}}]</span><br>
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
-            <div class="control-group{% if form.errors.subject %} error{% endif %}">
-                <label class="control-label" for="post">Subject:</label>
-                <div class="controls">
-                    {{ form.subject (size = 90, maxlength = 140) }}
-                    {% for error in form.errors.subject %}
-                        <span class="help-inline">[{{error}}]</span><br>
-                    {% endfor %}
-                </div>
-            </div>
 
-            <div class="control-group{% if form.errors.email_add %} error{% endif %}">
-                <label class="control-label" for="post">Email Address:</label>
-                <div class="controls">
-                    {{ form.email_add (size = 90, maxlength = 140) }}
-                    {% for error in form.errors.email_add %}
-                        <span class="help-inline">[{{error}}]</span><br>
-                    {% endfor %}
+                <div class="control-group{% if form.errors.msg %} error{% endif %}">
+                    <label class="control-label" for="post">Message:</label>
+                    <div class="controls">
+                        {{ form.msg (size = 90, maxlength = 1000) }}
+                        {% for error in form.errors.msg %}
+                            <span class="help-inline">[{{error}}]</span><br>
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <input class="btn btn-primary" type="submit" value="Send" style="margin-right: 100px;">
+                        <input type="reset" class="btn" name="reset" id="reset" value="Clear"/>
+                    </div>
+                </div>
 
-            <div class="control-group{% if form.errors.msg %} error{% endif %}">
-                <label class="control-label" for="post">Message:</label>
-                <div class="controls">
-                    {{ form.msg (size = 90, maxlength = 140) }}
-                    {% for error in form.errors.msg %}
-                        <span class="help-inline">[{{error}}]</span><br>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
-                    <input class="btn btn-primary" type="submit" value="Post!">
-                </div>
-            </div>
-
-        </form>
-    </div>
-            <div class="span4">
-                <br/><br/>
-                <address>
-                    <strong>Email us</strong> at <a href="mailto:harvardchina.org">contact@harvardchina.org</a>.<br/><br/>
-                    <strong>Reach us by post:</strong> <br/>
-                    230 Harvard Yard Mail Box <br/>
-                    24 Cambridge Road <br/>
-                    Cambridge, MA 02138 <br/>
-                    USA <br/>
-                </address>
-                <br/><br/>
-                <p>We receive a large number of messages! Please allow up to one week for a response. We appreciate your patience.</p>
-            </div>
+            </form>
+        </div>
+        <div class="span4">
+            <br/>
+            <address>
+                <strong>Email us</strong> at <a href="mailto:harvardchina.org">contact@harvardchina.org</a>.<br/><br/>
+                <strong>Reach us by post:</strong> <br/>
+                230 Harvard Yard Mail Box <br/>
+                24 Cambridge Road <br/>
+                Cambridge, MA 02138 <br/>
+                USA <br/>
+            </address>
+            <br/><br/>
+            <p>We receive a large number of messages! Please allow up to one week for a response. We appreciate your patience.</p>
         </div>
     </div>
 

@@ -80,9 +80,9 @@
         </div>
         {% endif %}
 
-        {% if table == 'speaker' or table == 'advisor' or table == 'team' %}
+        {% if table == 'speaker' or table == 'advisor' or table == 'team' or table == 'organization' %}
         <div class="control-group{% if form.errors.description %} error{% endif %}">
-            <label class="control-label" for="post">Bio:</label>
+            <label class="control-label" for="post">Bio or Description</label>
             <div class="controls">
                 {{ form.description(size = 100, maxlength = 140) }}
                 {% for error in form.errors.description %}
