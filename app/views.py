@@ -66,7 +66,7 @@ def view_team():
         for team_member in table_team:
             if team_member.group_id == group.id:
                 group.team_list[i % 2].append(team_member)
-                team_member.edit_url = "edit/team/" + str(team.id)
+                team_member.edit_url = "edit/team/" + str(team_member.id)
                 i += 1
 
     return render_template('team.html',
@@ -152,9 +152,10 @@ def view_panels():
 def view_advisors():
     table_advisors = Advisor.query.all()
     length = len(table_advisors)
-    advisors_list = [table_advisors[:length / 2], table_advisors[(length / 2):]]
-    for a in advisors_list:
+    for a in table_advisors:
         a.edit_url = "edit/advisor/" + str(a.id)
+    advisors_list = [table_advisors[:length / 2], table_advisors[(length / 2):]]
+
     return render_template('advisors.html',
         title = 'HCF Advisors',
         page_id = 'advisors',
@@ -398,16 +399,30 @@ def user(nickname, page = 1):
 
 map_tab = {'speaker':Speaker, 'panel':Panel, 'advisor':Advisor,
            'organization': Organization, 'group':Group,
-           'category':Category}
+           'category':Category, 'team':Team}
 
 map_form = {'speaker':PostSpeakerForm, 'panel':PostPanelForm, 'advisor':PostAdvisorForm,
            'organization': PostOrganizationForm, 'group':PostGroupForm,
-           'category':PostCategoryForm}
+           'category':PostCategoryForm, 'team':PostTeamForm}
 
 
 @app.route('/how_to', methods = ['GET'])
 def how_to():
     return render_template('how_to.html')
+@app.route
+
+
+
+@app.route('/delete/<table>/<int:id>', methods = ['GET', 'POST'])
+@login_required
+def delete_entity(table, id):
+    model = map_tab[table].query.filter_by(id = id).first()
+    db.session.delete(model)
+    db.session.commit()
+    flash("Deleted!")
+    return redirect(url_for("view_"+table+"s"))
+
+
 
 #the variables are string by default
 @app.route('/edit/<table>/<int:id>', methods = ['GET', 'POST'])
@@ -437,6 +452,7 @@ def edit_entity(table, id):
         #"new_"+table+".html", 
         title="Edit",
         table=table,
+        del_url = "/delete/"+table+"/"+str(id),
         form=form) #
 
 

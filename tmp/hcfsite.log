@@ -3851,6 +3851,7 @@ AttributeError: 'NoneType' object has no attribute 'pop'
 2013-02-17 21:54:14,021 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
 2013-02-17 21:54:14,995 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
 2013-02-17 21:55:10,781 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+<<<<<<< HEAD
 >>>>>>> 25b7c195849ccf9b0e26e1642d44cdb9bbfac6b4
 2013-02-17 22:46:58,963 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
 2013-02-17 22:46:59,937 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
@@ -3859,3 +3860,24 @@ AttributeError: 'NoneType' object has no attribute 'pop'
 2013-02-17 22:47:57,823 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
 2013-02-17 22:53:37,981 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
 2013-02-17 22:53:38,463 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+=======
+2013-02-17 22:54:04,276 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 22:54:05,576 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 22:56:11,282 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 22:57:15,521 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:01:17,745 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:02:31,016 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:02:39,030 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:02:53,504 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:02:54,696 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:10:18,293 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:12:56,539 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:13:35,591 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:13:36,963 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:14:03,324 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:14:12,457 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:15:25,586 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:16:06,350 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:16:59,090 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+2013-02-17 23:17:09,372 INFO: hcfsite startup [in /Users/yifanwu/Dropbox/Dev/HCF/hcfsite/app/__init__.py:40]
+>>>>>>> a8d9a6e6d5f89b048fbdbc7d9164fdff852f9f3f
