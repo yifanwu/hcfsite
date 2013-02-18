@@ -27,6 +27,9 @@
                     {% for team_member in team_list %}
                         <div class="span6">
                             <div class="detail_box">
+                                {% if g.user.is_authenticated() %}
+                                    <a class="btn btn-mini btn-edit" href={{ team_member.edit_url }}><i class="icon-edit"></i> Edit</a>
+                                {% endif %}
                             <img src="{{ team_member.img_url }}" alt=""/>
                             <p>
                                 <span class="name">{{ team_member.name }}</span><br/>
@@ -37,9 +40,6 @@
                         <div class="cleaner"></div>
                         </div>
                         </div>
-                        {% if g.user.is_authenticated() %}
-                            <a href={{ team_member.edit_url }}>edit</a>
-                        {% endif %}
                     {% endfor %}
                 {% endfor %}
             </div>

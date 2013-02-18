@@ -1,14 +1,14 @@
-<!-- extend base layout -->
 {% extends "base.html" %}
 
 {% block content %}
     </br>
+    <h1>{{ title }}</h1>
+    </br>
     {% include 'flash.html' %}
     </br>
-
+    <div class="well">
     <form class="form-horizontal" action="" method="post" name="post">
         {{form.hidden_tag()}}
-
 
         <div class="control-group{% if form.errors.name %} error{% endif %}">
             <label class="control-label" for="post">Name:</label>
@@ -21,7 +21,7 @@
         </div>
 
         <div class="control-group{% if form.errors.description %} error{% endif %}">
-            <label class="control-label" for="post">Bio:</label>
+            <label class="control-label" for="post">Description:</label>
             <div class="controls">
                 {{ form.description(size = 100, maxlength = 140) }}
                 {% for error in form.errors.description %}
@@ -30,8 +30,8 @@
             </div>
         </div>
 
-        <p>If you have the url to the photo, please paste it dirctly, otherwise, upload picture of the speaker
-            <a href="http://www.freeimagehosting.net/">here</a> and paste the link as prompted</p>
+        <p>If you have the url to the photo, please paste it directly, otherwise, upload picture of the speaker
+            <a href="http://www.freeimagehosting.net/upload.php" target="_blank">here</a> and paste the link as prompted</p>
         <div class="control-group{% if form.errors.img_url %} error{% endif %}">
             <label class="control-label" for="post">Image URL</label>
             <div class="controls">
@@ -40,6 +40,7 @@
                     <span class="help-inline">[{{error}}]</span><br>
                 {% endfor %}
             </div>
+        </div>
 
         <div class="control-group">
             <div class="controls">
@@ -48,4 +49,5 @@
         </div>
 
     </form>
+    </div>
 {% endblock %}

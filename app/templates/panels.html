@@ -15,12 +15,9 @@
 				<h5 style="margin-top: 0px;">{{ category.name }}</h5>
 				<ul class="nav nav-pills nav-stacked">
 					{% for panel in panels %}
-					{% if panel.category_id == category.id %}
-					<li><a href="#{{ panel.html_id }}" class="scroll_to_anchor">{{ panel.name }}</a></li>
-					{% endif %}
-                    {% if g.user.is_authenticated() %}
-                        <a href={{ panel.edit_url }}>edit</a>
-                    {% endif %}
+						{% if panel.category_id == category.id %}
+							<li><a href="#{{ panel.html_id }}" class="scroll_to_anchor">{{ panel.name }}</a></li>
+						{% endif %}
 					{% endfor %}
 				</ul>
 			{% endfor %}
@@ -29,10 +26,16 @@
   	</div>
 	<div class="span8" id="panels">
 		{% for category in categories %}
+			{% if g.user.is_authenticated() %}
+        		<a class="btn btn-mini btn-edit" href={{ category.edit_url }}><i class="icon-edit"></i> Edit Panel Category</a>
+    		{% endif %}
 			<h3>{{ category.name }}</h3>
 			{% for panel in panels %}
 				{% if panel.category_id == category.id %}
 					<h4 id="{{ panel.html_id }}">{{ panel.name }}</h4>
+					{% if g.user.is_authenticated() %}
+                		<a class="btn btn-mini btn-edit" href={{ panel.edit_url }}><i class="icon-edit"></i> Edit Panel</a>
+            		{% endif %}
 					<h5>Panel Description</h5>
 					<p>{{ panel.info }}</p>
 					<h5>Key Questions</h5>
@@ -42,9 +45,6 @@
 					  	{% endfor %}
 					</ol>
 				{% endif %}
-                {% if g.user.is_authenticated() %}
-                    <a href={{ panel.edit_url }}>edit</a>
-                {% endif %}
 			{% endfor %}
 			<div class="cleaner_h30">&nbsp;</div>
 		{% endfor %}

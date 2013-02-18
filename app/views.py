@@ -134,6 +134,7 @@ def view_panels():
 
     for cat in cat_list:
         cat.html_id = "cat_" + str(cat.id)
+        cat.edit_url  = "edit/category/" + str(cat.id)
 
     for panel in panel_list:
         panel.html_id = "panel_" + str(panel.id)
@@ -287,7 +288,7 @@ def new_team():
         flash('Your post for new TEAM is now lIVE!')
         return redirect(url_for('new_team'))
     return render_template('new_team.html',
-        title = 'New Team',
+        title = 'New Team Member',
         form = form,
     )
 
@@ -375,7 +376,7 @@ def new_partner_org():
         return redirect(url_for('new_partner_org'))
 
     return render_template('new_partner.html',
-        title = 'New Panel',
+        title = 'New Partner',
         form = form
     )
 
@@ -409,9 +410,16 @@ map_form = {'speaker':PostSpeakerForm, 'panel':PostPanelForm, 'advisor':PostAdvi
 @app.route('/how_to', methods = ['GET'])
 def how_to():
     return render_template('how_to.html')
-@app.route
+#@app.route
 
-
+# Gives the correct return url after editing or deleting
+def return_url(table):
+    if (table == "category"):
+        return "/panels"
+    elif (table == "group" or table == "team"):
+        return "/team"
+    else:
+        return url_for("view_"+table+"s")
 
 @app.route('/delete/<table>/<int:id>', methods = ['GET', 'POST'])
 @login_required
@@ -419,10 +427,7 @@ def delete_entity(table, id):
     model = map_tab[table].query.filter_by(id = id).first()
     db.session.delete(model)
     db.session.commit()
-    flash("Deleted!")
-    return redirect(url_for("view_"+table+"s"))
-
-
+    return redirect(return_url(table))
 
 #the variables are string by default
 @app.route('/edit/<table>/<int:id>', methods = ['GET', 'POST'])
@@ -453,6 +458,7 @@ def edit_entity(table, id):
         title="Edit",
         table=table,
         del_url = "/delete/"+table+"/"+str(id),
+        return_url = return_url(table),
         form=form) #
 
 

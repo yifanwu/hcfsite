@@ -4,9 +4,6 @@
         {% for panel in panels %}
             {% if panel.category_id == category.id %}
                 <li><a href="#speakers" class="panel_select" id = "{{ panel.html_id }}">{{ panel.name }}</a></li>
-                <!--{% if g.user.is_authenticated() %}
-                    <a href="{{ "edit/" + type + "/" + panel.name }}">edit</a>
-                {% endif %}-->
             {% endif %}
         {% endfor  %}
     </ul>

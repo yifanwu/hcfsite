@@ -21,6 +21,9 @@
                 <div class="span6">
                     {% for advisor in advisor_group %}
                         <div class="detail_box">
+                            {% if g.user.is_authenticated() %}
+                                <a class="btn btn-mini btn-edit" href={{ advisor.edit_url }}><i class="icon-edit"></i> Edit</a>
+                            {% endif %}
                             <img src="{{ advisor.img_url }}" alt=""/>
                             <p>
                                 <span class="name">{{ advisor.name }}</span><br/>
@@ -30,9 +33,6 @@
                             <div class="bio">{{ advisor.description }}</div>
                         <div class="cleaner"></div>
                         </div>
-                        {% if g.user.is_authenticated() %}
-                            <a href={{ advisor.edit_url }}>edit</a>
-                        {% endif %}
                     {% endfor %}
                 </div>
                 {% endfor %}

@@ -1,9 +1,20 @@
-<!-- extend base layout -->
 {% extends "base.html" %}
 
+{% block head %}
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $('.btn-danger').click(function() {
+            if (confirm("Are you sure you want to delete? This action is non-reversible!"))
+                window.location = "{{ del_url }}";
+            else
+                return false;
+        });
+    });
+</script>
+{% endblock %}
+
 {% block content %}
-    </br>
-    </br>
+    <h1>Edit</h1>
     {% include 'flash.html' %}
     </br>
     </br>
@@ -23,7 +34,7 @@
 
         {% if table == 'panel' %}
             <div class="control-group{% if form.errors.keyq %} error{% endif %}">
-                <label class="input-xlarge" for="post">Key Questions:</label>
+                <label class="control-label" for="post">Key Questions:</label>
                 <div class="controls">
                     {{ form.keyq (size = 30, maxlength = 140) }}
                     {% for error in form.errors.keyq %}
@@ -33,16 +44,7 @@
             </div>
         {% endif %}
 
-        {% if table == 'pannel' %}
-            <div class="control-group{% if form.errors.category_id %} error{% endif %}">
-                <label class="control-label">Select Category:</label>
-                <div class="controls">
-                    {{ form.category_id }}
-                </div>
-            </div>
-        {% endif %}
-
-        {% if table == ('speaker' or 'advisor') %}
+        {% if table == 'speaker' or table == 'advisor' %}
         <div class="control-group{% if form.errors.title %} error{% endif %}">
             <label class="control-label" for="post">Title:</label>
             <div class="controls">
@@ -64,7 +66,7 @@
         </div>
         {% endif %}
 
-        {% if table == ('speaker' or 'advisor' or 'team') %}
+        {% if table == 'speaker' or table == 'advisor' or table == 'team' %}
         <div class="control-group{% if form.errors.description %} error{% endif %}">
             <label class="control-label" for="post">Bio:</label>
             <div class="controls">
@@ -75,8 +77,6 @@
             </div>
         </div>
         
-        <p>If you have the url to the photo, please paste it dirctly, otherwise, upload picture of the speaker
-            <a href="http://www.freeimagehosting.net/">here</a> and paste the link as prompted</p>
         <div class="control-group{% if form.errors.img_url %} error{% endif %}">
             <label class="control-label" for="post">Image URL</label>
             <div class="controls">
@@ -87,8 +87,8 @@
             </div>
         </div>
         {% endif %}
-        {% if table == 'speaker'%}
 
+        {% if table == 'speaker'%}
         <div class="control-group">
             <div class="controls">
                 <label class="checkbox" for="featured">
@@ -100,11 +100,11 @@
 
         <div class="control-group">
             <div class="controls">
-                <input class="btn btn-primary" type="submit" value="Change">
+                <input class="btn btn-primary" type="submit" value="Edit">
+                <a class="btn btn-warning" style="margin-left: 20px;" href="{{ return_url }}">Cancel</a>
+                <button class="btn btn-danger" type="button" style="margin-left: 20px;">Delete</button>
             </div>
         </div>
-
-         <a href={{del_url}}>DELETE</a>
 
     </form>
 

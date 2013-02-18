@@ -24,6 +24,12 @@ h1,h2,h3,h4 {
     margin: 0 auto;
 }
 
+.btn-edit {
+    position: relative;
+    z-index: 10;
+    float: right;
+}
+
 .detail_box {
     margin-top: 30px;
     position: relative;
