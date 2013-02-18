@@ -22,11 +22,11 @@
                 </div>
             </div>
 
-            <div class="control-group{% if form.errors.bio %} error{% endif %}">
+            <div class="control-group{% if form.errors.description %} error{% endif %}">
                 <label class="control-label" for="post">Bio:</label>
                 <div class="controls">
-                    {{ form.bio(size = 100, maxlength = 140) }}
-                    {% for error in form.errors.bio %}
+                    {{ form.description(size = 100, maxlength = 140) }}
+                    {% for error in form.errors.description %}
                         <span class="help-inline">[{{error}}]</span><br>
                     {% endfor %}
                 </div>

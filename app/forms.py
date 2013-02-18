@@ -59,7 +59,7 @@ class PostCategoryForm(Form):
 
 class PostTeamForm(Form):
     name = TextField('name', validators=[Required()])
-    bio = TextAreaField('bio', validators=[Required()])
+    description = TextAreaField('description', validators=[Required()])
     img_url = URLField(validators=[URL()])
     group_id = SelectField(u'group_id', coerce=int)
 
