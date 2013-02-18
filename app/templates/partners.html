@@ -5,17 +5,14 @@
 {% endblock %}
 
 {% block content %}
-<h1>HCF Strategic Partners</h1>
+<h1>{{ title }}</h1>
     <div id="partners_list">
-      <div class="partner_logo"><img src="/static/img/partners/vanke.jpg" alt="Vanke"/></div>
-      <h3>Vanke (万科集团)</h3><p>Vanke is lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
-      <div class="partner_logo"><img src="/static/img/partners/taikang.jpg" alt="Taikang"/></div>
-      <h3>Taikang Life Insurance (泰康人寿保险)</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
-      <div class="partner_logo"><img src="/static/img/partners/iicg.jpg" alt="iicg"/></div>
-      <h3>Intercom International Communication Group (???)</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
-      <div class="partner_logo"><img src="/static/img/partners/china-us.jpg" alt="china-us"/></div>
-      <h3>China-US Business Leaders Roundtable<br/>(中美商业领袖圆桌会议)</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
-      <div class="partner_logo"><img src="/static/img/partners/cef.jpg" alt="CEF"/></div>
-      <h3>China Entrepreneurs Forum<br/>(中国企业家论坛)</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque erat, malesuada ut viverra et, sagittis fringilla orci. Sed sed lectus risus, vel congue sapien. Aliquam erat volutpat. Duis pharetra varius blandit. Aliquam vitae libero metus, a dignissim lacus. Nunc blandit condimentum mauris, et iaculis nunc lobortis vel. Integer auctor est non nisl aliquet semper facilisis nibh elementum. Duis elementum erat eu elit pulvinar.</p>
+      {% for partner in partners %}
+        {% if g.user.is_authenticated() %}
+            <a class="btn btn-mini btn-edit" href={{ partner.edit_url }}><i class="icon-edit"></i> Edit Partner</a>
+        {% endif %}
+        <div class="partner_logo"><img src="{{ partner.img_url }}" alt="{{ partner.name }}"/></div>
+        <h3>{{ partner.name }}</h3><p>{{ partner.description }}</p>        
+      {% endfor %}
     </div>
 {% endblock %}

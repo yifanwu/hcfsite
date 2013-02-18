@@ -61,6 +61,7 @@ def view_team():
     table_group = Group.query.all()
 
     for group in table_group:
+        group.edit_url = "/edit/group/" + str(group.id)
         group.team_list = [[], []]
         i = 0
         for team_member in table_team:

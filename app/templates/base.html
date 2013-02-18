@@ -39,8 +39,8 @@
 			  <img alt="HCF Logo" src="/static/img/logo.png" id="site_logo" /><br/>
 			  <span>April 12 - 14, 2013&nbsp;</span>
 			</a>
-		<span id="lang_option"><a href="#">简体中文</a> | <a href="#">English</a></span>
-        <div id="site_search" class="form-search">
+		<span id="lang_option" style="visibility:hidden;"><a href="#">简体中文 (coming soon)</a> | <a href="#">English</a></span>
+        <div id="site_search" class="form-search" style="visibility:hidden;">
             <form class="navbar-search pull-right" action="{{url_for('search')}}"
                   method="post" name="search">{{g.search_form.hidden_tag()}}
                 {{g.search_form.search(size=20,placeholder="Search",class="search-query")}}

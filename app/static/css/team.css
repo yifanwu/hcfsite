@@ -1,5 +1,7 @@
 #person_bio { margin-top: 10px; }
 
+.email { display: none; }
+
 #wrapper h4 { margin-bottom: 0px; padding-bottom: 0px; }
 
 .detail_box { margin-top: 20px; }

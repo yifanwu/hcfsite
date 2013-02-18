@@ -20,7 +20,12 @@
             {% for group in groups %}
             <div>
                 <h4 class="heading">{{ group.name }}<i class="icon-chevron-down"></i></h4>
-                <div class="descrip">{{ group.description }}</div>
+                <div class="descrip">
+                    {% if g.user.is_authenticated() %}
+                        <a class="btn btn-mini btn-edit" href={{ group.edit_url }}><i class="icon-edit"></i> Edit Group</a>
+                    {% endif %}
+                    {{ group.description }}
+                </div>
             </div>
             <div class="row-fluid">
                 {% for team_list in group.team_list %}
@@ -34,7 +39,7 @@
                             <p>
                                 <span class="name">{{ team_member.name }}</span><br/>
                                 <span class="title">{{ team_member.title }}</span><br/>
-                                <span class="organization">{{ team_member.organization }}<span>
+                                <span class="email">{{ team_member.email }}</span>
                             </p>
                             <div class="bio">{{ team_member.description }}</div>
                         <div class="cleaner"></div>
