@@ -3804,3 +3804,4 @@ AttributeError: 'NoneType' object has no attribute 'pop'
 2013-02-17 13:09:16,044 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
 2013-02-17 13:09:18,050 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
 2013-02-17 13:13:01,931 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
+2013-02-17 14:08:18,561 INFO: hcfsite startup [in /Users/yuechen/Projects/hcfsite/app/__init__.py:40]
