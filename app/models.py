@@ -104,7 +104,7 @@ class Panel(db.Model):
 
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(64), unique = True)
-    info = db.Column(db.String(5000))
+    description = db.Column(db.String(5000))
     keyq = db.Column(db.String(5000))
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
     speakers = db.relationship("Speaker")

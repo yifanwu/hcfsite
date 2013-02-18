@@ -115,7 +115,7 @@ class PostOrganizationForm(Form):
 
 class PostPanelForm(Form):
     name = TextAreaField('name', validators=[Required()])
-    info = TextAreaField('description', validators=[Required()])
+    description = TextAreaField('description', validators=[Required()])
     keyq = TextAreaField('keyq', validators=[Required()])
 
     category_id = SelectField('category_id', coerce=int)
