@@ -34,6 +34,11 @@ class EditForm(Form):
             return False
         return True
 
+class ContactForm(Form):
+    name = TextField('name', validators=[Required()])
+    subject = TextField('subject', validators=[Required()])
+    email_add = TextField('email_add', validators=[Required()])
+    msg = TextAreaField('msg', validators=[Required()])
 
 class PostForm(Form):
     post = TextField('post', validators = [Required()])

@@ -3,11 +3,12 @@ from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, oid
 from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm, PostPanelForm, \
-    PostAdvisorForm, PostOrganizationForm, PostCategoryForm, PostTeamForm, PostGroupForm
+    PostAdvisorForm, PostOrganizationForm, PostCategoryForm, PostTeamForm, PostGroupForm, ContactForm
 from models import User, ROLE_USER, Post, Panel, Organization, Advisor, Speaker, Category, Team, Group
 from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
 from flask import request
+from emails import contact_notification
 
 @lm.user_loader
 def load_user(id):
@@ -221,12 +222,24 @@ def after_login(resp):
     return redirect(request.args.get('next') or url_for('index'))
 
 
+@app.route('/contact', methods = ['GET', 'POST'])
+@login_required
+def contact():
+    form = ContactForm()
+    if form.validate_on_submit():
+        contact_notification(form.name.data, form.subject.data, form.email_add.data, form.msg.data)
+        flash('Your post is now live!')
+        return redirect(url_for('contact'))
+
+    return render_template('contact.html',
+        form = form)
+
+
 @app.route('/post_blog', methods = ['GET', 'POST'])
 @login_required
 def post_blog():
     form = PostForm()
     if form.validate_on_submit():
-        #TODO: add a dropdown menu instead of having the user type stuff in
         post = Post(
             body = form.post.data, timestamp = datetime.utcnow(), author = g.user,
             panel = form.panel.data

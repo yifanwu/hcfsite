@@ -3,30 +3,63 @@
 
 {% block content %}
     <div id="wrapper-outer"><div id="wrapper"><div id="wrapper_inner">
-        <h1>Contact Us</h1>
-        <div class="row-fluid">
-            <div class="span8">
-                <form method="post" id="contact" name="contact" action="#">
 
-                    <label for="name">Your Name:</label> <input type="text" id="name" name="name" class="required input_field" />
-                    <div class="cleaner_h10"></div>
+    <h1>Contact Us</h1>
+        
+    </br>
+    {% include 'flash.html' %}
+    </br>
+    <div class="well">
 
-                    <label for="subject">Subject:</label> <input type="text" id="subject" name="subject" class="required input_field" />
-                    <div class="cleaner_h10"></div>
 
-                    <label for="email">Email Address:</label> <input type="text" id="email" name="email" class="validate-email required input_field" />
-                    <div class="cleaner_h10"></div>
-
-                    <label for="message">Message:</label> <textarea id="message" name="message" class="required"></textarea>
-                    <div class="cleaner_h10"></div>
-
-                    <div id="buttons">
-                        <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Send" style="margin-right: 100px;"/>
-                        <input type="reset" class="btn" name="reset" id="reset" value="Reset"/>
-                    </div>
-
-                </form>
+        <form class="form-horizontal" action="" method="post" name="post">
+            {{form.hidden_tag()}}
+            <div class="control-group{% if form.errors.name %} error{% endif %}">
+                <label class="control-label" for="post">Your Name:</label>
+                <div class="controls">
+                    {{ form.name(size = 90, maxlength = 9000) }}
+                    {% for error in form.errors.name %}
+                        <span class="help-inline">[{{error}}]</span><br>
+                    {% endfor %}
+                </div>
             </div>
+            <div class="control-group{% if form.errors.subject %} error{% endif %}">
+                <label class="control-label" for="post">Subject:</label>
+                <div class="controls">
+                    {{ form.subject (size = 90, maxlength = 140) }}
+                    {% for error in form.errors.subject %}
+                        <span class="help-inline">[{{error}}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="control-group{% if form.errors.email_add %} error{% endif %}">
+                <label class="control-label" for="post">Email Address:</label>
+                <div class="controls">
+                    {{ form.email_add (size = 90, maxlength = 140) }}
+                    {% for error in form.errors.email_add %}
+                        <span class="help-inline">[{{error}}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="control-group{% if form.errors.msg %} error{% endif %}">
+                <label class="control-label" for="post">Message:</label>
+                <div class="controls">
+                    {{ form.msg (size = 90, maxlength = 140) }}
+                    {% for error in form.errors.msg %}
+                        <span class="help-inline">[{{error}}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <input class="btn btn-primary" type="submit" value="Post!">
+                </div>
+            </div>
+
+        </form>
+    </div>
             <div class="span4">
                 <br/><br/>
                 <address>

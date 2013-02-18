@@ -2,7 +2,7 @@ from flask import render_template
 from flask.ext.mail import Message
 from app import mail
 from decorators import async
-from config import ADMINS
+from config import ADMINS, TEST
 
 @async    
 def send_async_email(msg):
@@ -13,16 +13,12 @@ def send_email(subject, sender, recipients, text_body, html_body):
     msg.body = text_body
     msg.html = html_body
     send_async_email(msg)
-    #thr = threading.Thread(target = send_async_email, args = [msg])
-    #thr.start()
-
-    '''
-def follower_notification(followed, follower):
-    send_email("[microblog] %s is now following you!" % follower.nickname,
+    
+def contact_notification(name, subject, email_add, body):
+    send_email(subject,
         ADMINS[0],
-        [followed.email],
-        render_template("follower_email.txt", 
-            user = followed, follower = follower),
-        render_template("follower_email.html", 
-            user = followed, follower = follower))
-       '''
+        #send to self
+        ADMINS[0],
+        "sent by:"+str(email_add)+"\n"+body,
+        ''
+        )
