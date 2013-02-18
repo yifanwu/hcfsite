@@ -7,6 +7,7 @@ from forms import LoginForm, EditForm, PostForm, SearchForm, PostSpeakerForm, Po
 from models import User, ROLE_USER, Post, Panel, Organization, Advisor, Speaker, Category, Team, Group
 from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
+from flask import request
 
 @lm.user_loader
 def load_user(id):
@@ -65,6 +66,7 @@ def view_team():
         for team_member in table_team:
             if team_member.group_id == group.id:
                 group.team_list[i % 2].append(team_member)
+                team_member.edit_url = "edit/team/" + str(team.id)
                 i += 1
 
     return render_template('team.html',
@@ -77,6 +79,8 @@ def view_team():
 @app.route('/partners')
 def view_partners():
     table_partners = Organization.query.all()
+    for p in table_partners:
+        p.edit_url = "edit/partners/" + str(p.id)
     return render_template('partners.html',
         title = 'HCF Partners',
         page_id = 'partners',
@@ -112,6 +116,7 @@ def view_speakers():
         for speaker in table_speakers:
             if speaker.panel_id == panel.id:
                 panel.speakers_list[i % 2].append(speaker)
+                speaker.edit_url = "edit/speaker/" + str(speaker.id)
                 i += 1
 
     return render_template('speakers.html',
@@ -133,6 +138,7 @@ def view_panels():
     for panel in panel_list:
         panel.html_id = "panel_" + str(panel.id)
         panel.keyq = panel.keyq.split('\n')
+        panel.edit_url = "edit/panel/" + str(panel.id)
 
     return render_template('panels.html',
        title = 'HCF Panels',
@@ -147,6 +153,8 @@ def view_advisors():
     table_advisors = Advisor.query.all()
     length = len(table_advisors)
     advisors_list = [table_advisors[:length / 2], table_advisors[(length / 2):]]
+    for a in advisors_list:
+        a.edit_url = "edit/advisor/" + str(a.id)
     return render_template('advisors.html',
         title = 'HCF Advisors',
         page_id = 'advisors',
@@ -331,14 +339,14 @@ def new_advisor():
 
 @app.route('/new_panel', methods=['GET', 'POST'])
 @login_required
-def new_panel():
+def new_panel(form=None):
     form = PostPanelForm()
     categories = Category.query.all()
     form.category_id.choices = [(g.id, g.name) for g in categories]
 
     if form.validate_on_submit():
         post = Panel(
-            name = form.name.data, info = form.info.data, category_id =
+            name = form.name.data, description = form.description.data, category_id =
             form.category_id.data, keyq = form.keyq.data
         )
         db.session.add(post)
@@ -388,55 +396,47 @@ def user(nickname, page = 1):
         user = user,
         posts = posts)
 
-map_tab = {'speaker':Speaker, 'panel':Panel, 'advisor':Advisor, 'organization': Organization}
+map_tab = {'speaker':Speaker, 'panel':Panel, 'advisor':Advisor,
+           'organization': Organization, 'group':Group,
+           'category':Category}
 
-'''
-@app.route('/make_edit/<table>', methods = ['GET', 'POST'])
-@login_required
-def make_edit(table):
-    all_content = map_tab[table].query.all()
-'''
+map_form = {'speaker':PostSpeakerForm, 'panel':PostPanelForm, 'advisor':PostAdvisorForm,
+           'organization': PostOrganizationForm, 'group':PostGroupForm,
+           'category':PostCategoryForm}
+
 
 @app.route('/how_to', methods = ['GET'])
 def how_to():
     return render_template('how_to.html')
 
 #the variables are string by default
-@app.route('/edit/<table>/<id>', methods = ['GET', 'POST'])
+@app.route('/edit/<table>/<int:id>', methods = ['GET', 'POST'])
 @login_required
 def edit_entity(table, id):
-    form = EditForm()
-    entity_content = map_tab[table].query.filter_by(id = id).first()
 
-    if entity_content == None:
-        flash("This entity doesn\'t exit!")
+    #to_edit = map_tab[table].query.filter_by(id = id).first()
+    #model = (db.Model)map_tab[table].get((int)id)
+    model = map_tab[table].query.filter_by(id = id).first()
+    #model = Speaker.get(id)
+    form = map_form[table](request.form, model)
+    '''
+    return redirect(url_for('new_'+table, form = form))
+'''
+    #EditForm(request.form, model)
 
-    if form.validate_on_submit():
-        entity_content.name = form.name.data
-        entity_content.description = form.description.data
-        entity_content.img_url = form.img_url.data
-        if table == 'advisor' or table == 'speaker':
-            entity_content.title = form.title.data
-            entity_content.organization = form.organization.data
-            if table == 'speaker':
-                entity_content.panel = form.panel.data
-                entity_content.featured = form.featured.data
+    #if form.validate_on_submit():
+    
+    if request.method == 'POST':
+        form.populate_obj(model)
         db.session.commit()
+        #kmodel.save()
+        flash("Entry updated!")
+        return redirect(url_for("edit_entity", table = table, id= id))
 
-    elif request.method != "POST":
-        form.name.data = entity_content.name
-        form.description.data = entity_content.description
-        form.img_url.data = entity_content.img_url
-        if table == 'advisor' or table == 'speaker':
-            form.title.data = entity_content.title
-            form.organization.data = entity_content.organization
-            if table == 'speaker':
-                form.panel.data = entity_content.panel
-                form.featured.data = entity_content.featured# I CANNOT DO .ITEM HERE BECAUSE IT'S A STRING
+    return render_template("edit_entity.html",
+        #"new_"+table+".html", 
+        title="Edit",
+        table=table,
+        form=form) #
 
-    return render_template('edit_entity.html',
-        form = form,
-        table = table,
-        name = name,
-    )
 

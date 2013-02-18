@@ -41,6 +41,9 @@
                                     </p>
                                     <div class="cleaner"></div>
                                 </div>
+                                {% if g.user.is_authenticated() %}
+                                    <a href={{ speaker.edit_url }}>edit</a>
+                                {% endif %}
                             {% endfor %}
                         </div>
                     {% endfor %}
