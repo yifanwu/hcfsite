@@ -1,4 +1,6 @@
-/temp/nouces
+/tmp/nouces
+*.log
+/db_repository
 *.db
 .gitignore
 flask

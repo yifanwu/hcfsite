@@ -282,7 +282,7 @@ def new_team():
 
     if form.validate_on_submit():
         post = Team(name = form.name.data, description = form.description.data, img_url
-                = form.img_url.data, group_id = form.group_id.data)
+                = form.img_url.data, title = form.title.data, email = form.email.data, group_id = form.group_id.data)
         db.session.add(post)
         db.session.commit()
         flash('Your post for new TEAM is now lIVE!')

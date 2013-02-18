@@ -1,5 +1,5 @@
 from flask.ext.wtf import Form, TextField, BooleanField, TextAreaField, SelectField
-from flask.ext.wtf import Required, Length, URL
+from flask.ext.wtf import Required, Length, URL, Email
 from flask.ext.wtf.html5 import URLField
 from app.models import User, Panel, Advisor, Speaker, Organization, Group
 
@@ -60,6 +60,8 @@ class PostCategoryForm(Form):
 class PostTeamForm(Form):
     name = TextField('name', validators=[Required()])
     description = TextAreaField('description', validators=[Required()])
+    title = TextField('title', validators=[Required()])
+    email = TextField('Email', validators=[Email()])
     img_url = URLField(validators=[URL()])
     group_id = SelectField(u'group_id', coerce=int)
 

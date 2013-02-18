@@ -57,6 +57,8 @@ class Team(db.Model):
     __tablename__ = 'team'
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(64), unique = True)
+    title = db.Column(db.String(140))
+    email = db.Column(db.String(140))
     description = db.Column(db.String, nullable=False)
     img_url = db.Column(db.String(140), nullable=True)
     group_id = db.Column(db.Integer, db.ForeignKey('group.id'))
