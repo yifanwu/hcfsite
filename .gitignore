@@ -1,3 +1,4 @@
 flask
 *.pyc
 .DS_Store
+trash
