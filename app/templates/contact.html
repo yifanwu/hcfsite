@@ -27,7 +27,7 @@
                 <div class="control-group{% if form.errors.subject %} error{% endif %}">
                     <label class="control-label" for="post">Subject:</label>
                     <div class="controls">
-                        {{ form.subject (size = 90, maxlength = 140) }}
+                        {{ form.subject (size = 90, maxlength = 1000) }}
                         {% for error in form.errors.subject %}
                             <span class="help-inline">[{{error}}]</span><br>
                         {% endfor %}
@@ -37,7 +37,7 @@
                 <div class="control-group{% if form.errors.email_add %} error{% endif %}">
                     <label class="control-label" for="post">Email Address:</label>
                     <div class="controls">
-                        {{ form.email_add (size = 90, maxlength = 140) }}
+                        {{ form.email_add (size = 90, maxlength = 1000) }}
                         {% for error in form.errors.email_add %}
                             <span class="help-inline">[{{error}}]</span><br>
                         {% endfor %}
@@ -47,7 +47,7 @@
                 <div class="control-group{% if form.errors.msg %} error{% endif %}">
                     <label class="control-label" for="post">Message:</label>
                     <div class="controls">
-                        {{ form.msg (size = 90, maxlength = 1000) }}
+                        {{ form.msg (size = 90, maxlength = 3000) }}
                         {% for error in form.errors.msg %}
                             <span class="help-inline">[{{error}}]</span><br>
                         {% endfor %}

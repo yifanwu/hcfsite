@@ -13,7 +13,7 @@
         <div class="control-group{% if form.errors.name %} error{% endif %}">
             <label class="control-label" for="post">Name:</label>
             <div class="controls">
-                {{ form.name(size = 90, maxlength = 900) }}
+                {{ form.name(size = 90, maxlength = 1000) }}
                 {% for error in form.errors.name %}
                     <span class="help-inline">[{{error}}]</span><br>
                 {% endfor %}
@@ -23,7 +23,7 @@
         <div class="control-group{% if form.errors.description %} error{% endif %}">
             <label class="control-label" for="post">Description:</label>
             <div class="controls">
-                {{ form.description(size = 100, maxlength = 140) }}
+                {{ form.description(size = 100, maxlength = 3000) }}
                 {% for error in form.errors.description %}
                     <span class="help-inline">[{{error}}]</span><br>
                 {% endfor %}
