@@ -33,11 +33,6 @@
 
 #person_bio .person_descrip .title {
     position: absolute;
-    bottom: 40px;
-    left: 170px;
-}
-#person_bio .person_descrip .organization {
-    position: absolute;
     bottom: 20px;
     left: 170px;
 }

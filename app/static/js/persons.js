@@ -10,9 +10,11 @@ $(document).ready(function() {
     	bio = $(this).find('.bio').html();
 
 		var html ="<div class='person_descrip'><img src='" + img_src + "' alt='person pic'/>";
-		html += "<span class='name'>" + name + "</span> <span class='title'>" + title + "</span><br/>";
+		html += "<span class='name'>" + name + "</span> <span class='title'>" + title;
         if (organization != undefined)
-            html += "<span class='organization'>" + organization + "</span></br>";
+            html += "<br/>" + organization + "</span><br/>";
+        else
+            html += "</span><br/>";
         html += "<div class='cleaner'>&nbsp;</div></div>";
 		html += "<p class='bio'>" + bio;
         if (email != undefined)
