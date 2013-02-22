@@ -49,14 +49,14 @@ class User(db.Model):
 class Group(db.Model):
     __tablename__ = 'group'
     id = db.Column(db.Integer, primary_key = True)
-    name = db.Column(db.String(64), unique = True)
+    name = db.Column(db.String(64))
     members = db.relationship("Team")
-    description = db.Column(db.String(64), unique = True)
+    description = db.Column(db.String(5000))
 
 class Team(db.Model):
     __tablename__ = 'team'
     id = db.Column(db.Integer, primary_key = True)
-    name = db.Column(db.String(64), unique = True)
+    name = db.Column(db.String(64))
     title = db.Column(db.String(140))
     email = db.Column(db.String(140))
     description = db.Column(db.String, nullable=False)
@@ -67,8 +67,8 @@ class Advisor(db.Model):
     __tablename__ = 'advisor'
 
     id = db.Column(db.Integer, primary_key = True)
-    name = db.Column(db.String(64), unique = True)
-    description = db.Column(db.String, nullable=False)
+    name = db.Column(db.String(64))
+    description = db.Column(db.String(5000), nullable=False)
     img_url = db.Column(db.String(140), nullable=True)
     title = db.Column(db.String(140))
     organization = db.Column(db.String(140))
@@ -77,21 +77,20 @@ class Speaker(db.Model):
     __tablename__ = 'speaker'
 
     id = db.Column(db.Integer, primary_key = True)
-    name = db.Column(db.String(64), unique = True)
-    description = db.Column(db.String, nullable=False)
+    name = db.Column(db.String(64))
+    description = db.Column(db.String(5000), nullable=False)
     img_url = db.Column(db.String(140), nullable=True)
     title = db.Column(db.String(140))
     organization = db.Column(db.String(140))
     featured = db.Column(db.Boolean)
     panel_id = db.Column(db.Integer, db.ForeignKey('panel.id'))
 
-
 class Organization(db.Model):
     __tablename__ = 'organization'
 
     id = db.Column(db.Integer, primary_key = True)
-    name = db.Column(db.String(64), unique = True)
-    description = db.Column(db.String, nullable=False)
+    name = db.Column(db.String(64))
+    description = db.Column(db.String(5000), nullable=False)
     img_url = db.Column(db.String(140), nullable=True)
 
 class Category(db.Model):
