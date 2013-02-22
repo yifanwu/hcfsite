@@ -59,17 +59,7 @@
                </div>
            </div>
 
-            <p>If you have the url to the photo, please paste it directly, otherwise, upload picture of the speaker
-            <a href="http://www.freeimagehosting.net/upload.php" target="_blank">here</a> and paste the link as prompted</p>
-            <div class="control-group{% if form.errors.img_url %} error{% endif %}">
-                <label class="control-label" for="post">Image URL</label>
-                <div class="controls">
-                    {{ form.img_url(size = 100, maxlength = 500) }}
-                    {% for error in form.errors.img_url %}
-                        <span class="help-inline">[{{error}}]</span><br>
-                    {% endfor %}
-                </div>
-            </div>
+            {% include 'upload_image.html' %}
 
             <div class="control-group">
                 <div class="controls">
