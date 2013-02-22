@@ -18,7 +18,7 @@ def contact_notification(name, subject, email_add, body):
     send_email(subject,
         ADMINS[0],
         #send to self
-        ADMINS[0],
-        "sent by:"+str(email_add)+"\n"+body,
+        ADMINS,
+        "Sent by: "+name+" <"+str(email_add)+">\n"+body,
         ''
-        )
+    )

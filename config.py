@@ -21,11 +21,11 @@ MAIL_SERVER = 'stmp.gmail.com'
 MAIL_PORT = 465
 MAIL_USE_TLS = False
 MAIL_USE_SSL = True
-MAIL_USERNAME = 'yuechenzhao1993'
-MAIL_PASSWORD = '#Yz7228818930#'
+MAIL_USERNAME = 'contact@harvardchina.org'
+MAIL_PASSWORD = 'hcf2013contact'
 
 # administrator list
-ADMINS = ['yuechenzhao1993@gmail.com']
+ADMINS = ['contact@harvardchina.org']
 
 TEST = 'yifan1030@gmail.com'
 
