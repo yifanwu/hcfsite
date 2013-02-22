@@ -4,7 +4,7 @@ from app import mail
 from decorators import async
 from config import ADMINS, TEST
 
-@async    
+@async
 def send_async_email(msg):
     mail.send(msg)
     
