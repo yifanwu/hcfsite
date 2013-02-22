@@ -90,7 +90,9 @@
                 {% endfor %}
             </div>
         </div>
+        {% endif %}
         
+        {% if table == 'speaker' or table == 'advisor' or table == 'team' or table == 'organization' %}
         <div class="control-group{% if form.errors.img_url %} error{% endif %}">
             <label class="control-label" for="post">Image URL</label>
             <div class="controls">
