@@ -36,6 +36,11 @@
     bottom: 20px;
     left: 170px;
 }
+#person_bio .person_descrip .organization {
+    position: absolute;
+    bottom: 40px;
+    left: 170px;
+}
 
 #person_select_text { 
     text-align: center;
