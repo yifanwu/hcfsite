@@ -19,6 +19,7 @@ blinker==1.2
 decorator==3.4.0
 ## FIXME: could not find svn URL in dependency_links for this package:
 flup==1.0.3.dev-20110405
+psycopg2==2.4.6
 python-openid==2.2.5
 pytz==2012j
 speaklater==1.3
