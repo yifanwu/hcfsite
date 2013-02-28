@@ -12,7 +12,8 @@
             <a class="btn btn-mini btn-edit" href={{ partner.edit_url }}><i class="icon-edit"></i> Edit Partner</a>
         {% endif %}
         <div class="partner_logo"><img src="{{ partner.img_url }}" alt="{{ partner.name }}"/></div>
-        <h3>{{ partner.name }}</h3><p>{{ partner.description }}</p>        
+        <h3>{{ partner.name }}</h3><p>{{ partner.description }}</p>
+	<div class="cleaner">&nbsp;</div>
       {% endfor %}
     </div>
 {% endblock %}
