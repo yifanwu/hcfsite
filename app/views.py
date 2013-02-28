@@ -157,7 +157,12 @@ def view_advisors():
     length = len(table_advisors)
     for a in table_advisors:
         a.edit_url = "edit/advisor/" + str(a.id)
-    advisors_list = [table_advisors[:length / 2], table_advisors[(length / 2):]]
+    advisors_list = [[], []]
+    i = 0
+    for advisor in table_advisors:
+        advisors_list[i % 2].append(advisor)
+        i = i + 1
+        #advisors_list = [table_advisors[:length / 2], table_advisors[(length / 2):]]
 
     return render_template('advisors.html',
         title = 'HCF Advisors',
