@@ -16,14 +16,6 @@ SQLALCHEMY_DATABASE_URI = 'postgresql://rxqrftayvbnhbn:pu9nZuYHhIxU6kmozzMviFYEM
 SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 WHOOSH_BASE = os.path.join(basedir, 'search.db')
 
-# email server
-MAIL_SERVER = 'stmp.gmail.com'
-MAIL_PORT = 465
-MAIL_USE_TLS = False
-MAIL_USE_SSL = True
-MAIL_USERNAME = 'contact@harvardchina.org'
-MAIL_PASSWORD = 'hcf2013contact'
-
 # administrator list
 ADMINS = ['contact@harvardchina.org']
 
