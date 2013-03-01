@@ -34,9 +34,9 @@ def internal_error(error):
 
 @app.route('/', methods = ['GET', 'POST'])
 def index():
-    featured_speakers = Speaker.query.filter_by(featured = True)
-    panels = Panel.query.all()
-    cat_list = Category.query.all()
+    featured_speakers = Speaker.query.filter_by(featured = True).order_by(Speaker.name.asc()).all()
+    panels = Panel.query.order_by(Panel.name.asc()).all()
+    cat_list = Category.query.order_by(Category.name.asc()).all()
 
     for cat in cat_list:
         cat.html_id = "cat_" + str(cat.id)
@@ -87,7 +87,7 @@ def view_team():
 
 @app.route('/partners')
 def view_partners():
-    table_partners = Organization.query.all()
+    table_partners = Organization.query.order_by(Organization.name.asc()).all()
     for p in table_partners:
         p.edit_url = "edit/organization/" + str(p.id)
     return render_template('partners.html',
@@ -114,9 +114,9 @@ def view_about():
 #note that partners.html is NOT a copy-paste error!
 @app.route('/speakers')
 def view_speakers():
-    table_speakers = Speaker.query.all()
-    cat_list = Category.query.all()
-    panel_list = Panel.query.all()
+    table_speakers = Speaker.query.order_by(Speaker.name.asc()).all()
+    cat_list = Category.query.order_by(Category.name.asc()).all()
+    panel_list = Panel.query.order_by(Panel.name.asc()).all()
 
     for panel in panel_list:
         panel.html_id = "panel_" + str(panel.id)
@@ -138,8 +138,8 @@ def view_speakers():
 
 @app.route('/panels')
 def view_panels():
-    cat_list    = Category.query.all()
-    panel_list  = Panel.query.all()
+    cat_list    = Category.query.order_by(Category.name.asc()).all()
+    panel_list  = Panel.query.order_by(Panel.name.asc()).all()
 
     for cat in cat_list:
         cat.html_id = "cat_" + str(cat.id)
@@ -160,7 +160,7 @@ def view_panels():
 
 @app.route('/advisors')
 def view_advisors():
-    table_advisors = Advisor.query.all()
+    table_advisors = Advisor.query.order_by(Advisor.name.asc()).all()
     length = len(table_advisors)
     for a in table_advisors:
         a.edit_url = "edit/advisor/" + str(a.id)
