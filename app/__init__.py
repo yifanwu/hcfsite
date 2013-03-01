@@ -14,7 +14,6 @@ lm = LoginManager()
 lm.init_app(app)
 lm.login_view = 'login'
 oid = OpenID(app, os.path.join(basedir, 'tmp'))
-mail = Mail(app)
 
 app.config.update(
     #EMAIL SETTINGS
@@ -24,6 +23,8 @@ app.config.update(
     MAIL_USERNAME = 'contact@harvardchina.org', #full email
     MAIL_PASSWORD = 'hcf2013contact'
 )
+
+mail = Mail(app)
 
 #this is for people to upload the img
 UPLOAD_FOLDER = os.path.join(basedir, 'tmp')
