@@ -28,6 +28,7 @@ app.config.update(
 #this is for people to upload the img
 UPLOAD_FOLDER = os.path.join(basedir, 'tmp')
 
+'''
 if not app.debug:
     import logging
     from logging.handlers import SMTPHandler
@@ -37,6 +38,7 @@ if not app.debug:
     mail_handler = SMTPHandler((MAIL_SERVER, MAIL_PORT), 'no-reply@' + MAIL_SERVER, ADMINS, 'hcfsite failure', credentials)
     mail_handler.setLevel(logging.ERROR)
     app.logger.addHandler(mail_handler)
+'''
 
 if not app.debug:
     import logging
