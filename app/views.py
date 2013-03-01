@@ -59,7 +59,7 @@ def view_agenda():
 @app.route('/team')
 def view_team():
     table_team  = Team.query.all()
-    table_group = Group.query.order_by(Group.name.asc())
+    table_group = Group.query.all()
 
     for group in table_group:
         group.edit_url = "/edit/group/" + str(group.id)
