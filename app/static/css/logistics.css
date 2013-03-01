@@ -20,3 +20,9 @@
 }
 
 h3 { margin-top: 30px; color: #006192;}
+
+#logistics img {
+    width: 210px;
+    height: auto;
+    margin-right: 10px;
+}
