@@ -58,14 +58,21 @@ def view_agenda():
 
 @app.route('/team')
 def view_team():
-    table_team  = Team.query.all()
-    table_group = Group.query.all()
+    table_team  = Team.query.order_by(Team.name.asc()).all()
+    table_group = Group.query.order_by(Group.name.asc()).all()
+
+    team_members = []
+    for team_member in table_team:
+        if team_member.title == 'President' or team_member.title == 'Director':
+            team_members.insert(0, team_member)
+        else:
+            team_members.append(team_member)
 
     for group in table_group:
         group.edit_url = "/edit/group/" + str(group.id)
         group.team_list = [[], []]
         i = 0
-        for team_member in table_team:
+        for team_member in team_members:
             if team_member.group_id == group.id:
                 group.team_list[i % 2].append(team_member)
                 team_member.edit_url = "edit/team/" + str(team_member.id)
