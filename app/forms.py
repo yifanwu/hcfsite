@@ -83,10 +83,12 @@ class PostSpeakerForm(Form):
         if not Form.validate(self):
             self.name.errors.append('Something went wrong!')
             return False
+        '''
         person = Speaker.query.filter_by(name = self.name.data).first()
         if person != None:
             self.name.errors.append('This speaker is already added, please modify the old one instead')
             return False
+        '''
         return True
 
 class PostAdvisorForm(Form):
