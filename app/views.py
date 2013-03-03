@@ -35,7 +35,12 @@ def internal_error(error):
 @app.route('/', methods = ['GET', 'POST'])
 def index():
     featured_speakers = Speaker.query.filter_by(featured = True).order_by(Speaker.name.asc()).all()
+    # hack for keynote speakers -- remove later
     panels = Panel.query.order_by(Panel.name.asc()).all()
+    for panel in panels:
+        if panel.name == "Keynote Speakers":
+            panels.remove(panel)
+
     cat_list = Category.query.order_by(Category.name.asc()).all()
 
     for cat in cat_list:
@@ -118,6 +123,7 @@ def view_speakers():
     cat_list = Category.query.order_by(Category.name.asc()).all()
     panel_list = Panel.query.order_by(Panel.name.asc()).all()
 
+    panels = []
     for panel in panel_list:
         panel.html_id = "panel_" + str(panel.id)
         panel.speakers_list = [[], []]
@@ -128,12 +134,19 @@ def view_speakers():
                 speaker.edit_url = "edit/speaker/" + str(speaker.id)
                 i += 1
 
+        # hack for keynote speakers
+        if panel.name == "Keynote Speakers":
+            keynote_panel = panel
+        else:
+            panels.append(panel)
+
     return render_template('speakers.html',
         title = 'HCF Speakers',
         page_id = 'speakers',
         type = 'speaker',
-        panels = panel_list,
-        categories = cat_list
+        panels = panels,
+        categories = cat_list,
+        keynote = keynote_panel
     )
 
 @app.route('/panels')
@@ -145,16 +158,20 @@ def view_panels():
         cat.html_id = "cat_" + str(cat.id)
         cat.edit_url  = "edit/category/" + str(cat.id)
 
+    panels = []
     for panel in panel_list:
         panel.html_id = "panel_" + str(panel.id)
         panel.keyq = panel.keyq.split('\n')
         panel.edit_url = "edit/panel/" + str(panel.id)
+        # hack for keynote speakers
+        if panel.name != "Keynote Speakers":
+            panels.append(panel)
 
     return render_template('panels.html',
        title = 'HCF Panels',
        page_id = 'panels',
        type = 'panel',
-       panels = panel_list,
+       panels = panels,
        categories = cat_list
     )
 
